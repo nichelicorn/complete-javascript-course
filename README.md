@@ -16,7 +16,18 @@
     * CSS represent the adjectives
     * JavaScript represents the verbs 
 
+### Lesson 2.10  : Values and Variables
+* value - a piece of data; the most fundamental unit of information in programming; a single string is a value
 
+* variable - a way to store values
+  * declaring a variable will store a variable's value in memory; variables allow us to store values for future use
+  * variables names should be stated in camelCase (JS uses camelCase for naming)
+  * variable can be called / invoked by writing the variable name where its associated value is needed in JS operations
+  * there are rules about variable naming! cannot start with numbers; no spaces; no capital letters (these are reserved for Class names / OOP); no reserved JS keywords (`this`, `function`, etc...); etc
+  * can use a `$` to begin a name
+  * `name` is a JS keyword! a strange JS behavior will allow you to use this as a variable name, but this is bad practice! 🙅‍♀️
+* a few mathematical constants are hard-coded into JS, like Pi (3.1415...), written as `let PI = 3.1415...`
+* ensure variable names are descriptive; the name should let devs know what kind of value the variable is holding
 
 # Course Material and FAQ for my Complete JavaScript Course
 
