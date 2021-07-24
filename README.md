@@ -29,6 +29,41 @@
 * a few mathematical constants are hard-coded into JS, like Pi (3.1415...), written as `let PI = 3.1415...`
 * ensure variable names are descriptive; the name should let devs know what kind of value the variable is holding
 
+### Lesson 2.12 : Data Types
+* in JS, every value is either an object or a primitive value
+
+* 7 primitive data types; these include number, string, boolean, undefined, null, symbol, BigInt
+  * `number` : floating point numbers; always have decimals, even if they aren't seen or defined; used for both decimals and integers
+  * `string` : a sequence of characters, wrapped by quotes
+  * `boolean` : a logical value type; can only be `true` or `false`; used for decision making and conditionals
+  * `undefined` : the value taken by a variable that is not yet defined; an empty value; can be returned as a value and a type
+  * `null` : also an empty value; from MDN: 
+    ```
+      typeof null
+
+// This stands since the beginning of JavaScript
+typeof null === 'object';
+
+In the first implementation of JavaScript, JavaScript values were represented as a type tag and a value. The type tag for objects was 0. null was represented as the NULL pointer (0x00 in most platforms). Consequently, null had 0 as type tag, hence the typeof return value "object". (reference)
+
+A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would have resulted in typeof null === 'null'.
+    ```
+    - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+  * `symbol` : value that is unique and cannot be changed; introduced with ES2015
+  * `BigInt` : larger integers than the `number` type can hold; introduced with ES2020
+
+* JS features dynamic typing - this means that when a variable is declared, you *do not* need to manually indicate the data type; instead, data types are determined automatically by JS
+  * JS determines the type when storing variable values
+  * distinction btwn value and variable is important!
+  * in JS value have types, not the variables! this means that variable data types can be reassigned and gives greater flexibility to JS
+
+  * commenting code in JS is useful to notate certain parts of the script, OR to prevent statements from being executed in the browser
+    * `// notes` to create a single line comment
+    * `/* notes ... notes */` will create multi-line comments 
+
+
+
+
 # Course Material and FAQ for my Complete JavaScript Course
 
 This repo contains starter files and final code for all sections and projects contained in the course.
