@@ -84,9 +84,19 @@ let markHeight = 1.69;
 let johnMass = 92;
 let johnHeight = 1.95;
 
-let markBmi = markMass / markHeight ** 2;
+// function calculateBmi(mass, height) {
+//   return mass / height ** 2;
+// }
+
+const calculateBmi = (mass, height) => {
+  return mass / height ** 2;
+}
+
+// let markBmi = markMass / markHeight ** 2;
+let markBmi = calculateBmi(markMass, markHeight);
 console.log("Mark's BMI <>>>", markBmi);
-let johnBmi = johnMass / (johnHeight * johnHeight);
+// let johnBmi = johnMass / (johnHeight * johnHeight);
+let johnBmi = calculateBmi(johnMass, johnHeight);
 console.log("John's BMI <>>>", johnBmi);
 let markHigherBMI = markBmi >= johnBmi;
 console.log("Is Mark's BMI higher than John's?   ", markHigherBMI);
@@ -95,9 +105,9 @@ markMass = 95;
 markHeight = 1.88;
 johnMass = 85;
 johnHeight = 1.76;
-markBmi = markMass / markHeight ** 2;
-console.log("mark's new BMI <>>>", markBmi);
-johnBmi = johnMass / (johnHeight * johnHeight);
-console.log("john's new BMI <>>>", johnBmi);
+// markBmi = markMass / markHeight ** 2;
+console.log("mark's new BMI <>>>", markBmi = calculateBmi(markMass, markHeight));
+// johnBmi = johnMass / (johnHeight * johnHeight);
+console.log("john's new BMI <>>>", johnBmi = calculateBmi(johnMass, johnHeight));
 markHigherBMI = markBmi >= johnBmi;
 console.log("Is Mark's BMI higher than John's?   ", markHigherBMI);
