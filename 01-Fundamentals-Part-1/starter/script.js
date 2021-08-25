@@ -88,16 +88,31 @@ console.log('concat name <>>>', firstName + " " + lastName);
 // can use the + operator to concatenate strings; need to include an additional + " " + to add a space between words / characters in different strings
 
 // example of mathematical operators
-let x = 10 + 5; // addition
-x += 10; // add to the existing value
-x *= 4; // multiply by the existing value
-x++; // add one to existing value
-x--; // subtract one from the existing value
-x--;
-console.log("value of x <>>>", x);
+// let x = 10 + 5; // addition
+// x += 10; // add to the existing value
+// x *= 4; // multiply by the existing value
+// x++; // add one to existing value
+// x--; // subtract one from the existing value
+// x--;
+// console.log("value of x <>>>", x);
 
 // comparison operators
 console.log("Is Nichele's age > than Jim's age?", ageNichele > ageJim);
 
 console.log("Is Jim of age?", ageJim >= 18);
 
+const isFullAge = ageNichele >= 18;
+
+console.log("a comparison of years", currentYear - 1991 > currentYear - 2018);
+
+// Lesson 2.15 Operator Precedence
+let x, y;
+// these are declared as empty variables, to be assigned later
+x = y = 25 - 10 - 5;
+// same as writing x = y = 10;
+console.log("x <>>>", x);
+console.log("y <>>>", y);
+
+console.log("J and N's ages <>>>", ageJim, ageNichele);
+const avgJandNAges = (ageJim + ageNichele) / 2;
+console.log("average of J and N's ages", avgJandNAges);

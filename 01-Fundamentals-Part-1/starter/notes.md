@@ -80,3 +80,12 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
 * `=` is the assignment operator
 * `+=` will add the following value to the exisitng value of a variable
 * comparison operators are used to create Boolean values
+
+### Lesson 2.15 Operator Precedence
+* JS has a well-defined order of operations, or a specific order in which operations are executed
+* MDN reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+* "Operator precedence determines how operators are parsed concerning each other. Operators with higher precedence become the operands of operators with lower precedence."
+* there is a numerical ordering of operations, and JS knows to follow this order when completing JS which utilizes operators
+* good to have a general idea of which operators are completed first (ex: math operators are completed prior to comparison operators)
+* most operations are completed left -> right (mathematical operators), though some operations will be completed right -> left (assignment operator)
+* grouping using `()` takes the highest precedence
