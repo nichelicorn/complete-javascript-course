@@ -1,12 +1,12 @@
-console.log("lesson exercises 👩‍💻")
+console.log("👩‍💻 lesson exercises")
 
-// Lesson 2.9
+console.log("👩‍🏫 Lesson 2.9");
 const js = "amazing";
 
 console.log('My name is Computatron');
 console.log(typeof 'My name is Computatron');
 
-// Lesson 2.10
+console.log("👩‍🏫 Lesson 2.10");
 let firstName = "Nichele";
 let lastName = "Lovelace"
 console.log("variable firstName <>>>", firstName);
@@ -25,7 +25,7 @@ const myCurrentJob = "coding student";
 const job1 = "greeter";
 const job2 = "coding student";
 
-// Lesson 2.12
+console.log("👩‍🏫 Lesson 2.12");
 // true;
 let javascriptIsFun = true;
 console.log('Is JavaScript fun?', javascriptIsFun);
@@ -51,7 +51,7 @@ console.log('typeof year <>>>', typeof year);
 console.log('typeof null <>>>', typeof null); 
 // logs typeof null as an object; this is incorrect, and should return `null`, similar to the behavior exhibited by `undefined`
 
-// 2.13 let, const, and var
+console.log("👩‍🏫 2.13 let, const, and var");
 let age = 30;
 
 age = 31; 
@@ -69,7 +69,7 @@ pickle = "dill";
 console.log("mysterious undeclared pickle <>>>", pickle);
 // don't do this! now there's a global pickle
 
-// 2.14 Basic Operators
+console.log("👩‍🏫 2.14 Basic Operators");
 const currentYear = 2021;
 
 const ageNichele = currentYear - nBirthYear;
@@ -105,7 +105,7 @@ const isFullAge = ageNichele >= 18;
 
 console.log("a comparison of years", currentYear - 1991 > currentYear - 2018);
 
-// Lesson 2.15 Operator Precedence
+console.log("👩‍🏫 Lesson 2.15 Operator Precedence");
 let x, y;
 // these are declared as empty variables, to be assigned later
 x = y = 25 - 10 - 5;
@@ -116,3 +116,70 @@ console.log("y <>>>", y);
 console.log("J and N's ages <>>>", ageJim, ageNichele);
 const avgJandNAges = (ageJim + ageNichele) / 2;
 console.log("average of J and N's ages", avgJandNAges);
+
+console.log("👩‍🏫 2.17 Strings and Template Literals");
+firstName = "River";
+job = "Interdimensional archaeologist";
+birthyear = undefined;
+
+// using concatenation
+let river = "I'm " + firstName + ", a " + (year - birthyear) + " year old " + job + "!";
+console.log("River, using concatenation <>>>", river);
+
+// using template literal
+river = `I'm ${firstName}, a ${year - birthyear} year old ${job}!`;
+console.log("River, using template literal <>>>", river);
+
+console.log("It is possible to write \n\
+multi-line JS comments using the /n/ character. \n\ This is due to a JS bug!");
+
+console.log("👩‍🏫 2.18 Taking Decisions : if/else statements");
+age = 14;
+const isOldEnough = age >= 18;
+
+function evalDrivingAge(age) {
+  if (isOldEnough) {
+    console.log(`${firstName} can apply for a driving license 🚙`);
+  } else {
+    const yearsLeft = 18 - age;
+    console.log(`${firstName} is not yet old enough to drive. Wait another ${yearsLeft} years to apply for a license.`);
+  }
+};
+
+evalDrivingAge(age);
+
+birthyear = 1991;
+let century;
+
+function evalBirthCentury(year) {
+  if (birthyear <= 2000) {
+    console.log(century = 20);
+  } else {
+    console.log(century = 21);
+  }
+};
+
+console.log(evalBirthCentury(birthyear));
+
+
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");
+// console.log("👩‍🏫 ");

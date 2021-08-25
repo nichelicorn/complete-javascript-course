@@ -89,3 +89,10 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
 * good to have a general idea of which operators are completed first (ex: math operators are completed prior to comparison operators)
 * most operations are completed left -> right (mathematical operators), though some operations will be completed right -> left (assignment operator)
 * grouping using `()` takes the highest precedence
+
+### Lesson 2.17 Strings and Template literals
+* can use `` to write *any* regular string in JavaScript!; makes it easier to insert JS expressions into strings where needed (don't have to think about which type of string representation you're working with)
+
+### Lesson 2.18 Taking Decisions : if/else statements
+* can use `if / else` statements to determine the path code should take
+* if a condition is true, execute a certain line of code; if the condition is false, another line of code can be executed, or nothing will happen
