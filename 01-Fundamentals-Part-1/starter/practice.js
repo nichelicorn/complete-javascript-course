@@ -110,7 +110,8 @@ console.log(5 + 6 + '4' + 9 - 4 - 2);
 
 console.log("📝 Equality Operators : == vs ===");
 // 1. Declare a variable 'numNeighbours' based on a prompt input like this: prompt('How many neighbour countries does your country have?'); 
-// const numNeighbours = Number(prompt("How many neighboring countries does your country have?"));
+let numNeighbours;
+// numNeighbours = Number(prompt("How many neighboring countries does your country have?"));
 // console.log("numNeighbours <>>>", typeof numNeighbours);
 
 // 2. If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now) 
@@ -142,12 +143,47 @@ console.log("📝 Logical Operators");
   // speaks english
   // has less than 50 million people
   // is not an island
-// const sarahsNewCountry =   
+// const sarahsNewCountry = () => {
 
-// 3. Write an if statement to help Sarah figure out if your country is right for her. You will need to write a condition that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if necessary. 
+// }
 
+function checkSarahsConditions() {
+  console.log("Sarah's new country?");
 
-// 4. If yours is the right country, log a string like this: 'You should live in Portugal :)'. If not, log 'Portugal does not meet your criteria :(' 
+  const speaksEnglish = (language === "English");
+  const smallPop = (population < 50);
+  const notIsland = (!isIsland);
 
+  console.log("???", speaksEnglish, smallPop, notIsland);
 
-// 5. Probably your country does not meet all the criteria. So go back and temporarily change some variables in order to make the condition true (unless you live in Canada :D) 
+  // if (language === "English") {
+  //   console.log("This country speaks English!", (language === "English"));
+  // };
+  // if (population < 50) {
+  //   console.log("This country's population is less than 50 million!", (population < 50));
+  // } else {
+  //   console.log("This country's population is not less than 50 million.");
+  // };
+  // if (!isIsland) {
+  //   console.log("This country is not an island!", !isIsland);
+  // } else if (isIsland) {
+  //   console.log("This country is an island.");
+  // };
+
+  // Simplified using variables
+  if ( speaksEnglish && smallPop && notIsland) {
+    console.log(`This might be the place! Sarah, you should consider living in ${country}`);
+  } else {
+    console.log("You will need to try another country, Sarah");
+  };
+
+  // Conditional operator
+  // ( speaksEnglish && smallPop && notIsland ) ?  console.log(`This might be the place! Sarah, you should consider living in ${country}`) : console.log("You will need to try another country, Sarah");
+
+}
+
+console.log("Sarah's new country?", checkSarahsConditions());
+
+// 3. Write an if statement to help Sarah figure out if your country is right for her. You will need to write a condition that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if necessary. ✅
+// 4. If yours is the right country, log a string like this: 'You should live in Portugal :)'. If not, log 'Portugal does not meet your criteria :('  ✅
+// 5. Probably your country does not meet all the criteria. So go back and temporarily change some variables in order to make the condition true (unless you live in Canada :D)  ✅
