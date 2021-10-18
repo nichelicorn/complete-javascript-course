@@ -231,9 +231,25 @@ checkForHeight();
 height = 60;
 checkForHeight();
 
+console.log("👩‍🏫  2.22 Equality operators");
+const thisNumber = 18;
 
+if (thisNumber === 18) console.log("The strict equality operator does not perform type coercion :D ");
+if (thisNumber == "18") console.log("Type coercion does happen when using a loose equality operator");
 
-// console.log("👩‍🏫 ");
+const favNum = Number(prompt("What's your favorite number?")); // stores the value of a user input prompt on windowload; without using type coercion, this is stored as a string
+console.log("favNum <>>>", favNum);
+
+if (favNum === 13) {
+  console.log("Cool! 13 is a spooky number 👻");
+} else if (favNum === 7) {
+  console.log("You sure do like prime numbers! 🥩");
+} else {
+  console.log("All numbers are good numbers! 🌈 (but it's not 7 or 13)");
+}
+
+if (favNum !== 13) console.log("Don't you like spooky numbers?");
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

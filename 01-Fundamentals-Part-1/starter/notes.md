@@ -118,3 +118,12 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
   - `NaN`
 
 * JS will do type coercion to Booleans when using logical operators, or in a logical context, like an if/else statement
+
+### Lesson 2.22 Equality Operators
+* Strict equality operator `===` does *not* perform type coercion
+  * If necessary, best practice to convert type *before* performing equality operations
+* Loose equality operator `==` does perform type coercion, but this can lead to undesirable behaviors later on in the script
+* Updated numNeighbors to set the value using the `Number()` function, converting the returned value to a number
+  * [Number on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+* Using the strict equality operator ensures operations are only performed on like data types; type coercion will occasionally allow code to function as expected, but incorrect data types may cause issues down the line which are unaccounted for in the codebase.
+  * [Strict equality `===` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
