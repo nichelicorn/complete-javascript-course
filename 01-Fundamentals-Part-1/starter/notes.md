@@ -127,3 +127,6 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
   * [Number on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 * Using the strict equality operator ensures operations are only performed on like data types; type coercion will occasionally allow code to function as expected, but incorrect data types may cause issues down the line which are unaccounted for in the codebase.
   * [Strict equality `===` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+
+### Lesson 2.23 Logical Operators
+* 

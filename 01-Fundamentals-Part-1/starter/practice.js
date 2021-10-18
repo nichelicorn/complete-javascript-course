@@ -63,54 +63,6 @@ let euroLanguage = "Portuguese";
 description = `${euroCountry} is in Europe, and its ${euroPop} million people speak ${euroLanguage}.`;
 console.log("template literal format <>>>", description);
 
-console.log("🧪 coding challenge #1");
-// Mark and John are trying to compare their BMI (Body Mass Index), which is calculated using the formula: 
-// BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter). 
-// Your tasks: 
-// √ 1. Store Mark's and John's mass and height in variables
-// 2. Calculate both their BMIs using the formula (you can even implement both versions) 
-// 3. Create a Boolean variable 'markHigherBMI' containing information about whether Mark has a higher BMI than John. 
-
-// Test data: 
-// § Data 1: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall. 
-// § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76 m tall. 
- 
-// GOOD LUCK 😀
-
-let markMass = 78;
-let markHeight = 1.69;
-let johnMass = 92;
-let johnHeight = 1.95;
-
-// function calculateBmi(mass, height) {
-//   return mass / height ** 2;
-// }
-
-const calculateBmi = (mass, height) => {
-  return mass / height ** 2;
-}
-
-// let markBmi = markMass / markHeight ** 2;
-let markBmi = calculateBmi(markMass, markHeight);
-console.log("Mark's BMI <>>>", markBmi);
-// let johnBmi = johnMass / (johnHeight * johnHeight);
-let johnBmi = calculateBmi(johnMass, johnHeight);
-console.log("John's BMI <>>>", johnBmi);
-let markHigherBMI = markBmi >= johnBmi;
-console.log("Is Mark's BMI higher than John's?   ", markHigherBMI);
-
-markMass = 95;
-markHeight = 1.88;
-johnMass = 85;
-johnHeight = 1.76;
-
-// markBmi = markMass / markHeight ** 2;
-console.log("mark's new BMI <>>>", markBmi = calculateBmi(markMass, markHeight));
-// johnBmi = johnMass / (johnHeight * johnHeight);
-console.log("john's new BMI <>>>", johnBmi = calculateBmi(johnMass, johnHeight));
-markHigherBMI = markBmi >= johnBmi;
-console.log("Is Mark's BMI higher than John's?   ", markHigherBMI);
-
 console.log("📝 Taking Decisions: if / else Statements");
 // 1. If your country's population is greater that 33 million, log a string like this to the console: 'Portugal's population is above average'. Otherwise, log a string like 'Portugal's population is 22 million below average' (the 22 is the average of 33 minus the country's population)
 
@@ -126,25 +78,6 @@ evalAvgPopulation();
 
 // 2. After checking the result, change the population temporarily to 13 ( returns the else block of code ) and then to 130 (returns the if block of code ). See the different results, and set the population back to original
 // ✅
-
-console.log("🧪 Coding Challenge #2");
-// Use the BMI example from Challenge #1, and the code you already wrote, and improve it. 
-// Your tasks: 
-// √ 1. Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!" 
-// √ 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's BMI (28.3) is higher than John's (23.9)!" 
-// √ Hint: Use an if/else statement 😉 
- 
-// GOOD LUCK 😀
-
-function returnBmiMessage() {
-  if (markHigherBMI) {
-    console.log(`Mark's BMI of ${markBmi} is higher than John's BMI, at ${johnBmi} 🤷‍♂️`);
-  } else {
-    console.log(`John's BMI, measured at ${johnBmi}, is higher than Mark's BMI of ${markBmi} 🤷‍♂️`);
-  }
-}
-
-returnBmiMessage();
 
 console.log("📝 Type Conversion and Coercion");
 // 1. Predict the result of these 5 operations without executing them: 
@@ -177,7 +110,7 @@ console.log(5 + 6 + '4' + 9 - 4 - 2);
 
 console.log("📝 Equality Operators : == vs ===");
 // 1. Declare a variable 'numNeighbours' based on a prompt input like this: prompt('How many neighbour countries does your country have?'); 
-const numNeighbours = Number(prompt("How many neighboring countries does your country have?"));
+// const numNeighbours = Number(prompt("How many neighboring countries does your country have?"));
 // console.log("numNeighbours <>>>", typeof numNeighbours);
 
 // 2. If there is only 1 neighbour, log to the console 'Only 1 border!' (use loose equality == for now) 
@@ -200,3 +133,21 @@ if (numNeighbours === 1) {
 
 // 8. Reflect on why we should use the === operator and type conversion in this situation 
 // Using the strict equality operator ensures operations are only performed on like data types; type coercion will occasionally allow code to function as expected, but incorrect data types may cause issues down the line which are unaccounted for in the codebase
+
+console.log("📝 Logical Operators");
+// 1. Comment out the previous code so the prompt doesn't get in the way ✅
+
+// 2. Let's say Sarah is looking for a new country to live in. She wants to live in a country that speaks english, has less than 50 million people and is not an island. 
+// s's desired country has three conditions : 
+  // speaks english
+  // has less than 50 million people
+  // is not an island
+// const sarahsNewCountry =   
+
+// 3. Write an if statement to help Sarah figure out if your country is right for her. You will need to write a condition that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if necessary. 
+
+
+// 4. If yours is the right country, log a string like this: 'You should live in Portugal :)'. If not, log 'Portugal does not meet your criteria :(' 
+
+
+// 5. Probably your country does not meet all the criteria. So go back and temporarily change some variables in order to make the condition true (unless you live in Canada :D) 
