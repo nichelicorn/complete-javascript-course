@@ -162,8 +162,77 @@ function evalBirthCentury(year) {
 console.log(evalBirthCentury(birthyear));
 
 
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫  2.20 Type conversion and coercion");
+
+console.log("type conversion");
+
+const inputYear = "1991";
+
+console.log("full age occurs in year ", (inputYear + 18));
+// this example converts 18 to a string, and concatenates it with inputYear
+
+console.log("full age occurs in year ", Number(inputYear) + 18);
+// this example will return the string as a number - this is type conversion; using Number() does not alter the original value of inputYear
+
+console.log("attempting to turn a string into a number 👇");
+console.log(Number("Jonas"));
+// returns NaN - "Jonas" cannot be evaluated into a real number
+
+console.log("converting a number to a string 👇");
+console.log(String(17));
+
+console.log("type coercion");
+
+console.log("I am " + 23 + " years old");
+// converts 23 to a string; works with concatenation or template literals
+
+console.log("will this give us a number or a string?", "23" - "10" - 3);
+console.log(typeof ("23" - "10" - 3));
+
+console.log("let n = `1` + 1 ");
+let n = "1" + 1;
+console.log("n <>>>", n);
+console.log("n = n - 1")
+n = n - 1;
+console.log("n <>>>", n);
+
+console.log("👩‍🏫 2.21 Truthy and Falsy values");
+console.log("how do the following evaluate when using the JS `Boolean()` method?")
+console.log("0", Boolean(0));
+console.log("undefined", Boolean(undefined));
+console.log("Nichele", Boolean("Nichele"));
+console.log("{}", Boolean({}));
+console.log("empty string", Boolean(""));
+
+const money = 0;
+// the truthy or falsyness of this value will determine which block of code is executed in the function checkForMoney
+
+const checkForMoney = () => {
+  if(money) {
+    console.log("Don't spend all the money! 💰");
+  } else {
+    console.log("You don't have any money 💸");
+  }
+};
+
+checkForMoney();
+
+let height;
+const checkForHeight = () => {
+  if(height) {
+    console.log("Yay! Height is defined");
+  } else {
+    console.log("Height is undefined");
+  }
+}
+
+checkForHeight();
+
+height = 60;
+checkForHeight();
+
+
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

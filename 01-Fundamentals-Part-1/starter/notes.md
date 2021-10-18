@@ -96,3 +96,25 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
 ### Lesson 2.18 Taking Decisions : if/else statements
 * can use `if / else` statements to determine the path code should take
 * if a condition is true, execute a certain line of code; if the condition is false, another line of code can be executed, or nothing will happen
+
+### Lesson 2.20 Type conversion and coercion
+* type conversion is when we explicitly want to change a data type from one to another
+
+* type coercion happens whenever an operator is dealing with two values of differing data types
+* JS will convert one value to match the data type of the other value
+
+* the - operator will convert strings to numbers *not* numbers to strings
+* this behavior (numbers to strings) occurs with +, /, <> operators 
+
+### Lesson 2.21 Truthy and Falsy values
+* values that will be converted to `true` when converting to a Boolean (anything except the falsy values below)
+
+* falsy values are values that are not exactly false, but will become false when coverted to a Boolean
+* there are only *five* `falsy` values:
+  - zero
+  - an empty string
+  - `undefined`
+  - `null`
+  - `NaN`
+
+* JS will do type coercion to Booleans when using logical operators, or in a logical context, like an if/else statement
