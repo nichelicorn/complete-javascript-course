@@ -46,7 +46,7 @@ console.log("john's new BMI <>>>", johnBmi = calculateBmi(johnMass, johnHeight))
 markHigherBMI = markBmi >= johnBmi;
 console.log("Is Mark's BMI higher than John's?   ", markHigherBMI);
 
-console.log("🧪 Coding Challenge #2");
+console.log("🧪 Coding challenge #2");
 // Use the BMI example from Challenge #1, and the code you already wrote, and improve it. 
 // Your tasks: 
 // √ 1. Print a nice output to the console, saying who has the higher BMI. The message is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!" 
@@ -65,3 +65,96 @@ function returnBmiMessage() {
 
 returnBmiMessage();
 
+console.log("🧪 Coding challenge #3");
+// There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy! 
+
+// Test data: 
+// § Data 1: 
+let dolphinsScore = [ 96, 108, 89]; 
+let koalasScore =  [88, 91, 110];
+
+// § Data Bonus 1: 
+dolphinsScore = [97, 112, 101];
+koalasScore = [109, 95, 123];
+// § Data Bonus 2: 
+koalasScore = dolphinsScore;
+ 
+// GOOD LUCK 😀 
+// Your tasks: 
+
+// 1. Calculate the average score for each team, using the test data ✅
+function getAvgScore(arr) {
+  return arr.reduce((num, total) => (total += num) / arr.length);
+};
+
+// Set values for average scores
+const getDolphinsAvg = getAvgScore(dolphinsScore);
+const getKoalasAvg = getAvgScore(koalasScore);
+console.log("Average Dolphins score 🐬<>>>", getDolphinsAvg);
+console.log("Average Koalas score 🐨<>>>", getKoalasAvg);
+
+// Set a variable for the winner
+let winner;
+
+// 2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score) ✅
+// Create a variable hold the team name - this can be used in the interpolation to print the winner in the console
+
+function determineWinner(arrA, arrB) {
+  const teamAAvg = getAvgScore(arrA);
+  const teamBAvg = getAvgScore(arrB);
+  console.log("team a average >", teamAAvg, "team b average >", teamBAvg);
+
+  // assign the name based on the score
+  let teamA, teamB;
+
+  if (getAvgScore(arrA) === getAvgScore(dolphinsScore)) console.log("A: hello dolphin 🐬");
+  if (getAvgScore(arrA) === getAvgScore(koalasScore)) console.log("A: hello koala 🐨");
+  if (getAvgScore(arrB) === getAvgScore(dolphinsScore)) console.log("B: hello dolphin 🐬");
+  if (getAvgScore(arrB) === getAvgScore(koalasScore)) console.log("B: hello koala 🐨");
+
+  // if ((getAvgScore(arrA) === getAvgScore(koalasScore)) || (getAvgScore(arrB) === getAvgScore(koalasScore))) {
+  //   teamA = "Koalas";
+  //   teamB = "Dolphins";
+  // } else 
+  // if ((getAvgScore(arrA) === getAvgScore(dolphinsScore)) || (getAvgScore(arrB) === getAvgScore(dolphinsScore))) {
+    if (getAvgScore(arrA) === getAvgScore(dolphinsScore)) {
+    console.log("team A are the 🐬🐬🐬🐬🐬🐬🐬!")
+    teamA = "Dolphins";
+    teamB = "Koalas"
+  // } else if ((getAvgScore(arrA) === getAvgScore(koalasScore)) || (getAvgScore(arrB) === getAvgScore(koalasScore))) {
+  } else if (getAvgScore(arrA) === getAvgScore(koalasScore)) {
+    console.log("team A are the 🐨🐨🐨🐨🐨🐨🐨!")
+    teamA = "Koalas";
+    teamB = "Dolphins";
+  };
+
+  console.log("teamA, teamB", teamA, teamB);
+
+  
+
+  // Test conditions
+  // console.log("team A?", areDolphins, areKoalas);
+  // console.log("team B?", areDolphins, areKoalas);
+  // console.log("(teamAAvg > teamBAvg && areDolphins)??", (teamAAvg > teamBAvg && areDolphins));
+  // console.log("(teamBAvg > teamAAvg && areDolphins)?", (teamBAvg > teamAAvg && areDolphins));
+  // console.log("(teamBAvg > teamAAvg && areKoalas)?", (teamBAvg > teamAAvg && areKoalas));
+  // console.log("(teamAAvg > teamBAvg && areKoalas)?", (teamAAvg > teamBAvg && areKoalas));
+  // console.log("(teamAAvg === teamBAvg)?", (teamAAvg === teamBAvg));
+
+  // if ((teamAAvg > teamBAvg && areDolphins) || (teamBAvg > teamAAvg && areDolphins)) {
+  //   console.log(`Dolphins are the winners! 🐬🏆`);
+  // } else if ((teamBAvg > teamAAvg && areKoalas) || (teamAAvg > teamBAvg && areKoalas)) {
+  //   console.log(`Koalas are the winners! 🐨🏆`);
+  // } else if (teamAAvg === teamBAvg) {
+  //   console.log(`We have a draw!`);
+  // };
+
+};
+
+// determineWinner(dolphinsScore, koalasScore);
+determineWinner(koalasScore, dolphinsScore); 
+
+// 3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉 
+
+
+// 4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy 
