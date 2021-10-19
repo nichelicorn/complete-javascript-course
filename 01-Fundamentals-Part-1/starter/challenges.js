@@ -70,31 +70,40 @@ console.log("🧪 Coding challenge #3");
 
 // Test data: 
 // § Data 1: 
-let dolphinsScore = [ 96, 108, 89]; 
-let koalasScore =  [88, 91, 110];
+let dolphinsScore = [ 96, 108, 89]; // 293, avg = 97.666
+let koalasScore =  [88, 91, 110]; // 289, avg = 96.333
 
 // § Data Bonus 1: 
-dolphinsScore = [97, 112, 101];
-koalasScore = [109, 95, 123];
+dolphinsScore = [97, 112, 101]; // 310, avg = 103.333
+koalasScore = [109, 111, 123]; // 343, avg = 114.333
 // § Data Bonus 2: 
-// koalasScore = dolphinsScore;
+// koalasScore =  [97, 112, 101]; // 310, avg = 103.333
  
 // GOOD LUCK 😀 
 // Your tasks: 
 
 // 1. Calculate the average score for each team, using the test data ✅
+// function getAvgScore(arr) {
+//   return arr.reduce((num, total) => ((total += num) / arr.length));
+// }; // this math is wrong! somehow it's returning a divisor of 5-ish, not the array length; not sure what the issue is here... reworking this function below
+
 function getAvgScore(arr) {
-  return arr.reduce((num, total) => (total += num) / arr.length);
-};
+  arr.reduce((tot, num) => {
+    total = tot += num;
+    length = arr.length;
+    console.log(`The total is ${total} and the array length is ${length}.`);
+
+  })
+}
 
 // Set values for average scores
 const getDolphinsAvg = getAvgScore(dolphinsScore);
 const getKoalasAvg = getAvgScore(koalasScore);
-// console.log("Average Dolphins score 🐬<>>>", getDolphinsAvg);
-// console.log("Average Koalas score 🐨<>>>", getKoalasAvg);
+console.log("Average Dolphins score 🐬<>>>", getDolphinsAvg);
+console.log("Average Koalas score 🐨<>>>", getKoalasAvg);
 
 // Set a variable for the winner
-let winner;
+let winner, winnerAvg, grandWinner;
 
 // 2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score) ✅
 // Create a variable hold the team name - this can be used in the interpolation to print the winner in the console ✅
@@ -129,14 +138,20 @@ function determineWinner(arrA, arrB) {
     teamB = "Dolphins 🐬";
   };
 
-  console.log("teamA, teamB", teamA, teamB);
+  // console.log("teamA, teamB", teamA, teamB);
 
   if (teamAAvg > teamBAvg) {
-    console.log(`${teamA} are the winners!!`);
+    winner = teamA;
+    winnerAvg = teamAAvg;
+    console.log(`${teamA} win this round!`);
   } else if (teamBAvg > teamAAvg) {
-    console.log(`${teamB} are the winners!!`);
+    winner = teamB;
+    winnerAvg = teamBAvg;
+    console.log(`${teamB} win this round!`);
   } else if (teamAAvg === teamBAvg) {
-    console.log(`This match was a draw 🤝`);
+    winner = "draw";
+    winnerAvg = teamAAvg || teamBAvg;
+    console.log(`No winner! The match between ${teamA} and ${teamB} is a draw! 🤝`);
   }
 
   // Test conditions
@@ -155,13 +170,42 @@ function determineWinner(arrA, arrB) {
   // } else if (teamAAvg === teamBAvg) {
   //   console.log(`We have a draw!`);
   // };
+  if ((teamA === winner) || (teamB === winner)) {
+    return `${winner} win this round!`;
+  } else {
+    return winner;
+  }
 
 };
 
-determineWinner(dolphinsScore, koalasScore);
-determineWinner(koalasScore, dolphinsScore); 
+// determineWinner(dolphinsScore, koalasScore);
+// determineWinner(koalasScore, dolphinsScore); 
 
 // 3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉 
 
+
+// invoke determineWinner
+// validate average scores
+// if winner && avg score >=  100 {declare winner} else {declare, despite having the highest score, you did meet the min score of 100 required to take the match points}
+function declareGrandWinner(arrA, arrB) {
+
+  determineWinner(arrA, arrB);
+  console.log("the winner <>>>", winner);
+  console.log("winnerAvg <>>>", winnerAvg);
+
+  if (winnerAvg >= 100) {
+    grandWinner = winner;
+    console.log(`${grandWinner} are the grand winners, with over 100 points!`)
+  } else if (winnerAvg < 100) {
+    console.log(`Though they won the round, the ${winner} did not have 100 points, and no one wins the grand prize. 😿`);
+  } else if (winner === "draw") {
+    console.log(`This one was a draw! We'll play again soon.`);
+  }
+  console.log(grandWinner === winner);
+  console.log(`${grandWinner} have taken home the trophy!! 🏆`);
+
+}
+
+declareGrandWinner(dolphinsScore, koalasScore);
 
 // 4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy 
