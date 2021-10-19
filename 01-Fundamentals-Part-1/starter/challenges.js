@@ -77,7 +77,7 @@ let koalasScore =  [88, 91, 110];
 dolphinsScore = [97, 112, 101];
 koalasScore = [109, 95, 123];
 // § Data Bonus 2: 
-koalasScore = dolphinsScore;
+// koalasScore = dolphinsScore;
  
 // GOOD LUCK 😀 
 // Your tasks: 
@@ -90,14 +90,14 @@ function getAvgScore(arr) {
 // Set values for average scores
 const getDolphinsAvg = getAvgScore(dolphinsScore);
 const getKoalasAvg = getAvgScore(koalasScore);
-console.log("Average Dolphins score 🐬<>>>", getDolphinsAvg);
-console.log("Average Koalas score 🐨<>>>", getKoalasAvg);
+// console.log("Average Dolphins score 🐬<>>>", getDolphinsAvg);
+// console.log("Average Koalas score 🐨<>>>", getKoalasAvg);
 
 // Set a variable for the winner
 let winner;
 
 // 2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score) ✅
-// Create a variable hold the team name - this can be used in the interpolation to print the winner in the console
+// Create a variable hold the team name - this can be used in the interpolation to print the winner in the console ✅
 
 function determineWinner(arrA, arrB) {
   const teamAAvg = getAvgScore(arrA);
@@ -107,10 +107,11 @@ function determineWinner(arrA, arrB) {
   // assign the name based on the score
   let teamA, teamB;
 
-  if (getAvgScore(arrA) === getAvgScore(dolphinsScore)) console.log("A: hello dolphin 🐬");
-  if (getAvgScore(arrA) === getAvgScore(koalasScore)) console.log("A: hello koala 🐨");
-  if (getAvgScore(arrB) === getAvgScore(dolphinsScore)) console.log("B: hello dolphin 🐬");
-  if (getAvgScore(arrB) === getAvgScore(koalasScore)) console.log("B: hello koala 🐨");
+  // Score checks
+  // if (getAvgScore(arrA) === getAvgScore(dolphinsScore)) console.log("A: hello dolphin 🐬");
+  // if (getAvgScore(arrA) === getAvgScore(koalasScore)) console.log("A: hello koala 🐨");
+  // if (getAvgScore(arrB) === getAvgScore(dolphinsScore)) console.log("B: hello dolphin 🐬");
+  // if (getAvgScore(arrB) === getAvgScore(koalasScore)) console.log("B: hello koala 🐨");
 
   // if ((getAvgScore(arrA) === getAvgScore(koalasScore)) || (getAvgScore(arrB) === getAvgScore(koalasScore))) {
   //   teamA = "Koalas";
@@ -119,18 +120,24 @@ function determineWinner(arrA, arrB) {
   // if ((getAvgScore(arrA) === getAvgScore(dolphinsScore)) || (getAvgScore(arrB) === getAvgScore(dolphinsScore))) {
     if (getAvgScore(arrA) === getAvgScore(dolphinsScore)) {
     console.log("team A are the 🐬🐬🐬🐬🐬🐬🐬!")
-    teamA = "Dolphins";
-    teamB = "Koalas"
+    teamA = "Dolphins 🐬";
+    teamB = "Koalas 🐨"
   // } else if ((getAvgScore(arrA) === getAvgScore(koalasScore)) || (getAvgScore(arrB) === getAvgScore(koalasScore))) {
   } else if (getAvgScore(arrA) === getAvgScore(koalasScore)) {
     console.log("team A are the 🐨🐨🐨🐨🐨🐨🐨!")
-    teamA = "Koalas";
-    teamB = "Dolphins";
+    teamA = "Koalas 🐨";
+    teamB = "Dolphins 🐬";
   };
 
   console.log("teamA, teamB", teamA, teamB);
 
-  
+  if (teamAAvg > teamBAvg) {
+    console.log(`${teamA} are the winners!!`);
+  } else if (teamBAvg > teamAAvg) {
+    console.log(`${teamB} are the winners!!`);
+  } else if (teamAAvg === teamBAvg) {
+    console.log(`This match was a draw 🤝`);
+  }
 
   // Test conditions
   // console.log("team A?", areDolphins, areKoalas);
@@ -151,7 +158,7 @@ function determineWinner(arrA, arrB) {
 
 };
 
-// determineWinner(dolphinsScore, koalasScore);
+determineWinner(dolphinsScore, koalasScore);
 determineWinner(koalasScore, dolphinsScore); 
 
 // 3. Bonus 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. Hint: Use a logical operator to test for minimum score, as well as multiple else-if blocks 😉 
