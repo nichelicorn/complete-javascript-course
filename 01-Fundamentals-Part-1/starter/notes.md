@@ -128,5 +128,13 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
 * Using the strict equality operator ensures operations are only performed on like data types; type coercion will occasionally allow code to function as expected, but incorrect data types may cause issues down the line which are unaccounted for in the codebase.
   * [Strict equality `===` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
 
-### Lesson 2.23 Logical Operators
-* 
+### Lesson 2.23 Boolean Logic
+* A branch of computer science that uses true / false value to solve complex problems
+* Uses logical operators to combine logical operators
+* `and`, `or`, and `not` operators
+* Boolean variables are either true / truthy or false / falsy
+* `and` operator returns true only if all conditions are true; can have two or more variables in `and` operations
+* `or` operator works almost in the opposite way - returns true if any one of the conditions is true
+* `not` operator does not combine multiple variables, and works on only one variable and inverts it; if a is true, it will become false, and anything false will become true
+
+### Lesson 2.24 Logical Operators

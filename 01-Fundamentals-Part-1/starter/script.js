@@ -237,7 +237,8 @@ const thisNumber = 18;
 if (thisNumber === 18) console.log("The strict equality operator does not perform type coercion :D ");
 if (thisNumber == "18") console.log("Type coercion does happen when using a loose equality operator");
 
-const favNum = Number(prompt("What's your favorite number?")); // stores the value of a user input prompt on windowload; without using type coercion, this is stored as a string
+let favNum = 77;
+// favNum = Number(prompt("What's your favorite number?")); // stores the value of a user input prompt on windowload; without using type coercion, this is stored as a string
 console.log("favNum <>>>", favNum);
 
 if (favNum === 13) {
@@ -250,8 +251,49 @@ if (favNum === 13) {
 
 if (favNum !== 13) console.log("Don't you like spooky numbers?");
 
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫 Lesson 2.23 Boolean Logic");
+const boolA = favNum >= 20;
+const boolB = favNum < 30;
+console.log("check booleans a, b", boolA, boolB);
+
+// the `not` operator
+console.log("the not operator", !boolA);
+
+// the `and` operator
+console.log("the and operator", boolA && boolB);
+
+// the `or` operator
+console.log("the or operator", boolA || boolB);
+// only false if both are actually false; will return true if one of these operators is true
+
+console.log("👩‍🏫 Logical operators");
+const hasDriversLicense = true; // variable A
+const hasGoodVision = true; // variable B
+console.log("hasDriversLicense", hasDriversLicense);
+console.log("hasGoodVision", hasGoodVision);
+
+console.log("hasDriversLicense && hasGoodVision",  hasDriversLicense && hasGoodVision); // will be false if one variable is false
+console.log("hasDriversLicense || hasGoodVision", hasDriversLicense || hasGoodVision); // will be true if one variable si true
+console.log("!hasDriversLicense", !hasDriversLicense); // will invert the current value of the variable
+
+const licensedDriver = hasDriversLicense && hasGoodVision;
+
+// if ( licensedDriver ) {
+//   console.log("Sarah is able to drive!");
+// } else {
+//   console.log("Someone else should drive.");
+// };
+
+const isTired = false; // variable C
+console.log("hasDriversLicense || hasGoodVision || isTired", hasDriversLicense || hasGoodVision || isTired);
+
+if ( licensedDriver && !isTired ) { // if Sarah is a licensed driver and is not tired
+  console.log("Sarah is able to drive!");
+} else {
+  console.log("Someone else should drive.");
+};
+
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
