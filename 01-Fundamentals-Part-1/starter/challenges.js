@@ -212,4 +212,4 @@ function declareGrandWinner(arrA, arrB) {
 
 declareGrandWinner(dolphinsScore, koalasScore);
 
-// 4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy 
+// 4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy ✅
