@@ -87,13 +87,17 @@ koalasScore = [109, 111, 123]; // 343, avg = 114.333
 //   return arr.reduce((num, total) => ((total += num) / arr.length));
 // }; // this math is wrong! somehow it's returning a divisor of 5-ish, not the array length; not sure what the issue is here... reworking this function below
 
+// function getAvgScore(arr) {
+//   return arr.reduce((num, total) => {
+//     // console.log("number is a ", typeof num);
+//     // console.log("total is a ", typeof total);
+//     return total += num;
+//   }) / arr.length;
+// };
+
 function getAvgScore(arr) {
-  return arr.reduce((num, total) => {
-    // console.log("number is a ", typeof num);
-    // console.log("total is a ", typeof total);
-    return total += num;
-  }) / arr.length;
-};
+  return arr.reduce( (num, total) => total += num ) / arr.length;
+}
 
 // Set values for average scores
 const getDolphinsAvg = getAvgScore(dolphinsScore);
@@ -110,7 +114,7 @@ let winner, winnerAvg, grandWinner;
 function determineWinner(arrA, arrB) {
   const teamAAvg = getAvgScore(arrA);
   const teamBAvg = getAvgScore(arrB);
-  console.log("team a average >", teamAAvg, "team b average >", teamBAvg);
+  // console.log("team a average >", teamAAvg, "team b average >", teamBAvg);
 
   // assign the name based on the score
   let teamA, teamB;
@@ -127,12 +131,12 @@ function determineWinner(arrA, arrB) {
   // } else 
   // if ((getAvgScore(arrA) === getAvgScore(dolphinsScore)) || (getAvgScore(arrB) === getAvgScore(dolphinsScore))) {
     if (getAvgScore(arrA) === getAvgScore(dolphinsScore)) {
-    console.log("team A are the 🐬🐬🐬🐬🐬🐬🐬!")
+    // console.log("team A are the 🐬🐬🐬🐬🐬🐬🐬!");
     teamA = "Dolphins 🐬";
     teamB = "Koalas 🐨"
   // } else if ((getAvgScore(arrA) === getAvgScore(koalasScore)) || (getAvgScore(arrB) === getAvgScore(koalasScore))) {
   } else if (getAvgScore(arrA) === getAvgScore(koalasScore)) {
-    console.log("team A are the 🐨🐨🐨🐨🐨🐨🐨!")
+    // console.log("team A are the 🐨🐨🐨🐨🐨🐨🐨!");
     teamA = "Koalas 🐨";
     teamB = "Dolphins 🐬";
   };
@@ -189,9 +193,10 @@ function determineWinner(arrA, arrB) {
 function declareGrandWinner(arrA, arrB) {
 
   determineWinner(arrA, arrB);
-  console.log("the winner <>>>", winner);
-  console.log("winnerAvg <>>>", winnerAvg);
+  // console.log("the winner <>>>", winner);
+  // console.log("winnerAvg <>>>", winnerAvg);
 
+  // Statement to declare winner
   if (winnerAvg >= 100) {
     grandWinner = winner;
     console.log(`${grandWinner} are the grand winners, with over 100 points!`)
@@ -202,6 +207,7 @@ function declareGrandWinner(arrA, arrB) {
   };
   console.log(grandWinner === winner);
 
+  // Statement to determine the fate of the trophy
   if (!grandWinner || (winner === "draw")) {
     console.log("There was no grand winner today. The trophy stands until the next match!");
   } else {
