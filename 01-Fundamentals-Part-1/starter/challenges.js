@@ -97,7 +97,7 @@ koalasScore = [109, 111, 123]; // 343, avg = 114.333
 
 function getAvgScore(arr) {
   return arr.reduce( (num, total) => total += num ) / arr.length;
-}
+};
 
 // Set values for average scores
 const getDolphinsAvg = getAvgScore(dolphinsScore);
@@ -105,7 +105,7 @@ const getKoalasAvg = getAvgScore(koalasScore);
 console.log("Average Dolphins score 🐬<>>>", getDolphinsAvg);
 console.log("Average Koalas score 🐨<>>>", getKoalasAvg);
 
-// Set a variable for the winner
+// Set variables for the winner stats
 let winner, winnerAvg, grandWinner;
 
 // 2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score) ✅
@@ -116,7 +116,7 @@ function determineWinner(arrA, arrB) {
   const teamBAvg = getAvgScore(arrB);
   // console.log("team a average >", teamAAvg, "team b average >", teamBAvg);
 
-  // assign the name based on the score
+  // Create variables to assign the name based on the score
   let teamA, teamB;
 
   // Score checks
@@ -125,12 +125,15 @@ function determineWinner(arrA, arrB) {
   // if (getAvgScore(arrB) === getAvgScore(dolphinsScore)) console.log("B: hello dolphin 🐬");
   // if (getAvgScore(arrB) === getAvgScore(koalasScore)) console.log("B: hello koala 🐨");
 
+  // This solution was over-complicated; I was attempting to account for the arrays being passed in a random order, but didn't think through what this condition was actually checking for; teamA was being assigned to whichever team appeared first in the condition, as it was checking both the scores of teamA and teamB
   // if ((getAvgScore(arrA) === getAvgScore(koalasScore)) || (getAvgScore(arrB) === getAvgScore(koalasScore))) {
   //   teamA = "Koalas";
   //   teamB = "Dolphins";
   // } else 
   // if ((getAvgScore(arrA) === getAvgScore(dolphinsScore)) || (getAvgScore(arrB) === getAvgScore(dolphinsScore))) {
-    if (getAvgScore(arrA) === getAvgScore(dolphinsScore)) {
+
+  // Assign team based on a strict equality with the average score of each team
+  if (getAvgScore(arrA) === getAvgScore(dolphinsScore)) {
     // console.log("team A are the 🐬🐬🐬🐬🐬🐬🐬!");
     teamA = "Dolphins 🐬";
     teamB = "Koalas 🐨"
@@ -155,7 +158,7 @@ function determineWinner(arrA, arrB) {
     winner = "draw";
     winnerAvg = teamAAvg || teamBAvg;
     console.log(`No winner! The match between ${teamA} and ${teamB} is a draw! 🤝`);
-  }
+  };
 
   // Test conditions
   // console.log("team A?", areDolphins, areKoalas);
@@ -177,7 +180,7 @@ function determineWinner(arrA, arrB) {
     return `${winner} win this round!`;
   } else {
     return winner;
-  }
+  };
 
 };
 
@@ -219,3 +222,5 @@ function declareGrandWinner(arrA, arrB) {
 declareGrandWinner(dolphinsScore, koalasScore);
 
 // 4. Bonus 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy ✅
+
+// This code seems super messy...BUT it works 👻
