@@ -92,22 +92,8 @@ function getAvgScore(arr) {
     // console.log("number is a ", typeof num);
     // console.log("total is a ", typeof total);
     return total += num;
-    ((total += num) / arr.length)
   }) / arr.length;
-}; // this math is wrong! somehow it's returning a divisor of 5-ish, not the array length; not sure what the issue is here... reworking this function below
-
-
-// function getAvgScore(arr) {
-//   arr.reduce((tot, num) => {
-//     console.log("number is a ", typeof num);
-//     console.log("total is a ", typeof tot);
-
-//     total = tot += num;
-//     length = arr.length;
-//     console.log(`The total is ${total} and the array length is ${length}.`);
-
-//   })
-// }
+};
 
 // Set values for average scores
 const getDolphinsAvg = getAvgScore(dolphinsScore);
@@ -213,11 +199,16 @@ function declareGrandWinner(arrA, arrB) {
     console.log(`Though they won the round, the ${winner} did not have 100 points, and no one wins the grand prize. 😿`);
   } else if (winner === "draw") {
     console.log(`This one was a draw! We'll play again soon.`);
-  }
+  };
   console.log(grandWinner === winner);
-  console.log(`${grandWinner} have taken home the trophy!! 🏆`);
 
-}
+  if (!grandWinner || (winner === "draw")) {
+    console.log("There was no grand winner today. The trophy stands until the next match!");
+  } else {
+    console.log(`${grandWinner} have taken home the trophy!! 🏆`);
+  };
+
+};
 
 declareGrandWinner(dolphinsScore, koalasScore);
 
