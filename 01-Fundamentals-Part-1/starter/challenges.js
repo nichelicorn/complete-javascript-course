@@ -208,6 +208,7 @@ function declareGrandWinner(arrA, arrB) {
   } else if (winner === "draw") {
     console.log(`This one was a draw! We'll play again soon.`);
   };
+
   console.log(grandWinner === winner);
 
   // Statement to determine the fate of the trophy
