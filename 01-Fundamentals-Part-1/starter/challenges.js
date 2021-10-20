@@ -88,13 +88,26 @@ koalasScore = [109, 111, 123]; // 343, avg = 114.333
 // }; // this math is wrong! somehow it's returning a divisor of 5-ish, not the array length; not sure what the issue is here... reworking this function below
 
 function getAvgScore(arr) {
-  arr.reduce((tot, num) => {
-    total = tot += num;
-    length = arr.length;
-    console.log(`The total is ${total} and the array length is ${length}.`);
+  return arr.reduce((num, total) => {
+    // console.log("number is a ", typeof num);
+    // console.log("total is a ", typeof total);
+    return total += num;
+    ((total += num) / arr.length)
+  }) / arr.length;
+}; // this math is wrong! somehow it's returning a divisor of 5-ish, not the array length; not sure what the issue is here... reworking this function below
 
-  })
-}
+
+// function getAvgScore(arr) {
+//   arr.reduce((tot, num) => {
+//     console.log("number is a ", typeof num);
+//     console.log("total is a ", typeof tot);
+
+//     total = tot += num;
+//     length = arr.length;
+//     console.log(`The total is ${total} and the array length is ${length}.`);
+
+//   })
+// }
 
 // Set values for average scores
 const getDolphinsAvg = getAvgScore(dolphinsScore);
