@@ -293,8 +293,45 @@ if ( licensedDriver && !isTired ) { // if Sarah is a licensed driver and is not 
   console.log("Someone else should drive.");
 };
 
+console.log("👩‍🏫 2.26 The Switch Statement");
+const day = "Wednesday";
 
-// console.log("👩‍🏫 ");
+switch (day) {
+  case "Monday": // day === Monday
+    console.log("Create plan for the week 🎨");
+    break; // inside a switch statement, without the break, the code continues executing until it reaches a break
+  case "Tuesday":
+    console.log("Have Tacos 🌮");
+    break;
+  case "Wednesday":
+    console.log("Hope you're wearing pink today! 🐷");
+    break;
+  case "Thursday":
+  case "Friday":
+    console.log("Work on website 👩‍💻");
+    break;
+  case "Saturday":
+  case "Sunday":
+    console.log("Enjoy the weekend! 🌞");
+    break;
+  default:
+    console.log("Not a valid day of the week 🗓");
+};
+
+if (day === "Monday") {
+    console.log("Create plan for the week 🎨");
+} else if (day === "Tuesday") {
+    console.log("Have Tacos 🌮");
+} else if (day === "Wednesday") {
+    console.log("Hope you're wearing pink today! 🐷");
+} else if (day === "Thursday" || day === "Friday") {
+    console.log("Work on website 👩‍💻");
+} else if (day === "Saturday" || day === "Sunday") {
+    console.log("Enjoy the weekend! 🌞");
+} else {
+    console.log("Not a valid day of the week 🗓");
+};
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

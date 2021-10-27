@@ -187,3 +187,36 @@ console.log("Sarah's new country?", checkSarahsConditions());
 // 3. Write an if statement to help Sarah figure out if your country is right for her. You will need to write a condition that accounts for all of Sarah's criteria. Take your time with this, and check part of the solution if necessary. ✅
 // 4. If yours is the right country, log a string like this: 'You should live in Portugal :)'. If not, log 'Portugal does not meet your criteria :('  ✅
 // 5. Probably your country does not meet all the criteria. So go back and temporarily change some variables in order to make the condition true (unless you live in Canada :D)  ✅
+
+console.log("📝 The Switch Statement");
+// 1. Use a switch statement to log the following string for the given 'language':
+// chinese or mandarin: 'MOST number of native speakers!'
+// spanish: '2nd place in number of native speakers'
+// english: '3rd place'
+// hindi: 'Number 4'
+// arabic: '5th most spoken language'
+// for all other simply log 'Great language too :D'
+
+const switchLang = "english";
+
+switch (switchLang) {
+  case "chinese":
+  case "mandarin":
+    console.log(`${switchLang} has the MOST number of native speakers!`);
+    break;
+  case "spanish":
+    console.log(`${switchLang} is 2nd place in number of native speakers`);
+    break;
+  case "english":
+    console.log(`${switchLang} has the 3rd place`);
+    break;
+  case "hindi":
+    console.log(`${switchLang} has Number 4`);
+    break;
+  case "arabic":
+    console.log(`${switchLang} is the 5th most spoken language`);
+    break;
+  default:
+    console.log(`${switchLang} is a Great language too :D`);
+};
+

@@ -138,3 +138,19 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
 * `not` operator does not combine multiple variables, and works on only one variable and inverts it; if a is true, it will become false, and anything false will become true
 
 ### Lesson 2.24 Logical Operators
+
+
+### Lesson 2.26 The Switch statement
+* Use this when you want to compare one value to multiple different outcomes / options
+* Works similar to an `if / else` statement
+* May be declining in use
+* [`switch` on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+  * The `switch` statement evaluates an expression, matching the expression's value to a `case` clause, and executes statements associated with that case, as well as statements in `cases` that follow the matching `case`
+  * Uses the strict comparison `===` to match the `expression` criteria with the `case`
+  * A `default` clause can be provided in the event that none of the specified cases are met by the `expression` criteria
+  * Requires a `break` statement at the end of each clause; if the `break` is omitted, the program continues executing the next statement in the `switch`, until a `break` is found or the end is reached; *not* required if preceded by a `return` statement
+  * Multiple `cases` can be defined to execute the same statements; this is done by separating the `cases` using a colon `:`
+  * Multi-`case` chained operations are also possible, adding / updating the expression value until a `break` is reached or a `default` is executed
+  * Wrap clauses with curly brackets `{}` if using variable redeclarations from within the `switch` statement
+
+  
