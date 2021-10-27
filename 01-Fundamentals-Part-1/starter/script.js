@@ -358,17 +358,3 @@ if (condAge >= 18) {
 console.log(drink2);
 
 console.log(`I like to drink ${drink2}`);
-
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
