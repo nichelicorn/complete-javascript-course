@@ -160,9 +160,29 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
   * Statements include things like control flow statements (`if ... else`, `switch`, `break`, etc), declarations (`var`, `let`, and `const`), functions and classes (`function`, `return`, `class`, etc), iterations (`for` loops, `while`, etc), and others (`debugger`, `import`, `export`, etc);
   * There are some browser compatibility issues with statements / declarations, mainly Internet Explorer
 
-### Lesson 2.28 - The Conditional (Ternary) Operator
+### Lesson 2.28 The Conditional (Ternary) Operator
 * "This one is actually *really* nice." - Jonas
 * Only one thing can be done if a condition is true (use an `if ... else` when you have multiple things to do in a statement)
 * Has three parts (hence the name, ternary), the condition, the `if` part, and the `else` part
 * An operator always produces a value (it's an expression); it can be assigned to a variable
 * Can be used in an interpolation, *unlike* an `if ... else` statement
+
+### Lesson 2.30 JavaScript Releases
+* The history of JavaScript 📖
+  * First version created in 1995 in 10 days; was initially named Mocha, renamed to LiveScript in 1996, and then to JavaScript to attract Java developers
+  * Internet Explorer launched in 1996 as well, but called their copied Netscape JavaScript JScript
+  * ECMA released ES1 in 1997, the very first official standard for the JavaScript language; this means that all browsers use the same version of the language in implementation
+  * New features released in 2009 after much debate (ES5)
+  * June 2015 saw the launch of ES2015 / ES6, containing many new and exciting features! Still a big deal in the JS world; new releases now occur annually
+
+* JavaScript includes backward compatibility! This means you can't break the web using old JS code - it will work just the same
+  * Old features are *never* removed
+  * New versions are incremental updates on top of previous versions (releases)
+  * Websites will never stop working!
+  * Ignore most of the weird, old stuff, and focus on new features instead! There's a lot of cool stuff now 😎
+
+* During development, use the most recent version of your browser (Firefox / Chrome)
+* During production, transpiling / polyfilling allows any new code to be interpreted on older browsers / devices
+  * ES5 is fully supported on all browsers, back to 2011
+  * Newer releases are well supported in modern browsers, but lack support for older browsers; most of these features can be put into production using transpiling / polyfilling
+  * ESNext (future releases) are often implemented before they enter official ECMAScript documentation; may  not be available in all browsers

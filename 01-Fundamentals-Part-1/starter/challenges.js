@@ -239,7 +239,7 @@ let [ bill1, bill2, bill3 ] = [ 275, 40, 430 ];
 // Your tasks:
 // 1. Calculate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
 const gratuity = (bill) => {
-  return (bill >= 300 || bill <= 50) ? (bill * .15) : (bill * .2);
+  return (bill <= 300 && bill >= 50) ? (bill * .15) : (bill * .2);
 }
 
 console.log(gratuity(bill1));
