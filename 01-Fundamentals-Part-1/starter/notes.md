@@ -153,4 +153,9 @@ A fix was proposed for ECMAScript (via an opt-in), but was rejected. It would ha
   * Multi-`case` chained operations are also possible, adding / updating the expression value until a `break` is reached or a `default` is executed
   * Wrap clauses with curly brackets `{}` if using variable redeclarations from within the `switch` statement
 
-  
+### Lesson 2.26 Statements and Expressions
+* An expression is a piece of code that produces a value (ex, 3 + 4 is an expression, and produces a value, 7; 17 on its own is also an expression, as are Boolean values or other number)
+* A declaration is like a complete sentence, and expressions are the words that make up the declarations/statements
+* [Statements and declarations on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements)
+  * Statements include things like control flow statements (`if / else`, `switch`, `break`, etc), declarations (`var`, `let`, and `const`), functions and classes (`function`, `return`, `class`, etc), iterations (`for` loops, `while`, etc), and others (`debugger`, `import`, `export`, etc);
+  * There are some browser compatibility issues with statements / declarations, mainly Internet Explorer

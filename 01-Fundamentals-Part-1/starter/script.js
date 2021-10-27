@@ -332,7 +332,17 @@ if (day === "Monday") {
     console.log("Not a valid day of the week 🗓");
 };
 
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫  2.27 Statements and Expressions");
+
+if (23 > 10) {
+  const string = "23 is bigger";
+  console.log("string", string); 
+}; // this is a statement, doesn't really produce a value, just declares a variable, `string`; ends with a semicolon
+
+console.log(`I'm ${2037 - 1991} years old.`); // template literals work with expressions
+
+
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
