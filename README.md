@@ -1,23 +1,3 @@
-# Notes
-
-### Lesson 2.8 : A Brief Introduction to JavaScript
-
-* What is JavaScript?
-  * A high-level (don't have to think about the complex management of the program, operates in / using abstractions), object-oriented (mostly based on the concepts of objects for storing most kinds of data), multi-paradign (flexible and versatile, allows devs to use multiple styles of programming to achieve results) programming language (a tool that instructs a computer to do something)
-  * builds dynamic effects and web applications in a browser
-  * can be build using frameworks and libraries for simplicity and speed (these are built using JavaScript!)
-  * nodeJS builds backend web applications for interaction with databases
-  * can also use JS for building native mobile and desktop applications
-
-* What is JavaScript used for?
-  * JavaScript (functionality, how things happen, interactivity and dynamic effects, can also manipulate HTML and CSS) works with HTML (content) and CSS (style and presentation, layout) to create web applications
-  * If web applications were paragraphs: 
-    * HTML represents the nouns
-    * CSS represent the adjectives
-    * JavaScript represents the verbs 
-
-
-
 # Course Material and FAQ for my Complete JavaScript Course
 
 This repo contains starter files and final code for all sections and projects contained in the course.
