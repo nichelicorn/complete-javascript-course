@@ -341,9 +341,24 @@ if (23 > 10) {
 
 console.log(`I'm ${2037 - 1991} years old.`); // template literals work with expressions
 
+console.log("👩‍🏫  2.28 The Conditional (Ternary) Operator");
+const condAge = 33;
+const ofAge = condAge >= 18 ? console.log("I like to drink wine 🍷")  : console.log("I like to drink tea 🧋");
 
+// 👇 This creates one small, readable (assuming you know the syntax) expression
+const drink = condAge >= 18 ? "🍷 wine" : "🧋 bubble tea";
 
-// console.log("👩‍🏫 ");
+// 👇 This is a lot to write / read!
+let drink2;
+if (condAge >= 18) {
+  drink2 = "🍷";
+} else {
+  drink2 = "🧋";
+};
+console.log(drink2);
+
+console.log(`I like to drink ${drink2}`);
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
