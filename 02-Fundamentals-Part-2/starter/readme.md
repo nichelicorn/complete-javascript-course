@@ -23,3 +23,13 @@
 * Parameters are defined when a function is invoked (arguments passed through to the function);
 * Set function invocations to a variable to utilize their returned values in the script
 * Keeps code DRY
+
+## Function Declarations vs. Expressions
+* Function declarations utilize the `function` keyword
+* Function expressions are set up like a variable, and assign the function declaration to its value
+* 🪄 In JavaScript, functions are values, which means they can be stored in variables
+* The main practical difference is that function declarations can be called *before* they are defined in the code
+* Using declarations vs. expressions is usually down to personal preference
+  * Know about both! They each have their place / use in JavaScript
+
+  

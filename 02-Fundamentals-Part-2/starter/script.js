@@ -36,7 +36,34 @@ console.log("🍊🍊🍊!", orangeOnly);
 const num = Number("77");
 console.log("🔢", typeof num, num);
 
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫  Function Declarations vs. Expressions");
+
+const earlyAge = calcAge(0);
+console.log("function declarations can be invoked prior to their declaration in the codebase", earlyAge);
+
+// Function declaration
+// yob = year of birth
+function calcAge(yob) {
+  const thisYear = new Date().getFullYear();
+  // console.log("thisYear", thisYear);
+  const age = thisYear - yob;
+  return age;
+}
+
+const nAge = calcAge(1913);
+const jAge = calcAge(1904);
+console.log(nAge, jAge);
+
+// Function expression
+const calcAgeAnon = function birthYear(yob) {
+  const thisYear = new Date().getFullYear();
+  const age = thisYear - yob;
+  return age;
+}
+
+const anonAge = calcAgeAnon(1911);
+console.log("anon age", anonAge);
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
