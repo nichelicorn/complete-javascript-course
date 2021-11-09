@@ -32,6 +32,10 @@ console.log("🌞🧃", morningBev);
 const orangeOnly = fruitProcessor(0, 3);
 console.log("🍊🍊🍊!", orangeOnly);
 
+// built-in JS function that converts a string to a number; only works on strings made of numerical characters
+const num = Number("77");
+console.log("🔢", typeof num, num);
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

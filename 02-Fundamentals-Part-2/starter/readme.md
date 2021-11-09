@@ -22,3 +22,4 @@
   * Food processor analogy (food processor = function body)
 * Parameters are defined when a function is invoked (arguments passed through to the function);
 * Set function invocations to a variable to utilize their returned values in the script
+* Keeps code DRY
