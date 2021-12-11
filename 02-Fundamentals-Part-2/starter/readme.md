@@ -32,4 +32,23 @@
 * Using declarations vs. expressions is usually down to personal preference
   * Know about both! They each have their place / use in JavaScript
 
-  
+## Arrow Functions
+* An arrow function is a shorter, more concise syntax
+* Remember to include the `return` statement when writing multi-line functions / arrow functions
+* Arrow functions are easier to write, but they aren't the best tool for every scenario
+  * The `this` keyword DOES NOT APPLY to arrow functions - if `this` binding is required, use a fxn expression / declaration
+  * Best case for use is one-liner functions
+
+## Functions Calling Other Functions
+* Write small functions that do simple tasks
+* These functions can be invoked anywhere within the codebase, creating DRYness in the code, and avoiding repetition
+* Keeping functionality discrete avoids future debugging issues when a value / expression needs updating
+
+## Reviewing Functions
+* Function declarations use the `function` keyword and can be used in code before it is declared (if it appears lower down the script)
+* Function expressions are essentially a function *value* stored in a variable; they are declared using the `const` variable keyword and are then assigned as the value of the variable
+* Arrow functions are a shortened syntax; these are great for one-line functions; has no `this` keyword
+* These various methods of building functions all operating by receiving, transforming, and outputing data
+* Functions will have: a name (usually); parameters (placeholders to receive input values; when invoked, these values will be presented as arguments); function body (block of code to be executed; processes the function's input data); a `return` statement (contains the output value from the function and terminates execution)
+* A function is invoked / called / executed using the function name and a pair of parentheses containing any arguments needed to pass through to the function's parameters
+* Storing a function invocation in a variable stores the results of invoking a function for reuse

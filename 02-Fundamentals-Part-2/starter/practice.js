@@ -20,7 +20,7 @@ const fishCountryDeets = describeCountry("Atlantis", 999, "Alga Central Whirlpoo
 console.log("🐟🇺🇳🍥", fishCountryDeets);
 
 console.log("👩‍💻 Function Declarations vs Expressions");
-// 1. The world population is 7900 million people. ✅ Create a function declaration called 'percentageOfWorld1' which ✅ receives a 'population' value, and ✅ returns the percentage of the world population that the given population represents. For example, China has 1441 million people, so it's about 18.2% of the world population
+// 1. The world population is 7900 million people. ✅ Create a function declaration called 'percentageOfWorld1' which ✅ receives a 'population' value, and ✅ returns the percentage of the world population that the given population represents. For example, China has 1411 million people, so it's about 18.2% of the world population
 // 2. To calculate the percentage, divide the given 'population' value by 7900 and then multiply by 100
 // 3. ✅ Call 'percentageOfWorld1' for 3 populations of countries of your choice, store the results into variables, and log them to the console
 function populationDeclrn(pop) {
@@ -64,7 +64,31 @@ const populationArrow = (pop) => {
 const canadaPopPctg = populationArrow(38);
 console.log(`🇨🇦 Approximately ${canadaPopPctg}% of the world population lives in Canada.`);
 
-// console.log("👩‍💻 ");
+console.log("👩‍💻 Functions Calling Other Functions");
+// 1. Create a function called 'describePopulation'. Use the function type you like the most. This function takes in two arguments: 'country' and 'population', and returns a string like this: 'China has 1411 million people, which is about 18.2% of the world.'
+function describePopulation(country, pop) {
+  const pctg = Math.round(pop / 7900 * 100);
+
+  return `${country} has ${pop} million people, which is about ${pctg}% of the total world population!`;
+}
+
+// console.log(describePopulation("China", 1411));
+
+// 2. To calculate the percentage, 'describePopulation' call the 'percentageOfWorld1' you created earlier
+// console.log(populationDeclrn(1411));
+function describeInvokingOtherFunction(country, pop) {
+  const pctg = populationDeclrn(pop);
+
+  return `${country} has ${pop} million people, which is about ${pctg}% of the total world population!`;
+}
+
+console.log(describeInvokingOtherFunction("China", 1411));
+
+// 3. Call 'describePopulation' with data for 3 countries of your choice
+console.log(describePopulation("India", 1384));
+console.log(describePopulation("United States of America", 332));
+console.log(describePopulation("Indonesia", 271));
+
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");

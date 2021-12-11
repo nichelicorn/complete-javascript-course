@@ -64,9 +64,67 @@ const calcAgeAnon = function birthYear(yob) {
 const anonAge = calcAgeAnon(1911);
 console.log("anon age", anonAge);
 
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫  Arrow Functions");
+// One line arrow function
+// const birthYear = 2002;
+// birthYear is the parameter here
+const calcAge3 = birthYear => 2037 - birthYear;
+const age3 = calcAge3(1001);
+console.log("age3 <>>>", age3);
+
+// Multi-line arrow function
+const yearsToRetirement = (birthYear, name) => {
+  // calculate retirement age - currentAge
+  const age = 2021 - birthYear;
+  const retirement = 65 - age;
+
+  // return retirement;
+  return `${name}, you have ${retirement} years until retirement 🧖‍♀️`;
+}
+
+console.log(yearsToRetirement(1982, "Nichelicorn"));
+console.log(yearsToRetirement(1978, "BigBike96"))
+
+console.log("👩‍🏫  Functions Calling Other Functions");
+// Fruit must be chopped before adding to the processor
+function frootChopper(numFruits) {
+  // return the fruit chopped into four pieces
+  return numFruits * 4;
+}
+
+function frootProcessor(numApples, numOranges) {
+  const applePieces = frootChopper(numApples);
+  const orangePieces = frootChopper(numOranges);
+
+  const juice = `Your juice was made with ${applePieces} pieces of apple and ${orangePieces} pieces of orange.`;
+  return juice; 
+}
+
+console.log(frootProcessor(2, 3));
+
+console.log("👩‍🏫 Reviewing Functions");
+const calcul8Age = function (birthYear) {
+  return 2037 - birthYear;
+}
+
+const yrsToRetire = function (birthYear, name) {
+  // calculate retirement age - currentAge
+  const age = calcul8Age(birthYear);
+  const retirement = 65 - age;
+
+  // return retirement based on the number of years remaining
+ if (retirement > 0) {
+  return `${name}, you have ${retirement} years until retirement 🧖‍♀️`;
+} else {
+   return `${name} has already retired!`;
+ }
+};
+
+console.log(yrsToRetire(1999, "Shang-Chi"));
+console.log(yrsToRetire(1001, "Wenwu"));
+
+
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
