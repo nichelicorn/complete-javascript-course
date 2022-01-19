@@ -123,9 +123,45 @@ const yrsToRetire = function (birthYear, name) {
 console.log(yrsToRetire(1999, "Shang-Chi"));
 console.log(yrsToRetire(1001, "Wenwu"));
 
+console.log("👩‍🏫  Introduction to Arrays");
+// can set variables individually, but this is time consuming and takes up a lot of space in code
+const friend1 = "Ahsoka";
+const friend2 = "Rex";
+const friend3 = "Anakin";
+
+// use an array to group like values together so they can be accessed and referenced as a group
+const friends = ["Ahsoka", "Rex", "Anakin"];
+console.log("friends, array literal", friends);
+
+const years = new Array(103332, 102323, 104829);
+console.log("years, made with `new Array()` function,", years);
+
+console.log("the first element in the friends array <>>>", friends[0]);
+console.log("the number of friends <>>>", friends.length);
+console.log("the middle friend <>>>", friends[1]);
+console.log("the last friend <>>>", friends[friends.length - 1]);
+
+// mutate the array: change the name of the last friend in the array
+friends[2] = "Mace";
+console.log("new friends array <>>>", friends);
+
+const ahsoka = ["Ahsoka", "Tano", 336, undefined, "Jedi", friends];
+
+console.log("Ahsoka details <>>>", ahsoka);
+console.log("how many details?", ahsoka.length);
+
+// Exercise
+// use the calcAge function on the array below and store the results in a new array
+const theseYears = [1990, 1967, 2002, 2010, 2018];
+
+function createAgeArray(array) {
+  return array.map(year => calcAge(year));
+};
+
+const theseAges = createAgeArray(theseYears);
+console.log("ages array <>>>", theseAges);
 
 
-// console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

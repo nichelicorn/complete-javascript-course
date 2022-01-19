@@ -52,3 +52,11 @@
 * Functions will have: a name (usually); parameters (placeholders to receive input values; when invoked, these values will be presented as arguments); function body (block of code to be executed; processes the function's input data); a `return` statement (contains the output value from the function and terminates execution)
 * A function is invoked / called / executed using the function name and a pair of parentheses containing any arguments needed to pass through to the function's parameters
 * Storing a function invocation in a variable stores the results of invoking a function for reuse
+
+## Introduction to Arrays
+* Arrays are zero-based; items in the array are indexed beginning with zero; the first element in an array can be called by referencing array[0]
+* Reminder: an expression is code that produces a value
+* use `array.length` to get the number of elements in an array
+* Only primitive values are bound by the immutability of `const` vs. `let`
+* Array values can be mutated; however, the entire array cannot be redeclared when declared as a `cosnt`
+* When working with array values, iterator methods can be used to perform the same operation on each value within the array

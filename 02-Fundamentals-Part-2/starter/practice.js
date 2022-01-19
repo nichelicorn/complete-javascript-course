@@ -89,7 +89,25 @@ console.log(describePopulation("India", 1384));
 console.log(describePopulation("United States of America", 332));
 console.log(describePopulation("Indonesia", 271));
 
-// console.log("👩‍💻 ");
+console.log("👩‍💻 Introduction to Arrays");
+// ✅ 1. Create an array containing 4 population values of 4 countries of your choice.You may use the values you have been using previously. Store this array into a variable called 'populations'
+// ✅ 2. Log to the console whether the array has 4 elements or not (true or false)
+// 3. Create an array called 'percentages' containing the percentages of the world population for these 4 population values. Use the function 'percentageOfWorld1' that you created earlier to compute the 4 percentage values
+
+// populations of Nova Scotia, New Brunswick, Newfoundland and Labrador, and Prince Edward Island
+// source: https://en.wikipedia.org/wiki/Population_of_Canada_by_province_and_territory
+const maritimeProvincePopulations = [ 938598, 747101, 519716, 142907 ];
+
+console.log("the array has 4 elements <>>>", maritimeProvincePopulations.length === 4);
+
+function calculatePercentage(array) {
+  return array.map(num => populationDeclrn(num));
+}
+
+// this is returning math, but the numbers are below the threshold to round to 1; correct population numbers for the maritime provinces should be represented as .num, as they are all below 1 million inhabitants
+const maritimeProvincePercentages = calculatePercentage(maritimeProvincePopulations);
+console.log("Maritime province population percentages <>>>", maritimeProvincePercentages);
+
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
