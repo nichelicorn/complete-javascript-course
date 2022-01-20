@@ -60,3 +60,31 @@
 * Only primitive values are bound by the immutability of `const` vs. `let`
 * Array values can be mutated; however, the entire array cannot be redeclared when declared as a `cosnt`
 * When working with array values, iterator methods can be used to perform the same operation on each value within the array
+
+## Basic Array Operations (Methods)
+* JS has some built-in methods that are specifically designed to use with arrays
+* `.push(element)` adds an element to the end of an array
+  * this method accepts an argument - the element to be added to the array
+  * mutates the original array
+  * returns the length of the new array; setting this method to a variable will return a number
+
+* `.unshift(element)` adds an element to the beginning of an array
+  * accepts an argument - the element to be added to the array
+  * mutates the original array
+  * returns the updated length of the array
+
+* `.pop()` will remove the last element from the array
+  * does not require an argument; will automatically remove the last element in the array
+  * returns the element that was removed from the array
+
+* `.shift()` will remove the first element from the array
+  * does not require an argument; will automatically remove the first element in the array
+  * returns the element that was removed from the array
+
+* `.indexOf(element)` returns the index number of a known element
+  * accepts an argument - the element to be found
+  * if an unknown element is passed to the method, it will return -1
+
+* `.includes(element)` will search an array for an element and return a boolean
+  * accepts one argument, an element to be searched for within an array
+  * tests with strict equality

@@ -161,8 +161,37 @@ function createAgeArray(array) {
 const theseAges = createAgeArray(theseYears);
 console.log("ages array <>>>", theseAges);
 
+console.log("👩‍🏫 Basic Array Operations (Methods)");
 
-// console.log("👩‍🏫 ");
+// add a name to the end of the `friends` array
+friends.push("Chewbacca");
+console.log("a new friend <>>>", friends);
+// const newLength = friends.push("Chewbacca");
+// console.log("newLength <>>>", newLength);
+
+// add a name to the beginning of the `friends` array
+friends.unshift("Anakin");
+console.log("a new friend <>>>", friends);
+// console.log("new length <>>>", friends.unshift("Anakin"));
+
+// remove the last element from the array
+friends.pop();
+console.log("one less friend <>>>", friends);
+const poppedFriend = friends.pop();
+console.log("the popped friend <>>>", poppedFriend);
+console.log("one less friend <>>>", friends);
+
+// remove the first element from the array
+friends.shift();
+console.log("one less friend <>>>", friends);
+
+// find the index of a known element
+console.log("index of Ahsoka <>>>", friends.indexOf("Ahsoka"));
+console.log("index of unknown element <>>>", friends.indexOf("unknown"));
+
+// determine if an element exists within an array
+console.log("there is a friend named Din Djarin <>>>", friends.includes("Din Djarin"));
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
