@@ -88,33 +88,28 @@ const totals = [
 ]
 
 // Create function
-// function calculateTips(bill) {
-//   let tip = 0;
-
-//   if (bill <= 300 && bill >= 50) {
-//     return tip = bill * .15;
-//   } else {
-//     return tip = bill * .20;
-//   }
-// }
+function calcTips(bill) {
+  return bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.20
+}
 
 // Refactor function to work on an array of bills
 function calculateTips(array) {
-  let tip = 0;
+  // let tip = 0;
 
   return array.map(bill => {
-    if (bill <= 300 && bill >= 50) {
-      tips.push((bill * .15));
-      return tip = bill * .15;
-    } else {
-      tips.push(bill * .20);
-      return tip = bill * .20;
-    }
+    bill >= 50 && bill <= 300 ? tips.push(bill * 0.15) : tips.push(bill * 0.20)
+    // if (bill <= 300 && bill >= 50) {
+    //   tips.push((bill * .15));
+    //   return tip = bill * .15;
+    // } else {
+    //   tips.push(bill * .20);
+    //   return tip = bill * .20;
+    // }
   })
 }
 
-// console.log("tip for a bill of $100 >", calculateTips(100));
-// console.log("tip for a bill of $15 >", calculateTips(1500));
+console.log("tip for a bill of $100 >", calcTips(100));
+console.log("tip for a bill of $15 >", calcTips(1500));
 
 calculateTips(bills);
 console.log("the tips for an array of bills >", tips);
