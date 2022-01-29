@@ -99,4 +99,14 @@
   * object literal syntax, defining an object using curly braces, is the easiest way to create a new object
   * used to group values that belong together
   * the order of values *does not matter* because they will be accessed using the key, rather than an index as in an array
-  
+
+## 43. Dot vs. Bracket Notation
+* The order of properties does not matter; the property name (key) is used to access these values
+* dot notation - searches the object when a key name is used, ex. `ahsoka.lastName` will look for the key `lastName` inside the `ahsoka` object
+* bracket notation - searches the object when a key name is used, ex. `ahsoka["lastName"]` will look for the key `lastName` inside the `ahsoka` object; use a string inside the brackets to indicate the key / property name
+  * brackets allow use of expressions to discover values if the key name is unknown
+  * see example on line 224 of the scripts file
+* using an unknown key will returned an `undefined` value
+* brackets and dots are operators
+* in MDN docs, dots are referred to as `member access`, and brackets are referred to as `computed member access`
+  * order of precedence shows arrays and dots are both completed left to right in order received 

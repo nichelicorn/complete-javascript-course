@@ -202,7 +202,7 @@ const ahsokaArray = [
   friends
 ];
 
-const ahsokaObject = {
+const ahsokaObj = {
   firstName: "Ahsoka",
   lastName: "Tano",
   born: 36,
@@ -211,7 +211,50 @@ const ahsokaObject = {
   friends: ["Chewbacca", "Rex", "Anakin"]
 }
 
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫 43. Dot vs. Bracket Notation");
+// The object
+console.log("Ahsoka details >", ahsokaObj);
+
+// dot notation
+console.log("Ahsoka's last name, dots >", ahsokaObj.lastName);
+
+// bracket notation
+console.log("Ahsoka's last name, brackets >", ahsokaObj["lastName"]);
+
+// store the name only; this variable will be set to search the object for any value containing the value of `nameKey`
+const nameKey = "Name";
+console.log("first name using brackets and a special key >", ahsokaObj["first" + nameKey]);
+console.log("last name using brackets and a special key >", ahsokaObj["last" + nameKey]);
+
+// what if we don't know which property we want to show?
+// this uses a built-in JS function that creates an input field; user will input one of the options and that value will be returned in the console
+// const interestedIn = prompt("What do you want to know about Ahsoka? Input firstName, lastName, born, died, job, or friends");
+// console.log("user is interested in >", interestedIn);
+// using dot notation
+// console.log("interested in prompt with dots >", ahsokaObj.interestedIn);
+// using bracket notation
+// console.log("interested in propt with brackets >", ahsokaObj[interestedIn]);
+
+// return a message when an undefined value is selected
+function printObjectDetail() {
+  if(ahsokaObj[interestedIn]) {
+    console.log(`Ahsoka's ${interestedIn} is / are ${ahsokaObj[interestedIn]}`);
+  } else {
+    console.log(`The ${interestedIn} is undefined.`);
+  }
+}
+
+// printObjectDetail(ahsokaObj);
+
+ahsokaObj.location = "Coruscant";
+ahsokaObj["twitter"] = "@not_a_jedi";
+
+// challenge - print a string with Ahsoka's first three friends, and the first friend in the array is the best friend; do not hardcode these values
+console.log("Ahsoka's best friend!");
+console.log(`${ahsokaObj.firstName}'s closest friends are ${ahsokaObj["friends"]}, and her best friend is ${ahsokaObj["friends"][0]}`);
+
+console.log("Jonas' solution >", `${ahsokaObj.firstName} has ${ahsokaObj.friends.length} friends. ${ahsokaObj.firstName}'s best friend is ${ahsokaObj.friends[0]}.`)
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

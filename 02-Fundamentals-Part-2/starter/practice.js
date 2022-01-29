@@ -144,18 +144,33 @@ neighbours[findMandalore] = "New Mandalore";
 console.log("current neighbours of Taris 🪐 >", neighbours);
 
 console.log("👩‍💻 Introduction to Objects");
-// 1. Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments)
+// 1. Create an object called 'malawi' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments)
 // source : https://en.wikipedia.org/wiki/Malawi
-const myCountry = {
-  country: "Malawi",
+const malawi = {
+  name: "Malawi",
   capital: "Lilongwe",
   language: ["English", "Chewa", "Yao", "Tumbuka", "Tonga", "Sena", "Lomwe", "Ngonde", "Lambya"],
   population: 19129952,
   neighbours: ["Zambia", "Tanzania", "Mozambique"]
 }
-console.log("Malawi data >", myCountry);
+console.log("Malawi data >", malawi);
 
-// console.log("👩‍💻 ");
+console.log("👩‍💻 Dot vs. Bracket Notation");
+// ✅ 1. Using the object from the previous assignment, log a string like this to the console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries and a capital called Helsinki.'
+// ✅ 2. ✅ Increase the country's population by two million using dot notation, and ✅ then decrease it by 1.5 million using brackets notation.
+console.log("Malawi one minute elevator speech 🛗");
+
+function printCountryDetails(country) {
+  return `${country.name} has a population of ${country.population} people. The most-spoken language in ${country.name} is ${country.language[0]}. ${country.name} has several neighbours, including ${country.neighbours[0]} and ${country.neighbours[2]}. ${country.capital} is ${country.name}'s capital city.`
+}
+
+console.log(printCountryDetails(malawi));
+
+malawi.population += 2000000;
+console.log("a dot notation increase in Malawi's population >", malawi.population);
+malawi["population"] -= 1500000;
+console.log("a bracket notation decrease in Malawi's population >", malawi.population);
+
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
