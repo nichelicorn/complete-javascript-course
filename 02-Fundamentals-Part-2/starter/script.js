@@ -192,7 +192,25 @@ console.log("index of unknown element <>>>", friends.indexOf("unknown"));
 // determine if an element exists within an array
 console.log("there is a friend named Din Djarin <>>>", friends.includes("Din Djarin"));
 
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫  42. Introduction to Objects");
+
+const ahsokaArray = [
+  "Ahsoka",
+  "Tano",
+  36 - 20,
+  "Jedi",
+  friends
+];
+
+const ahsokaObject = {
+  firstName: "Ahsoka",
+  lastName: "Tano",
+  born: 36,
+  died: undefined,
+  job: "Jedi",
+  friends: ["Chewbacca", "Rex", "Anakin"]
+}
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

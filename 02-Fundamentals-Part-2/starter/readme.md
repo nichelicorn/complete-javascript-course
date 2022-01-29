@@ -88,3 +88,15 @@
 * `.includes(element)` will search an array for an element and return a boolean
   * accepts one argument, an element to be searched for within an array
   * tests with strict equality
+
+## Coding Challenge #2
+* Complex data types can be reassigned when using certain prototype methods
+
+## 42. Introduction to Objects
+* Arrays are data structures which combine multiple values that all belong to a single entity; arrays do not have named elements - they can be referenced only by index
+* Objects are complex data structures with defined key: value pairs
+  * new objects are defined using curly brackets `{}` rather than square brackets
+  * object literal syntax, defining an object using curly braces, is the easiest way to create a new object
+  * used to group values that belong together
+  * the order of values *does not matter* because they will be accessed using the key, rather than an index as in an array
+  

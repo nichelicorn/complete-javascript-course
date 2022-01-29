@@ -143,7 +143,18 @@ console.log("Mandalore can be found at index >", findMandalore);
 neighbours[findMandalore] = "New Mandalore";
 console.log("current neighbours of Taris 🪐 >", neighbours);
 
-// console.log("👩‍💻 ");
+console.log("👩‍💻 Introduction to Objects");
+// 1. Create an object called 'myCountry' for a country of your choice, containing properties 'country', 'capital', 'language', 'population' and 'neighbours' (an array like we used in previous assignments)
+// source : https://en.wikipedia.org/wiki/Malawi
+const myCountry = {
+  country: "Malawi",
+  capital: "Lilongwe",
+  language: ["English", "Chewa", "Yao", "Tumbuka", "Tonga", "Sena", "Lomwe", "Ngonde", "Lambya"],
+  population: 19129952,
+  neighbours: ["Zambia", "Tanzania", "Mozambique"]
+}
+console.log("Malawi data >", myCountry);
+
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
