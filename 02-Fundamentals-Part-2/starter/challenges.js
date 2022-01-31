@@ -135,3 +135,66 @@ function calculateBillTotals(array) {
 
 calculateBillTotals(bills);
 console.log("the total of bills, itemized >", totals);
+
+console.log("👩‍🏫 Coding Challenge #3");
+// Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height) (mass in kg and height in meter)
+
+// Your tasks:
+// 1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
+// 2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method
+// 3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+
+// GOOD LUCK 😀
+
+// Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+
+const chewbacca = {
+  firstName: "Chewbacca",
+  lastName: "",
+  mass: 112,
+  height: 2.3,
+
+  calcBmi: function() {
+    const bmi = this.mass / (this.height ** 2);
+
+    return this.bmi = Math.round(bmi);
+  }
+}
+
+const ahsoka = {
+  firstName: "Ahsoka",
+  lastName: "Tano",
+  mass: 76,
+  height: 1.76,
+
+  calcBmi: function() {
+    const bmi = this.mass / (this.height ** 2);
+
+    return this.bmi = Math.round(bmi);
+  }
+}
+
+console.log("Chewbacca's BMI >", chewbacca.calcBmi());
+console.log("Ahsoka's BMI >", ahsoka.calcBmi());
+
+function compareBmi(objA, objB) {
+  const aBmi = objA.calcBmi();
+  const bBmi = objB.calcBmi();
+
+  console.log("obj A * obj B bmi >", aBmi, bBmi);
+  
+  // if a is higher than b
+  if (aBmi > bBmi) {
+    return `${objA.firstName}'s BMI (${aBmi}) is higher than ${objB.firstName}'s (${bBmi}).`
+    // else if b is higher than a
+  } else if (bBmi > aBmi) {
+      return `${objB.firstName}'s BMI (${bBmi}) is higher than ${objA.firstName}'s (${aBmi}).`
+      // else if they are they same
+  } else if (aBmi === bBmi) {
+      return `${objA.firstName} and ${objB.firstName} have the same BMI!`
+  }
+}
+
+console.log("BMI comparison >", compareBmi(chewbacca, ahsoka));
+console.log("BMI comparison >", compareBmi(ahsoka, chewbacca));
+console.log("BMI comparison >", compareBmi(ahsoka, ahsoka));
