@@ -171,7 +171,27 @@ console.log("a dot notation increase in Malawi's population >", malawi.populatio
 malawi["population"] -= 1500000;
 console.log("a bracket notation decrease in Malawi's population >", malawi.population);
 
-// console.log("👩‍💻 ");
+console.log("👩‍💻 Object Methods");
+// ✅ 1. Add a method called 'describe' to the 'malawi' object. This method will log a string to the console, similar to the string logged in the previous assignment, but this time using the 'this' keyword.
+// ✅ 2. Call the 'describe' method
+// 3. Add a method called 'checkIsland' to the 'malawi' object. This method will set a new property on the object, called 'isIsland'. 'isIsland' will be true if there are no neighbouring countries, and false if there are. Use the ternary operator to set the property.
+
+malawi.describe = function() {
+  return `${this.name} has a population of ${this.population} people. The most-spoken language in ${this.name} is ${this.language[0]}. ${this.name} has several neighbours, including ${this.neighbours[0]} and ${this.neighbours[2]}. ${this.capital} is ${this.name}'s capital city.`
+}
+
+console.log("method to describe malawi >", malawi.describe());
+
+malawi.checkIsland = function() {
+  this.isIsland = !this.neighbours ? true : false;
+
+  return this.isIsland;
+}
+
+console.log("is malawi an island?", malawi.checkIsland());
+
+console.log("malawi >", malawi);
+
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");

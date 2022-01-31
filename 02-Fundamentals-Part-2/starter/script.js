@@ -236,9 +236,9 @@ console.log("last name using brackets and a special key >", ahsokaObj["last" + n
 // console.log("interested in propt with brackets >", ahsokaObj[interestedIn]);
 
 // return a message when an undefined value is selected
-function printObjectDetail() {
-  if(ahsokaObj[interestedIn]) {
-    console.log(`Ahsoka's ${interestedIn} is / are ${ahsokaObj[interestedIn]}`);
+function printObjectDetail(obj) {
+  if(obj[interestedIn]) {
+    console.log(`Ahsoka's ${interestedIn} is / are ${obj[interestedIn]}`);
   } else {
     console.log(`The ${interestedIn} is undefined.`);
   }
@@ -253,9 +253,79 @@ ahsokaObj["twitter"] = "@not_a_jedi";
 console.log("Ahsoka's best friend!");
 console.log(`${ahsokaObj.firstName}'s closest friends are ${ahsokaObj["friends"]}, and her best friend is ${ahsokaObj["friends"][0]}`);
 
-console.log("Jonas' solution >", `${ahsokaObj.firstName} has ${ahsokaObj.friends.length} friends. ${ahsokaObj.firstName}'s best friend is ${ahsokaObj.friends[0]}.`)
+console.log("Jonas' solution >", `${ahsokaObj.firstName} has ${ahsokaObj.friends.length} friends. ${ahsokaObj.firstName}'s best friend is ${ahsokaObj.friends[0]}.`);
 
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫 44. Object Methods");
+// object data source : https://starwars.fandom.com/wiki/Chewbacca
+// object methods : functions that are set as the value of an object
+const chewbacca = {
+  firstName: "Chewbacca",
+  lastName: null,
+  born: 200,
+  died: undefined,
+  job: "Resistance Fighter",
+  friends: ["Ahsoka", "Han Solo", "Luke Skywalker"],
+  isForceWielder: false,
+
+  // set a method using a function expression
+  // calcAge: function(born) {
+  //   return born - 0;
+  // }
+
+  // set the method using `this`
+  // calcAge: function() {
+  //   // console.log("this >", this);
+  //   return this.born - 0;
+  // }
+
+  // use the method to store a new property
+  calcAge: function() {
+    // calculage the age
+    this.age = this.born - 0;
+    // return the age and store in the object
+    return this.age;
+  },
+
+  // use a method to print object details
+  getSummary: function() {
+    return `${this.firstName} is a ${this.calcAge()} year old ${this.job}, and he ${this.isForceWielder ? "is" : "is not"} a Force wielder.`
+  }
+};
+
+// console.log("Chewbacca's age >", chewbacca.calcAge(chewbacca.born));
+console.log("Chewbacca's age, this >", chewbacca.calcAge());
+// repeat the call multiple times; probably not best practice! calculate the age once to store in the object, then retrieve when it is needed
+// console.log("Chewbacca's age, this >", chewbacca.calcAge());
+// console.log("Chewbacca's age, this >", chewbacca.calcAge());
+// console.log("Chewbacca's age, this >", chewbacca.calcAge());
+
+// now call the age using the object property that has been set
+console.log("set the age value >", chewbacca.calcAge());
+console.log("the age value >", chewbacca.age);
+
+// 🧪 Challenge : return a string that describes the object properties; ex: Chewbacca is a {age} year old {job} who {is or is not} a Force Wielder.
+function printCharacterDetails(object) {
+  const theForce = () => object.isForceWielder ? "is" : "is not";
+
+  console.log("the force?", theForce());
+
+  return `${object.firstName} is a ${object.calcAge()} year old ${object.job} who ${theForce()} a Force Wielder. 🌌`
+}
+
+console.log("Chewbacca details function >", printCharacterDetails(chewbacca));
+
+// console.log("ahsokaObj >", ahsokaObj);
+// Add properties to ahsokaObj
+ahsokaObj.isForceWielder = true;
+ahsokaObj.calcAge = function() {
+  this.age = this.born - 0;
+  return this.age;
+};
+
+console.log("Ahsoka details function >", printCharacterDetails(ahsokaObj));
+
+console.log("chewbacca details using object method >", chewbacca.getSummary());
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

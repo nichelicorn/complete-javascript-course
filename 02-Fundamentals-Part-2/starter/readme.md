@@ -110,3 +110,9 @@
 * brackets and dots are operators
 * in MDN docs, dots are referred to as `member access`, and brackets are referred to as `computed member access`
   * order of precedence shows arrays and dots are both completed left to right in order received 
+
+## 44. Object Methods
+* can create a key value pair in which the value is a function
+* In every method, JS provides access to a special variable, called `this`; can now use values directly from the object itself without having to use parameters in object methods
+* JS methods (functions set on objects) can use the special keyword `this`, which will refer all references contained in that object to that object's values containing the keyword
+* using `this` keeps code DRY by preventing the repeating of object names inside the code; if the object name ever changes, won't have to change multiple references to the object name in the code
