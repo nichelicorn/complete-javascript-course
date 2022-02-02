@@ -181,7 +181,7 @@ function compareBmi(objA, objB) {
   const aBmi = objA.calcBmi();
   const bBmi = objB.calcBmi();
 
-  console.log("obj A * obj B bmi >", aBmi, bBmi);
+  // console.log("obj A * obj B bmi >", aBmi, bBmi);
   
   // if a is higher than b
   if (aBmi > bBmi) {

@@ -326,7 +326,24 @@ console.log("Ahsoka details function >", printCharacterDetails(ahsokaObj));
 
 console.log("chewbacca details using object method >", chewbacca.getSummary());
 
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫 46: Iteration: the `for` loop");
+
+// this 👇 is *not* an efficient way to create an output
+// console.log("Lifting weights 🏋️‍♀️ repetition : 1");
+// console.log("Lifting weights 🏋️‍♀️ repetition : 2");
+// console.log("Lifting weights 🏋️‍♀️ repetition : 3");
+
+// a loop is able to complete a repetitive task / tasks
+// use a `let` variable, because the counter will be updated by the loop
+// arguments: set a variable; set a condition to determine the end point of the loop (keeps running as long as this condition is `true`); update the counter after each iteration, use the `++` incrementer operative
+// this loop will verify the condition each time it runs, until the condition is no longer true (when rep >= 10, the loop will end)
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`lifting weights 🏋️‍♀️, repetition : ${rep}`);
+};
+
+// perform another repetitive operation
+
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
