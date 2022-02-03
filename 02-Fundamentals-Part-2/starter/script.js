@@ -343,8 +343,73 @@ for (let rep = 1; rep <= 10; rep++) {
 
 // perform another repetitive operation
 
+console.log("👩‍🏫 47. Looping Arrays, Breaking and Continuing");
+// this will use the `ahsoka` array
+// log every element in the array to the console, ex log ahsoka[0]
+// start with element index 0 to touch every element in the array
+for (let i = 0; i <= ahsoka.length; i++) {
+  console.log("ahsoka detail >", ahsoka[i]);
+}
 
-// console.log("👩‍🏫 ");
+// written as a function
+function logArrayDetails(array) {
+  for (let i = 0; i <= array.length; i++) {
+    console.log("array detail >", array[i]);
+  }
+};
+
+console.log("ahsoka array details >", logArrayDetails(ahsoka));
+
+// create an empty array, and add details from the ahsoka array to this new array
+const types  = [];
+console.log("empty types array >", types);
+
+function populateTypesArray(array) {
+  for (let i = 0; i < array.length; i++) {  
+    // assign values based on index of array
+    // types[i] = typeof array[i];
+
+    // assign values by pushing them into the array
+    types.push(typeof array[i]);
+  }
+};
+
+console.log("new array with types >", populateTypesArray(ahsoka));
+console.log("populated types array >", types);
+
+// use the years array to calculate ages for birth years and store in a new array
+
+const ageBasedOnYears = [];
+
+function calculateAgeBasedOnYears(array) {
+  for (let i = 0; i <= array.length; i++) {
+    const age = 105432 - array[i];
+
+    ageBasedOnYears.push(age);
+  }
+};
+
+calculateAgeBasedOnYears(years);
+console.log("completed ages array >", ageBasedOnYears);
+
+// continue statement
+// exits the current iteration of the loop and moves on to the next one
+// only print elements that are strings
+for (let i = 0; i <= ahsoka.length; i++) {
+  // this line will skip an element if the type is not a string and move on to the next element; doesn't log the number or array elements in the ahsoka array
+  if (typeof ahsoka[i] !== "string") continue;
+  console.log("ahsoka string >", ahsoka[i]);
+};
+
+// break statement
+// terminates the loop
+for (let i = 0; i <= ahsoka.length; i++) {
+  // stop logging elements when a number is found
+  // stops the loop before logging the number that is discovered within the array
+  if (typeof ahsoka[i] === "number") break;
+  console.log("ahsoka detail, stops at a number >", ahsoka[i]);
+};
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");

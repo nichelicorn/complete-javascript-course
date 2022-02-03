@@ -120,3 +120,7 @@
 ## 46. Iteration: the `for` loop
 * loops are fundamental to creating automations
 * loops help keep code DRY by allowing an operation to be repeated a designated number of times
+
+## 47. Looping Arrays, Breaking and Continuing
+* `continue` statement can be used to skip a particular element and continue on to the next element if a certain condition is met
+* `break` statement can be used to end a loop entirely if a certain condition is met

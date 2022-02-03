@@ -23,25 +23,25 @@ console.log("👩‍💻 Function Declarations vs Expressions");
 // 1. The world population is 7900 million people. ✅ Create a function declaration called 'percentageOfWorld1' which ✅ receives a 'population' value, and ✅ returns the percentage of the world population that the given population represents. For example, China has 1411 million people, so it's about 18.2% of the world population
 // 2. To calculate the percentage, divide the given 'population' value by 7900 and then multiply by 100
 // 3. ✅ Call 'percentageOfWorld1' for 3 populations of countries of your choice, store the results into variables, and log them to the console
-function populationDeclrn(pop) {
+function populationCalculator(pop) {
   // return the percentage of the country's population, given the total world population of 7900 million
   const totalPop = 7900;
   const percentage = Math.round((pop / totalPop) * 100);
   return percentage;
 }
 
-const usPopPctg = populationDeclrn(330);
+const usPopPctg = populationCalculator(330);
 console.log(`🇺🇸 Approximately ${usPopPctg}% of the world population lives in the United States.`);
 
-const ethiopiaPopPctg = populationDeclrn(114);
+const ethiopiaPopPctg = populationCalculator(114);
 console.log(`🇪🇹 Approximately ${ethiopiaPopPctg}% of the world population lives in Ethiopia.`);
 
-const japanPopPctg = populationDeclrn(125);
+const japanPopPctg = populationCalculator(125);
 console.log(`🇯🇵 Approximately ${japanPopPctg}% of the world population lives in Japan.`);
 
 // 4. ✅ Create a function expression which does the exact same thing, called 'percentageOfWorld2', ✅ and also call it with 3 country populations (can be the same populations)
 
-const populationAnon = function populationDeclrn(pop) {
+const populationAnon = function populationCalculator(pop) {
   return (pop / 7900);
 }
 
@@ -75,9 +75,9 @@ function describePopulation(country, pop) {
 // console.log(describePopulation("China", 1411));
 
 // 2. To calculate the percentage, 'describePopulation' call the 'percentageOfWorld1' you created earlier
-// console.log(populationDeclrn(1411));
+// console.log(populationCalculator(1411));
 function describeInvokingOtherFunction(country, pop) {
-  const pctg = populationDeclrn(pop);
+  const pctg = populationCalculator(pop);
 
   return `${country} has ${pop} million people, which is about ${pctg}% of the total world population!`;
 }
@@ -101,7 +101,7 @@ const maritimeProvincePopulations = [ 938598, 747101, 519716, 142907 ];
 console.log("the array has 4 elements <>>>", maritimeProvincePopulations.length === 4);
 
 function calculatePercentage(array) {
-  return array.map(num => populationDeclrn(num));
+  return array.map(num => populationCalculator(num));
 }
 
 // this is returning math, but the numbers are below the threshold to round to 1; correct population numbers for the maritime provinces should be represented as .num, as they are all below 1 million inhabitants
@@ -203,7 +203,32 @@ function countVotes() {
 
 console.log("voter counts >", countVotes());
 
-// console.log("👩‍💻 ");
+console.log("👩‍💻 Looping Arrays, Breaking and Continuing");
+// ✅ 1. Let's bring back the 'populations' array from a previous assignment
+// use the maritimeProvincePopulations array
+// ✅ 2. Use a for loop to compute an array called 'percentages2' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier
+// previous array is maritimeProvincePercentages
+// previous function is populationCalculator
+// 3. Confirm that 'percentages2' contains exactly the same values as the 'percentages' array that we created manually in the previous assignment, and reflect on how much better this solution is
+const computedMaritimeProvincePercentages = [];
+
+function computePopulationPercentage(array, newArray) {
+  for (let i = 0; i <= array.length; i++) {
+    console.log("array[i] >", array[i]);
+    if (!array[i]) break;
+    computedMaritimeProvincePercentages.push(populationCalculator(array[i]));
+  };
+};
+
+computePopulationPercentage(maritimeProvincePopulations, computedMaritimeProvincePercentages);
+console.log("computed maritime province percentages >", computedMaritimeProvincePercentages);
+
+console.log("maritimeProvincePercentages >", maritimeProvincePercentages);
+
+console.log("equality check >", computedMaritimeProvincePercentages === maritimeProvincePercentages);
+
+// not sure why, but these are coming up as not strictly equal; the values and type appear the same in the log
+
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
