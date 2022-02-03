@@ -124,3 +124,6 @@
 ## 47. Looping Arrays, Breaking and Continuing
 * `continue` statement can be used to skip a particular element and continue on to the next element if a certain condition is met
 * `break` statement can be used to end a loop entirely if a certain condition is met
+
+## 48. Looping backwards and loops in loops
+* loop backwards through an array by setting the counter to the length of the array, and using different settings for the condition, and a decrementer rather than an incrementer

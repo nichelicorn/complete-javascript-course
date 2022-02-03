@@ -229,7 +229,47 @@ console.log("equality check >", computedMaritimeProvincePercentages === maritime
 
 // not sure why, but these are coming up as not strictly equal; the values and type appear the same in the log
 
-// console.log("👩‍💻 ");
+console.log("👩‍💻 Looping Backwards and Loops in Loops");
+// 1. Store this array of arrays into a variable called 'listOfNeighbours'
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+
+// ✅ 2. Log only the neighbouring countries to the console, one by one, not the entire arrays. Log a string like 'Neighbour: Canada' for each country
+// ✅ 3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't worry if it's too difficult for you! But you can still try to figure this out anyway 😉
+
+// log each neighbour individually to the console
+function logNeighbours(array) {
+  // set up the outer loop
+  console.log("neighbouring countries 👇");
+
+  for (let group = 0; group <= array.length; group++) {
+    console.log(`Group ${group} >`);
+    // console.log(`Group ${group} >`, array[group]);
+
+
+    // set up the inner loop
+    if (!array[group]) {
+      console.log("nothing to see here 🙈");
+      break;
+    };
+
+    // console.log("group length >", array[group].length);
+    let length = array[group].length;
+    // for (let neighbour = 0; neighbour <= group.length; neighbour++) {
+      // }
+      for (let rep = 0; rep <= length ; rep++) {
+        // console.log("➿ inner loop ➿");
+        // console.log("rep >", rep); // returns the index number
+        // console.log("group[rep] >", group[rep]); // returns undefined
+        let neighbour = array[group][rep];
+        if (!neighbour) break;
+        console.log("neighbour >", neighbour);
+    };
+  };
+};
+
+console.log("neighbours >", logNeighbours(listOfNeighbours));
+
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");
 // console.log("👩‍💻 ");

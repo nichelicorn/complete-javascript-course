@@ -410,7 +410,40 @@ for (let i = 0; i <= ahsoka.length; i++) {
   console.log("ahsoka detail, stops at a number >", ahsoka[i]);
 };
 
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫 48. Looping backwards and loops in loops");
+// use the ahsoka array
+// loop backwards through the array
+// start with the last index in the array and log each element, until you reach element 0
+
+function backwardsForLoop(array) {
+  // the loop should run as long as the counter is greater than 0
+  // start by setting the counter to the length of the array
+  // set the condition to end when the counter reaches 0
+  // use the decrementer rather than an incrementer to decrease the counter / value of i
+  for (let i = array.length - 1; i >= 0; i--) {
+    console.log("array element >", array[i], i);
+  }
+}
+
+console.log("backwards for loop >", backwardsForLoop(ahsoka));
+
+// use a loop in a loop to log information more than once
+// log a count based on where you are in the loop
+function loopTheLoop(array) {
+  // set up the outer loop
+  for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`Starting exercise ${exercise}`);
+
+    // set up the inner loop
+    // each time the inner loop is complete, the outer loop will repeat until iterations are complete
+    for (let rep = 1; rep < 6; rep++) {
+      console.log(`Exercise ${exercise}: Lifting weight, repitition 🏋️‍♀️ ${rep}`);
+    }
+  }
+}
+
+console.log("a loop in a loop >", loopTheLoop(ahsoka));
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
