@@ -270,15 +270,43 @@ function logNeighbours(array) {
 
 console.log("neighbours >", logNeighbours(listOfNeighbours));
 
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
+console.log("👩‍💻 The while Loop");
+// 1. Recreate the challenge from the lecture 'Looping Arrays, Breaking and Continuing', but this time using a while loop (call the array 'percentages3')
+// use the maritimeProvincePopulations array
+// previous function is populationCalculator
+
+// 2. Reflect on what solution you like better for this task: the for loop or the while loop?
+
+// * Use a while loop to compute an array called 'percentages3' containing the percentages of the world population for the 4 population values. Use the function 'percentageOfWorld1' that you created earlier
+
+// function computePopulationPercentage(array, newArray) {
+  //   for (let i = 0; i <= array.length; i++) {
+    //     console.log("array[i] >", array[i]);
+    //     if (!array[i]) break;
+    //     computedMaritimeProvincePercentages.push(populationCalculator(array[i]));
+    //   };
+    // };
+    
+let percentages3 = [];
+let percentage = undefined;
+console.log("percentage >", percentage);
+
+function calculatePercentageWithWhile(array) {
+  let index = 0;
+  while (index <= array.length) {
+    // calculate percentage and push to array
+    console.log(`index ${index}`);
+    percentages3.push(populationCalculator(array[index]));
+    index++;
+    if (index === array.length) break;
+  }
+};
+
+calculatePercentageWithWhile(maritimeProvincePopulations);
+
+console.log("calculated array with a while loop >", percentages3);
+
+// don't like the while loop as much;
+// it's a little cleaner to read, but the way the condition is set up means you need to look to other places to discover what is happening in the whole picture
+// it's not bad, just different
+// i might like the for loop more because it's more familiar

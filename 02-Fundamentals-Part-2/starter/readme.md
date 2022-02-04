@@ -127,3 +127,12 @@
 
 ## 48. Looping backwards and loops in loops
 * loop backwards through an array by setting the counter to the length of the array, and using different settings for the condition, and a decrementer rather than an incrementer
+
+## 49. The while loop
+* another type of JS loop
+* for a while loop, can only specify a condition; no counter variables like in a standard for loop
+* more versatile than a for loop (because it doesn't use a counter)
+* any condition can be set for the loop
+* if a counter is needed, set a variable outside the loop and remember to increment / decrement inside the loop
+* Use a `while` loop when you don't know how many iterations are needed to meet the condition
+ 

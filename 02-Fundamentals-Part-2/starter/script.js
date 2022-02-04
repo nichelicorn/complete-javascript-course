@@ -444,7 +444,39 @@ function loopTheLoop(array) {
 
 console.log("a loop in a loop >", loopTheLoop(ahsoka));
 
-// console.log("👩‍🏫 ");
+console.log("👩‍🏫  49. The while loop");
+// this code uses a for loop
+// for (let rep = 1; rep <= 10; rep++) {
+  // console.log(`lifting weights 🏋️‍♀️, repetition : ${rep}`);
+// };
+
+// complete a similar operating using a while loop
+// no counter; a variable must be set outside the loop
+// will run until the condition is true
+let rep = 1;
+while (rep <= 10) {
+  console.log(`lifting weights 🏋️‍♀️, repetition : ${rep}`);
+  rep++;
+};
+
+// an example without a counter
+// uses a random variable
+// roll a dice
+// continue rolling the dice until a six is rolled
+// dice will return a random number between 1 and 6
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log("dice >", dice);
+
+// without resetting the dice, this is an infinite loop, and crashes the browser 
+// if a 6 is rolled first, the loop never starts
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}!`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) {
+    console.log(`You rolled a ${dice}! The loop will end now.`);
+  }
+};
+
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
 // console.log("👩‍🏫 ");
