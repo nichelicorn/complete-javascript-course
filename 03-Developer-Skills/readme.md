@@ -20,6 +20,7 @@
 
 ## 56. Installing Node.js and Setting up a dev environment
 * set up Live Server to reload browser with each update (no more manual reloads!)
+* use command `live-server` in the terminal to start the server
 
 ## 57. Learning how to code
 * How to fail at learning how to code
@@ -88,3 +89,6 @@
   * Find in the code: use developer console; debugger software
   * Fix it!: Replace the bad code with a correct solution
   * Prevent: Search project for a similar bug; write tests!
+
+## 61. Debugging with the console and breakpoints
+* watched debugger demo

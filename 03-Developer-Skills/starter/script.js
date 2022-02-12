@@ -105,9 +105,53 @@ const ampli2de = calcAmplitudeTwoArrays(temperatures, temps);
 
 console.log("ampli2de >", ampli2de);
 
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
-// console.log("👩‍💻 ");
+console.log("👩‍💻 Debugging with the console and breakpoints");
+function measureKelvin() {
+  const measurement = {
+    type: "temperature",
+    unit: "celsius",
+    value: Number(prompt("Degrees celsius:")),
+  }
+
+  // debugging steps
+  console.log("value >", measurement.value);
+  console.table("measurement >", measurement); // the value is a string, not a number; need to convert to a number to use in const `kelvin`
+
+  const kelvin = measurement.value + 273;
+
+  return kelvin;
+};
+
+// bug -- concatenating the value and the number 273 
+// console.log(measureKelvin());
+
+// console.log("👩‍💻 Coding Challenge #1");
+// Given an array of forecasted maximum temperatures, the thermometer displays a string with the given temperatures. 
+// Example: [17, 21, 23] will print "... 17ºC in 1 days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+
+// Your tasks:
+// 1. Create a function 'printForecast' which takes in an array 'arr' and logs a string like the above to the console. Try it with both test datasets.
+// 2. Use the problem-solving framework: Understand the problem and break it up into sub-problems!
+
+// GOOD LUCK 😀
+
+// Test data:
+const datasetOne = [17, 21, 23];
+const datasetTwo =  [12, 5, -5, 0, 4];
+
+// print a string with the expected temp in n number of days
+// function takes in one array
+// iterate through array and log a string for each value in the array
+
+function printForecast(array) {
+  // log a string for each value
+  // console.log(array);
+  for (let i = 0; i < array.length; i++) {
+    // console.log("temp >", array[i]);
+    // console.log("index >", i);
+    console.log(`In ${i + 1} days, the high temperature will be ${array[i]} degrees Celsius.`);
+  }
+};
+
+// printForecast(datasetOne);
+printForecast(datasetTwo);
