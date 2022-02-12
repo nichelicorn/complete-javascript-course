@@ -80,3 +80,11 @@
   * Develop a curiosity for how things work; dig into that curiosity to inspire your understanding of systems and how they work together
 
 ## 59. Using Google, StackOverflow, and MDN
+
+## 60. Debugging (fixing errors)
+* A software bug is a defect or problem in software; any unexpected or unintended behavior
+* Steps to discovering / fixing bugs:
+  * Identify: during development; testing software; user reports during production; context: brow sers, users, etc. (certain behaviors may not occur in all environments)
+  * Find in the code: use developer console; debugger software
+  * Fix it!: Replace the bad code with a correct solution
+  * Prevent: Search project for a similar bug; write tests!
