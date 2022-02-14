@@ -5,6 +5,7 @@
 * in VS code, use the shortcut ! + tab to create a basic HTML setup
 
 ## 65. Attributes, classes, and ids
+* "child" elements are any element that exists within an "parent" element
 
 ## 66. Basic styling with CSS
 

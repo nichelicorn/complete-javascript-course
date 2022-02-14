@@ -9,8 +9,23 @@
   <body>
     <!-- what will be visible on the page -->
     <h1>This is a level one heading</h1>
-    <p>Header elements come with their own pre-defined styles</p>
-    <p>This and the line above are contained in a paragraph element.</p>
+    <p class="first">Header elements come with their own pre-defined styles</p>
+    <p>This and the line above are contained in a <code>p</code> paragraph element.</p>
     <p>HTML's inherent styling is rather boring, and looks like one of my seventh-grade 5-paragraph essays.</p>
+    <a href="https://github.com/nichelicorn">anchor tags use attributes to define their behavior</a>
+    <p class="second">An <code>href</code> attribute defines the URL a user should be taken to when a link is clicked.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/The_Childrens_Museum_of_Indianapolis_-Roller_Skates.jpg/220px-The_Childrens_Museum_of_Indianapolis_-Roller_Skates.jpg" id="course-image"/>
+    <p>An <code>img</code> image element uses the <code>src</code> attribute to define the image address.</p>
+    <p>Image elements are self-closing elements! They don't need a closing tag.</p>
+    <p>Classes and ids are also essential to identifying HTML elements.</p>
+    <p>Classes can be reused, and are very helpful for defining styling rules. Use kebab-case for naming classes.</p>
+    <p>IDs are great for identifying unique elements on a page. IDs are also unique to a single element, and can't be reused.</p>
+    <form id="your-name">
+      <h2>Your name here</h2>
+      <p>Please fill in this form 👇</p>
+      <input type="text" placeholder="Please add your name here" />
+      <button>OK!</button>
+      <p>Using a <code>form</code> element provides more meaning to the structure of the HTML.</p>
+    </form>
   </body>
 </html>
