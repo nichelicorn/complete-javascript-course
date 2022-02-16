@@ -1,14 +1,33 @@
 /* Styles set on a parent element will be passed on to child elements (they cascade down) */
 
+/* `*` selector will select all elements and apply these styles everwhere */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(175, 215, 201);
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   /* font-size: 20px; */
-  font-size: 1rem;
+  font-size: 1.2rem;
+  padding: 3rem; 
 }
 
 h1 {
   font-size: 3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  margin: 1rem;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1.5rem;  
 }
 
 .first {
@@ -20,4 +39,28 @@ h1 {
   background-color:aquamarine;
   /* border properties will not be inherited by child elements inside the #your-name element */
   border: .5rem solid darkblue;
+  padding: 1.5rem;
+  width: 400px;
+  margin-top: 2rem;
+}
+
+input, button {
+  padding: .9rem;
+  font-size: 1rem;
+}
+
+a {
+  background-color: lightpink;
+}
+
+/* child selector */
+/* have two h2 elements -- what if you only want the h2 in the form? add a class or id, OR tell CSS to select the h2 inside the #your-name element */
+#your-name h2 {
+  color: darkmagenta;
+}
+
+/* specify image size - if no sizing is set, the image will be as large as it can be; can use the img selector, or a unique id / class; usually just specify the width, the height will auto-adjust to maintain proportions */
+#course-image {
+  width: 200px;
+  /* height: 300px; */
 }
