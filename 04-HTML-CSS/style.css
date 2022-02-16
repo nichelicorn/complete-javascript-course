@@ -1,56 +1,23 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Styles set on a parent element will be passed on to child elements (they cascade down) */
 
 body {
-  background-color: rgb(255, 247, 201);
-  font-family: Arial;
-  font-size: 20px;
-  padding: 50px;
+  background-color: rgb(175, 215, 201);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  /* font-size: 20px; */
+  font-size: 1rem;
 }
 
 h1 {
-  font-size: 35px;
-  margin-bottom: 25px;
-}
-
-h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-p {
-  margin-bottom: 20px;
+  font-size: 3rem;
 }
 
 .first {
-  color: red;
+  color: darkblue;
+  font-family:'Courier New', Courier, monospace;
 }
 
 #your-name {
-  background-color: rgb(255, 220, 105);
-  border: 5px solid #444;
-  width: 400px;
-  padding: 25px;
-  margin-top: 30px;
-}
-
-input,
-button {
-  padding: 10px;
-  font-size: 16px;
-}
-
-a {
-  background-color: yellowgreen;
-}
-
-#course-image {
-  width: 300px;
-}
-
-#your-name h2 {
-  color: olivedrab;
+  background-color:aquamarine;
+  /* border properties will not be inherited by child elements inside the #your-name element */
+  border: .5rem solid darkblue;
 }
