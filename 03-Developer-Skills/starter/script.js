@@ -1,6 +1,6 @@
 // Remember, we're gonna use strict mode in all scripts now!
 "use strict";
-git ad
+
 console.log("👩‍💻 Section Five : Developer skills & editor setup");
 
 console.log("👩‍💻 Prettier and VS Code");
