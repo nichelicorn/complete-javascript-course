@@ -33,6 +33,7 @@
 * make the application do something!
 * an event is something that happens on the page, like a mouse being clicked, a mouse being moved, a keypress, etc
 * can "listen" for an event, and specify which action to take when the action occurs
+* event handlers allow a function to be defined, but will not be invoked until the event occurs
 
 ## 74. Implementing the game logic
 

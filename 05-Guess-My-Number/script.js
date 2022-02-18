@@ -27,6 +27,14 @@
 // log the guess to the console using event handlers
 // Listen for a click event on the `check!` button
 // selects the button element
+// When a user clicks on a button, retrieve the number
+// make sure there is a value
+// if there is not a value, alert the user
 document.querySelector(".check").addEventListener("click", function() {
-  console.log("input value >", document.querySelector(".guess").value);
-}); 
+  const guess =  Number(document.querySelector(".guess").value);
+  console.log("guess >", guess, ", a", typeof guess);
+
+  if (!guess) {
+    document.querySelector(".message").textContent = "🙅‍♀️ No guess!";
+  }
+});
