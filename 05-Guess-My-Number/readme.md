@@ -13,8 +13,18 @@
   * each guess decreases the score by one point
   * several elements will update when the user guesses the correct number; high score will remain in place as the user moves on to another game
 * Interface is already set up in HTML
+* can use `document.querySelector("selector")` to "grab" HTML elements and update / manipulate them
 
 ## 71. What's the DOM and DOM manipulation
+* `DOM` - Document Object Model, a structured representation of HTML documents; allows JS to access HTML elements and styles to manipulate them; ex, using JS to change CSS styles or HTML elements / attributes; a complete representation of the HTML document
+* automatically created by the browser when a page loads
+* stored in a "tree" structure
+  * starts with `document` at the top of the tree - grants access to the entire DOM tree; the entry point to the DOM
+  * the first child element is *usually* the `<html>` element; this contains additional child elements (who are sibling elements to each other)
+  * additional child elements will be contained within additional elements, and these relationships can all be seen in the DOM tree
+* DOM !== JavaScript
+  * the DOM is a WebAPI, a library that can be accessed by JavaScript
+  * WebAPIs are libraries that are automatically available for use on the web (they don't require any additional imports / setups to use); the reason the DOM is the same in all browsers
 
 ## 72. Selecting and manipulating elements
 
