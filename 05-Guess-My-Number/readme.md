@@ -46,6 +46,7 @@
 * always use a string to specify the updated styling values
 
 ## 76. Coding challenge #1
+* implement button click to start the game again
 
 ## 77. Implementing highscores
 
