@@ -36,6 +36,9 @@
 * event handlers allow a function to be defined, but will not be invoked until the event occurs
 
 ## 74. Implementing the game logic
+* determine what should happen / when
+* Reminder! updates made to the DOM are *not* part of the application state
+  * if state needs to be updated, think about how data is passing through the DOM
 
 ## 75. Manipulating CSS styles
 
