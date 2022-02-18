@@ -27,8 +27,12 @@
   * WebAPIs are libraries that are automatically available for use on the web (they don't require any additional imports / setups to use); the reason the DOM is the same in all browsers
 
 ## 72. Selecting and manipulating elements
+* select elements and display updated values in the DOM
 
 ## 73. Handling click events
+* make the application do something!
+* an event is something that happens on the page, like a mouse being clicked, a mouse being moved, a keypress, etc
+* can "listen" for an event, and specify which action to take when the action occurs
 
 ## 74. Implementing the game logic
 
