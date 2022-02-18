@@ -41,6 +41,9 @@
   * if state needs to be updated, think about how data is passing through the DOM
 
 ## 75. Manipulating CSS styles
+* can use JS to update CSS styles too! this is included in the DOM
+* use camelCase notation when updating CSS with JavaScript (doesn't recognize kebab case naming
+* always use a string to specify the updated styling values
 
 ## 76. Coding challenge #1
 

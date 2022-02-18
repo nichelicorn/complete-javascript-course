@@ -49,11 +49,18 @@ document.querySelector(".check").addEventListener("click", function() {
 
   // Display a message to the user based on the guess value
   // decrement the score when an incorrect guess is made (score is stored in a global / state variable; this will maintain the score throughout game play; the score is part of the application state)
-  // display updated score in the DOM
+  
+  // if there is no input 👇
   if (!guess) {
     document.querySelector(".message").textContent = "🙅‍♀️ No guess!";
+    // if the guess is correct 👇
   } else if (guess === secretNumber) {
     document.querySelector(".message").textContent = "🎉 You got the number!";
+    // update the page styles when the player wins the game
+    document.querySelector("body").style.backgroundColor = "#60b347";
+    document.querySelector(".number").style.width = "30rem";
+
+    // if the guess is too high 👇
   } else if ( guess > secretNumber) {
     if (score > 1) {
       message.textContent =  "👇 Your guess is too high!";
@@ -64,6 +71,7 @@ document.querySelector(".check").addEventListener("click", function() {
       message.textContent = "🤷‍♀️ You used all your guesses! Start a new game.";
       document.querySelector(".score").textContent = 0;
     };
+    // if the guess is too low 👇
   } else if (guess < secretNumber) {
     if (score > 1) {
       message.textContent = "👆 Your guess is too low!";
