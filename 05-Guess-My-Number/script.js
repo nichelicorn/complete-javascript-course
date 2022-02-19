@@ -1,3 +1,13 @@
+// Future iterations:
+// prevent any numbers lower than 0 or higher than 20 from being entered in the input
+// add a button to resest the scoreboard to zero (reset application state)
+// relocate [Again!] button to the lower portion of the screen
+// relocate (between...) instructions to appear below the number/? box
+
+// Refactoring
+// assign query selectors to variables for readabilitly -- determine if it makes more sense for them to be defined inside function or globally
+// check game functionality for duplicate lines / statements -- can these be refactored into usable snippets or does it make more sense to leave as they are?
+
 'use strict';
 
 // 🔎 Query selectors
@@ -24,7 +34,7 @@ function checkInput() {
 
   // if there is no input 👇
   if (!guess) {
-    document.querySelector(".message").textContent = "🙅‍♀️ No guess!";
+   message.textContent = "🙅‍♀️ No guess!";
 
     // if the guess is correct 👇
   } else if (guess === secretNumber) {
@@ -32,7 +42,7 @@ function checkInput() {
     highscore += score;
     // console.log("highscore >", highscore);
     document.querySelector(".highscore").textContent = highscore;
-    document.querySelector(".message").textContent = "🎉 You got the number!";
+    message.textContent = "🎉 You got the number!";
     // update the page styles when the player wins the game
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
@@ -127,9 +137,3 @@ function startNewGame() {
   number.textContent = "?";
 };
 
-
-//  additional things to add to this game
-// prevent any numbers lower than 0 or higher than 20 from being entered in the input
-// add a button to resest the scoreboard to zero (reset application state)
-// relocate [Again!] button to the lower portion of the screen
-// relocate (between...) instructions to appear below the number/? box
