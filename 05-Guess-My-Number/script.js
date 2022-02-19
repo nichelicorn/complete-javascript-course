@@ -1,12 +1,25 @@
 'use strict';
 
 // 🔎 Query selectors
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
-console.log("secret number >", secretNumber);
-const number = document.querySelector(".number");
 let message =  document.querySelector(".message");
+const number = document.querySelector(".number");
+const again = document.querySelector(".again");
+
+
+// 💾 Application state
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
+// console.log("secret number >", secretNumber);
 let score = 20;
 let highscore = 0;
+
+// 🎧 Event listeners
+again.addEventListener("click", startNewGame);
+
+
+// ⚙️ Functions
+
+// gameplay functionality > refactor this into separate event listener / helper function
+// break out guess checks into a separate function(s)
 document.querySelector(".check").addEventListener("click", function() {
   // check the guess value
   const guess =  Number(document.querySelector(".guess").value);
@@ -51,9 +64,7 @@ document.querySelector(".check").addEventListener("click", function() {
   };
 });
 
-const again = document.querySelector(".again");
 
-again.addEventListener("click", startNewGame);
 
 function startNewGame() {
   console.log("new game starts now!");
