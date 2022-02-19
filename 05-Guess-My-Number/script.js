@@ -11,6 +11,7 @@
 'use strict';
 
 // 🔎 Query selectors
+let guess = document.querySelector(".guess");
 let message =  document.querySelector(".message");
 let scoreDisplay = document.querySelector(".score");
 let highscoreDisplay =  document.querySelector(".highscore");
@@ -31,15 +32,21 @@ check.addEventListener("click", checkInput);
 // ⚙️ Functions
 function checkInput() {
   // check the guess value
-  const guess =  Number(document.querySelector(".guess").value);
-  // console.log("guess >", guess, ", a", typeof guess);
+  // this works
+  const thisGuess =  Number(document.querySelector(".guess").value);
+
+  // this doesn't work
+  // console.log("guess >", guess, typeof guess);
+  // console.log("guess.value >", guess.value,  typeof guess.value);
+  // const thisGuess = Number(guess);
+  // console.log("thisGuess >", thisGuess, ", a", typeof thisGuess);
 
   // if there is no input 👇
-  if (!guess) {
+  if (!thisGuess) {
    message.textContent = "🙅‍♀️ No guess!";
 
     // if the guess is correct 👇
-  } else if (guess === secretNumber) {
+  } else if (thisGuess === secretNumber) {
     number.textContent = secretNumber;
     highscore += score;
     // console.log("highscore >", highscore);
@@ -52,7 +59,7 @@ function checkInput() {
     
 
     // if the guess is too high 👇
-  } else if ( guess > secretNumber) {
+  } else if ( thisGuess > secretNumber) {
     if (score > 1) {
       message.textContent =  "👇 Your guess is too high!";
       score--;
@@ -63,7 +70,7 @@ function checkInput() {
     };
 
     // if the guess is too low 👇
-  } else if (guess < secretNumber) {
+  } else if (thisGuess < secretNumber) {
     if (score > 1) {
       message.textContent = "👆 Your guess is too low!";
       score--;
@@ -129,7 +136,7 @@ function startNewGame() {
   score = 20;
   scoreDisplay.textContent = score;
   // console.log("score >", score);
-  document.querySelector(".message").textContent = "Start guessing";
+  message.textContent = "Start guessing";
   document.querySelector(".guess").value = "",
 
   // reset page styles
