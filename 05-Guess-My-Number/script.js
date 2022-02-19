@@ -33,45 +33,15 @@ check.addEventListener("click", checkInput);
 function checkInput() {
   const thisGuess =  Number(document.querySelector(".guess").value);
 
-  // if there is no input 👇
+  // if there is no input
   if (!thisGuess) {
-  //  message.textContent = "🙅‍♀️ No guess!";
   displayNoGuess();
     
-    // if the guess is correct 👇
+    // if the guess is correct
   } else if (thisGuess === secretNumber) {
-    // number.textContent = secretNumber;
-    // highscore += score;
-    // highscoreDisplay.textContent = highscore;
-    // message.textContent = "🎉 You got the number!";
-
-    // // update the page styles when the player wins the game
-    // document.querySelector("body").style.backgroundColor = "#60b347";
-    // document.querySelector(".number").style.width = "30rem";
     displayCorrectGuess();
-    
-    // if the guess is too high 👇
-  // } else if ( thisGuess > secretNumber) {
-  //   if (score > 1) {
-  //     message.textContent =  "👇 Your guess is too high!";
-  //     score--;
-  //     scoreDisplay.textContent = score;
-  //   } else {
-  //     message.textContent = "🤷‍♀️ You used all your guesses! Start a new game.";
-  //     scoreDisplay.textContent = 0;
-  //   };
-
-  //   // if the guess is too low 👇
-  // } else if (thisGuess < secretNumber) {
-  //   if (score > 1) {
-  //     message.textContent = "👆 Your guess is too low!";
-  //     score--;
-  //     scoreDisplay.textContent = score;
-  //   } else {
-  //     message.textContent = "🤷‍♀️ You used all your guesses! Start a new game.";
-  //     scoreDisplay.textContent = 0;
-  //   }
-  // };
+  
+  // if the guess is incorrect
   } else {
     displayIncorrectGuess(thisGuess);
   }
@@ -94,18 +64,14 @@ function displayCorrectGuess() {
 };
 
 function displayIncorrectGuess(thisGuess) {
-  // console.log("we're in the function now!", thisGuess);
   score--;
   scoreDisplay.textContent = score;
+
   if (thisGuess > secretNumber) {
-    // console.log("too high!");
     message.textContent =  "👇 Your guess is too high!";
   } else if (thisGuess < secretNumber) {
-    // console.log("too low!");
     message.textContent = "👆 Your guess is too low!";
   };
-  
-  console.log("score >", score);
 };
 
 function startNewGame() {
@@ -122,6 +88,11 @@ function startNewGame() {
   document.querySelector(".number").style.width = "15rem";
 
   // reset secretNumber and ?
-  secretNumber = Math.trunc(Math.random() * 20) + 1;
+  secretNumber = getSecretNumber();
+  // secretNumber = Math.trunc(Math.random() * 20) + 1;
   number.textContent = "?";
+};
+
+function getSecretNumber() {
+  return Math.trunc(Math.random() * 20) + 1;
 };
