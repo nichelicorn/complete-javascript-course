@@ -6,7 +6,6 @@
 
 // Refactoring
 // gameplay functionality > refactor this into separate event listener / helper function
-// break out guess checks into a separate function(s)
 
 'use strict';
 
@@ -20,7 +19,9 @@ const again = document.querySelector(".again");
 const check = document.querySelector(".check");
 
 // 💾 Application state
-let secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber;
+// let secretNumber = getSecretNumber();
+// let secretNumber = Math.trunc(Math.random() * 20) + 1;
 // console.log("secret number >", secretNumber);
 let score = 20;
 let highscore = 0;
@@ -28,6 +29,7 @@ let highscore = 0;
 // 🎧 Event listeners
 again.addEventListener("click", startNewGame);
 check.addEventListener("click", checkInput);
+window.addEventListener("load", startGame);
 
 // ⚙️ Functions
 function checkInput() {
@@ -96,3 +98,9 @@ function startNewGame() {
 function getSecretNumber() {
   return Math.trunc(Math.random() * 20) + 1;
 };
+
+function startGame() {
+  secretNumber = getSecretNumber();
+  number.textContent = "?";
+  guess.value  = null;
+}
