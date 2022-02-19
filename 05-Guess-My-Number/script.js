@@ -5,7 +5,6 @@
 // relocate (between...) instructions to appear below the number/? box
 
 // Refactoring
-// assign query selectors to variables for readabilitly -- determine if it makes more sense for them to be defined inside function or globally
 // gameplay functionality > refactor this into separate event listener / helper function
 // break out guess checks into a separate function(s)
 
@@ -36,13 +35,13 @@ function checkInput() {
 
   // if there is no input 👇
   if (!thisGuess) {
-   message.textContent = "🙅‍♀️ No guess!";
-
+  //  message.textContent = "🙅‍♀️ No guess!";
+  displayNoGuess();
+    
     // if the guess is correct 👇
   } else if (thisGuess === secretNumber) {
     number.textContent = secretNumber;
     highscore += score;
-    // console.log("highscore >", highscore);
     highscoreDisplay.textContent = highscore;
     message.textContent = "🎉 You got the number!";
 
@@ -50,7 +49,6 @@ function checkInput() {
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
     
-
     // if the guess is too high 👇
   } else if ( thisGuess > secretNumber) {
     if (score > 1) {
@@ -73,6 +71,10 @@ function checkInput() {
       scoreDisplay.textContent = 0;
     }
   };
+};
+
+function displayNoGuess() {
+  message.textContent = "🙅‍♀️ No guess!";
 };
 
 function startNewGame() {
