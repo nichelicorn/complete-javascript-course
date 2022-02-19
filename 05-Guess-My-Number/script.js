@@ -12,6 +12,8 @@
 
 // 🔎 Query selectors
 let message =  document.querySelector(".message");
+let scoreDisplay = document.querySelector(".score");
+let highscoreDisplay =  document.querySelector(".highscore");
 const number = document.querySelector(".number");
 const again = document.querySelector(".again");
 const check = document.querySelector(".check");
@@ -41,21 +43,23 @@ function checkInput() {
     number.textContent = secretNumber;
     highscore += score;
     // console.log("highscore >", highscore);
-    document.querySelector(".highscore").textContent = highscore;
+    highscoreDisplay.textContent = highscore;
     message.textContent = "🎉 You got the number!";
+
     // update the page styles when the player wins the game
     document.querySelector("body").style.backgroundColor = "#60b347";
     document.querySelector(".number").style.width = "30rem";
+    
 
     // if the guess is too high 👇
   } else if ( guess > secretNumber) {
     if (score > 1) {
       message.textContent =  "👇 Your guess is too high!";
       score--;
-      document.querySelector(".score").textContent = score;
+      scoreDisplay.textContent = score;
     } else {
       message.textContent = "🤷‍♀️ You used all your guesses! Start a new game.";
-      document.querySelector(".score").textContent = 0;
+      scoreDisplay.textContent = 0;
     };
 
     // if the guess is too low 👇
@@ -63,10 +67,10 @@ function checkInput() {
     if (score > 1) {
       message.textContent = "👆 Your guess is too low!";
       score--;
-      document.querySelector(".score").textContent = score;
+      scoreDisplay.textContent = score;
     } else {
       message.textContent = "🤷‍♀️ You used all your guesses! Start a new game.";
-      document.querySelector(".score").textContent = 0;
+      scoreDisplay.textContent = 0;
     }
   };
 };
@@ -123,7 +127,7 @@ function startNewGame() {
   // console.log("new game starts now!");
 
   score = 20;
-  document.querySelector(".score").textContent = score;
+  scoreDisplay.textContent = score;
   // console.log("score >", score);
   document.querySelector(".message").textContent = "Start guessing";
   document.querySelector(".guess").value = "",
