@@ -6,7 +6,6 @@ const number = document.querySelector(".number");
 const again = document.querySelector(".again");
 const check = document.querySelector(".check");
 
-
 // 💾 Application state
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 // console.log("secret number >", secretNumber);
@@ -21,7 +20,7 @@ check.addEventListener("click", checkInput);
 function checkInput() {
   // check the guess value
   const guess =  Number(document.querySelector(".guess").value);
-  console.log("guess >", guess, ", a", typeof guess);
+  // console.log("guess >", guess, ", a", typeof guess);
 
   // if there is no input 👇
   if (!guess) {
@@ -31,7 +30,7 @@ function checkInput() {
   } else if (guess === secretNumber) {
     number.textContent = secretNumber;
     highscore += score;
-    console.log("highscore >", highscore);
+    // console.log("highscore >", highscore);
     document.querySelector(".highscore").textContent = highscore;
     document.querySelector(".message").textContent = "🎉 You got the number!";
     // update the page styles when the player wins the game
@@ -111,11 +110,11 @@ function checkInput() {
 
 
 function startNewGame() {
-  console.log("new game starts now!");
+  // console.log("new game starts now!");
 
   score = 20;
   document.querySelector(".score").textContent = score;
-  console.log("score >", score);
+  // console.log("score >", score);
   document.querySelector(".message").textContent = "Start guessing";
   document.querySelector(".guess").value = "",
 
