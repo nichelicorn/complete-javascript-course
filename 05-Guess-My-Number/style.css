@@ -74,10 +74,12 @@ h1 {
   position: absolute;
   top: 2rem;
   right: 2rem;
+  text-align: center;
 }
 
 .again {
-  position: absolute;
+  /* position: absolute; */
+  margin-top: 2rem;
   top: 2rem;
   left: 2rem;
 }

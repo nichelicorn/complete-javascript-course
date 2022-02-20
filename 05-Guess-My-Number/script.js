@@ -1,5 +1,4 @@
 // Future iterations:
-// prevent any numbers lower than 0 or higher than 20 from being entered in the input
 // add a button to resest the scoreboard to zero (reset application state)
 // relocate [Again!] button to the lower portion of the screen
 // relocate (between...) instructions to appear below the number/? box
