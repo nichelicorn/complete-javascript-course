@@ -47,10 +47,13 @@
 
 ## 76. Coding challenge #1
 * implement button click to start the game again
+- [x] added button functionality
 
 ## 77. Implementing highscores
+- [x] added incremental high score functionality
 
 ## 78. Refactoring our code: the DRY principle
+* 
 
 ## 79. Project #2: Modal window
 

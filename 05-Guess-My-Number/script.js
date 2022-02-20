@@ -64,11 +64,12 @@ function displayIncorrectGuess(thisGuess) {
   score--;
   scoreDisplay.textContent = score;
 
-  if (thisGuess > secretNumber) {
-    message.textContent =  "👇 Your guess is too high!";
-  } else if (thisGuess < secretNumber) {
-    message.textContent = "👆 Your guess is too low!";
-  };
+  // if (thisGuess > secretNumber) {
+  //   message.textContent =  "👇 Your guess is too high!";
+  // } else if (thisGuess < secretNumber) {
+  //   message.textContent = "👆 Your guess is too low!";
+  // };
+  (thisGuess > secretNumber) ? message.textContent =  "👇 Your guess is too high!" : message.textContent = "👆 Your guess is too low!";
 };
 
 function startNewGame() {
