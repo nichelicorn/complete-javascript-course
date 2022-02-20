@@ -1,5 +1,10 @@
 # JavaScript in the browser: DOM and event fundamentals
 
+## Guess My Number!
+* This project teaches the basics of DOM manipulation, query selection, and updating CSS using JavaScript
+
+# [Guess My Number!](https://codepen.io/nichelicorn/pen/YzEaWNb)
+
 ## 68. Section Intro
 * This section will cover the basics of DOM manipulation
 
