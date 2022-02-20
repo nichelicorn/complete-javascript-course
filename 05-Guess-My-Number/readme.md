@@ -54,7 +54,6 @@
 
 ## 78. Refactoring our code: the DRY principle
 
-
 ## Resources
 * [`Node.textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) on MDN
   * If the node is a CDATA section, a comment, a processing instruction, or a text node, `textContent` returns the text inside the node; it sets the text as the markdown on the DOM
