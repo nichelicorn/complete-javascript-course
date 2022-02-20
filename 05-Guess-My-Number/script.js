@@ -1,7 +1,6 @@
 // Future iterations:
 // add a button to resest the scoreboard to zero (reset application state)
-// relocate [Again!] button to the lower portion of the screen
-// relocate (between...) instructions to appear below the number/? box
+// add a win condition that will reset at the end of the game - currently, a user can win the game, but clicking check keeps incrementing the score
 
 'use strict';
 
