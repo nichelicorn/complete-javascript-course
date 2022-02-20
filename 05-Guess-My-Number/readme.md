@@ -53,20 +53,11 @@
 - [x] added incremental high score functionality
 
 ## 78. Refactoring our code: the DRY principle
-* 
 
-## 79. Project #2: Modal window
 
-## 80. Working with classes
-
-## 81. Handling an `esc` keypress eveng
-
-## 82. Project #3: Pig game
-
-## 83. Rolling the dice
-
-## 84. Switching the active player
-
-## 85. Holding current score
-
-## 86. Resetting the game
+## Resources
+* [`Node.textContent`](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) on MDN
+  * If the node is a CDATA section, a comment, a processing instruction, or a text node, `textContent` returns the text inside the node; it sets the text as the markdown on the DOM
+  * For other node types, returns a concatenation of the `textContent` of every child node, or an empty string
+  * returns the content of all elements in the node an
+  * using `.innerText` triggers a reflow (when a browser must process and draw part or all of a webpage again), which can be computationally expensive and should be avoided when possible
