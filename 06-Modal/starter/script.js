@@ -21,12 +21,13 @@ document.addEventListener("keydown", function(event) {
   // determine which key was pressed
   // console.log("hey there key event", event);
   // console.log("hey there key event.key", event.key);
-  if (event.key === "Escape") {
-    if (!modal.classList.contains("hidden")) {
-      // console.log("escape!!!");
-      closeModal();
-    }
-  }
+  // if (event.key === "Escape") {
+  //   if (!modal.classList.contains("hidden")) {
+  //     console.log("escape!!!");
+  //     closeModal();
+  //   }
+  // }
+  if (event.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
 })
 
 // ⚙️ Functions
