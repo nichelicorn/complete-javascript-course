@@ -17,18 +17,19 @@ overlay.addEventListener("click", closeModal);
 // works if any key is pressed
 // document.addEventListener("keydown", closeModal);
 // only want to close the popup if the escape key is pressed
-document.addEventListener("keydown", function(event) {
-  // determine which key was pressed
-  // console.log("hey there key event", event);
-  // console.log("hey there key event.key", event.key);
-  // if (event.key === "Escape") {
-  //   if (!modal.classList.contains("hidden")) {
-  //     console.log("escape!!!");
-  //     closeModal();
-  //   }
-  // }
-  if (event.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
-})
+document.addEventListener("keydown", keyCloseModal);
+// document.addEventListener("keydown", function(event) {
+//   // determine which key was pressed
+//   // console.log("hey there key event", event);
+//   // console.log("hey there key event.key", event.key);
+//   // if (event.key === "Escape") {
+//   //   if (!modal.classList.contains("hidden")) {
+//   //     console.log("escape!!!");
+//   //     closeModal();
+//   //   }
+//   // }
+//   if (event.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
+// })
 
 // ⚙️ Functions
 function showModal() {
@@ -41,4 +42,8 @@ function showModal() {
 function closeModal() {
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
+};
+
+function keyCloseModal(event) {
+  if (event.key === "Escape" && !modal.classList.contains("hidden")) closeModal();
 };
