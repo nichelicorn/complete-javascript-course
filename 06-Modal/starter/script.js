@@ -12,5 +12,7 @@ const btnsShowModal = document.querySelectorAll(".show-modal");
 for (let i = 0; i < btnsShowModal.length; i++) btnsShowModal[i].addEventListener("click", showModal);
 
 function showModal() {
- console.log("show modal on click! ");
+//  console.log("show modal on click!");
+ // remove hidden class from the modal div
+ modal.classList.remove("hidden");
 };
