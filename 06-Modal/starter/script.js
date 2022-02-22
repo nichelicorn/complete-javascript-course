@@ -13,6 +13,21 @@ const btnsShowModal = document.querySelectorAll(".show-modal");
 btnsShowModal.forEach(btn => btn.addEventListener("click", showModal));
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+// add a keypress event to exit the modal
+// works if any key is pressed
+// document.addEventListener("keydown", closeModal);
+// only want to close the popup if the escape key is pressed
+document.addEventListener("keydown", function(event) {
+  // determine which key was pressed
+  // console.log("hey there key event", event);
+  // console.log("hey there key event.key", event.key);
+  if (event.key === "Escape") {
+    if (!modal.classList.contains("hidden")) {
+      // console.log("escape!!!");
+      closeModal();
+    }
+  }
+})
 
 // ⚙️ Functions
 function showModal() {
