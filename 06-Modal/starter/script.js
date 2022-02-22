@@ -10,9 +10,16 @@ const btnsShowModal = document.querySelectorAll(".show-modal");
 // 🎧 Event listeners
 // loop through show modal buttons to add event listener
 for (let i = 0; i < btnsShowModal.length; i++) btnsShowModal[i].addEventListener("click", showModal);
+btnCloseModal.addEventListener("click", closeModal);
 
 function showModal() {
 //  console.log("show modal on click!");
- // remove hidden class from the modal div
+ // remove hidden class from the modal div and overlay
  modal.classList.remove("hidden");
+ overlay.classList.remove("hidden");
 };
+
+function closeModal() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+}l
