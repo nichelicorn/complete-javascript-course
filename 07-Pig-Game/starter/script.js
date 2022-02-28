@@ -48,12 +48,12 @@ function rollDice() {
   } else {
     console.log("player rolled a 1!");
     console.log("current player >", currentPlayer);
-    if (currentPlayer === "name--0") {
-      currentPlayer = "name--1";
-    } else {
-      currentPlayer = "name--0";
-    }
-    // currentPlayer = ("name--0") ? "name--1" : "name--0";
+    // if (currentPlayer === "name--0") {
+    //   currentPlayer = "name--1";
+    // } else {
+    //   currentPlayer = "name--0";
+    // }
+    currentPlayer = (currentPlayer === "name--0") ? "name--1" : "name--0";
     console.log("reset current player?? >", currentPlayer);
     // if number rolled === 1: set player score to zero; switch to next player
   }
