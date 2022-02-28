@@ -86,11 +86,11 @@ function rollDice() {
   // currentScoreDisplay.textContent = currentScore;
   
   // console.log("currentScore >", currentScore);
-  console.log("currentPlayer >", currentPlayer);
+  // console.log("currentPlayer >", currentPlayer);
   // console.log("currentScoreDisplay >", currentScoreDisplay);
   
   // currentActive = (currentActive === player0ActiveEl) ? player1ActiveEl : player0ActiveEl;
   
 
-  console.log("currentActive >", currentActive);
+  // console.log("currentActive >", currentActive);
 };
