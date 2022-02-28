@@ -54,27 +54,43 @@ function rollDice() {
     currentPlayer = (currentPlayer === "name--0") ? "name--1" : "name--0";
     // console.log("reset current player >", currentPlayer);
 
-    // update visual cue of current player
-    console.log("currentActive >", currentActive);
-    if (currentActive === player0ActiveEl) {
-      player1ActiveEl.classList.add("player--active");
-      player0ActiveEl.classList.remove("player--active");  
-    } else {
-      player0ActiveEl.classList.add("player--active");  
-      player1ActiveEl.classList.remove("player--active");
-    }
+    // // update visual cue of current player
+    // console.log("currentActive >", currentActive);
+    // if (currentActive === player0ActiveEl) {
+    //   player1ActiveEl.classList.add("player--active");
+    //   player0ActiveEl.classList.remove("player--active");  
+    // } else if (currentActive === player1ActiveEl) {
+    //   player1ActiveEl.classList.remove("player--active");
+    //   player0ActiveEl.classList.add("player--active");  
+    // }
     // currentActive = (currentActive === player0ActiveEl) ? player1ActiveEl.classList.add("player--active") : player0ActiveEl.classList.add("player--active");
 
     // reset currentScoreDisplay
     currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
+
+
+    if (currentActive === player0ActiveEl) {
+      player1ActiveEl.classList.add("player--active");
+      player0ActiveEl.classList.remove("player--active");
+      currentActive = player1ActiveEl;
+    } else {
+      player1ActiveEl.classList.remove("player--active");
+      player0ActiveEl.classList.add("player--active");
+      currentActive = player0ActiveEl;
+    }
+
   }
 
-  // console.log("currentScore >", currentScore);
-  // console.log("currentPlayer >", currentPlayer);
-  // console.log("currentScoreDisplay >", currentScoreDisplay);
-
+  
   // add roll to current player score
   // currentScoreDisplay.textContent = currentScore;
-
   
+  // console.log("currentScore >", currentScore);
+  console.log("currentPlayer >", currentPlayer);
+  // console.log("currentScoreDisplay >", currentScoreDisplay);
+  
+  // currentActive = (currentActive === player0ActiveEl) ? player1ActiveEl : player0ActiveEl;
+  
+
+  console.log("currentActive >", currentActive);
 };
