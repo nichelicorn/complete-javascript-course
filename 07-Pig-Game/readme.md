@@ -4,9 +4,10 @@
 * Created a flow chart to describe all available user actions
 * Flow chart available in project folder for this game
 
-
 ## 83. Rolling the dice
-
+* Implement game functionality!
+* start with rolling the dice
+* Flow charts are useful for dividing a problem into smaller sub-problems
 
 ## 84. Switching the active player
 
