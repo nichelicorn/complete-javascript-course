@@ -2,7 +2,7 @@
 
 // 💾 Application state
 let currentScore = 0;
-let currentPlayer;
+let currentPlayer, currentScoreDisplay;
 
 // 🔎 Selected elements
 const btnHold = document.querySelector(".btn--hold");
@@ -20,6 +20,7 @@ score0El.textContent = 0;
 score1El.textContent = 0;
 diceEl.classList.add("hidden");
 currentPlayer = "name--0";
+currentScoreDisplay = current0El;
 
 // 🎧 Event listeners
 btnRoll.addEventListener("click", rollDice);
@@ -33,22 +34,32 @@ function rollDice() {
   diceEl.classList.remove("hidden");
   diceEl.src = `dice-${roll}.png`
   
-  // check if the number rolled === 1
-  console.log("roll >", roll);
+  // √ check if the number rolled === 1
   if (roll !== 1) {
     // update and display current score
     currentScore += roll;
-    current0El.textContent = currentScore;
+    currentScoreDisplay.textContent = currentScore;
   } else {
-    // if number rolled === 1: set player score to zero; switch to next player
+    // if number rolled === 1: set current player score to zero; switch to next player
+    console.log("🧟‍♀️...player rolled a 1!");
+    // set current player score to zero and display;
     currentScore = 0;
-    current0El.textContent = currentScore;
-    // console.log("player rolled a 1!");
+    currentScoreDisplay.textContent = currentScore;
+    console.log("currentScore >", currentScore);
+    // current0El.textContent = currentScore;
     // console.log("current player >", currentPlayer);
     currentPlayer = (currentPlayer === "name--0") ? "name--1" : "name--0";
-    console.log("reset current player?? >", currentPlayer);
+    console.log("reset current player >", currentPlayer);
+    // reset currentScoreDisplay
+    currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
   }
 
-    // add roll to current player score
+  // console.log("currentScore >", currentScore);
+  console.log("currentPlayer >", currentPlayer);
+  // console.log("currentScoreDisplay >", currentScoreDisplay);
+
+  // add roll to current player score
+  // currentScoreDisplay.textContent = currentScore;
+
   
 };
