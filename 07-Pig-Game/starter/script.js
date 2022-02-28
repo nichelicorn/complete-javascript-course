@@ -23,6 +23,10 @@ function rollDice() {
   // √ generate a random dice roll
   const roll = Math.trunc(Math.random() * 6) + 1;
  
+   
+  // display the dice corresponding to the roll
+  diceEl.classList.remove("hidden");
+  diceEl.src = `dice-${roll}.png`
 
   console.log("roll >", roll);
 }
