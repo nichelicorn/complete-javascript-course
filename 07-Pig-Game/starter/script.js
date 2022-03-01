@@ -37,16 +37,16 @@ function rollDice() {
   
   // display the dice corresponding to the roll
   diceEl.classList.remove("hidden");
-  diceEl.src = `dice-${roll}.png`
+  diceEl.src = `dice-${roll}.png`;
   
   // check if the number rolled === 1
-  if (roll !== 1) {
+  if (roll !== 1) { // refactor to function updateCurrentScore()
     // update and display current score
-    currentScore += roll;
-    document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
-
+    // currentScore += roll;
+    // document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
     // currentScoreDisplay.textContent = currentScore;
-  } else {
+    updateCurrentScore(roll);
+  } else { // refactor to function switchPlayer()
     // if number rolled === 1: set current player score to zero; switch to next player; update visual cue of current player
     console.log("🧟‍♀️...player rolled a 1!");
 
@@ -55,31 +55,20 @@ function rollDice() {
     currentScoreDisplay.textContent = currentScore;
 
     // reset current player to the next player
-    // currentPlayer = (currentPlayer === "name--0") ? "name--1" : "name--0";
     currentPlayer = (currentPlayer === 0) ? 1 : 0;
-
-    // console.log("reset current player >", currentPlayer);
 
     // reset currentScoreDisplay
     currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
 
     // set active player status on game board
-    // if (currentActive === player0ActiveEl) {
-    //   player1ActiveEl.classList.add("player--active");
-    //   player0ActiveEl.classList.remove("player--active");
-    //   currentActive = player1ActiveEl;
-    // } else {
-    //   player1ActiveEl.classList.remove("player--active");
-    //   player0ActiveEl.classList.add("player--active");
-    //   currentActive = player0ActiveEl;
-    // };
     player0ActiveEl.classList.toggle("player--active");
     player1ActiveEl.classList.toggle("player--active");
-
-  }
-  
-  // console.log("currentScore >", currentScore);
-  // console.log("currentPlayer >", currentPlayer);
-  // console.log("currentScoreDisplay >", currentScoreDisplay); 
-  // console.log("currentActive >", currentActive);
+  };
 };
+
+function updateCurrentScore(roll) {
+    // update and display current score
+    currentScore += roll;
+    // document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
+    currentScoreDisplay.textContent = currentScore;
+}
