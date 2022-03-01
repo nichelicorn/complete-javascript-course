@@ -28,42 +28,26 @@ currentPlayer = 0; // jonas' solution
 currentScoreDisplay = current0El;
 
 // 🎧 Event listeners
-btnRoll.addEventListener("click", rollDice);
+btnRoll.addEventListener("click", takeTurn);
+
+// ⚙️ Functions
+function rollDice() {
+  return Math.trunc(Math.random() * 6) + 1;
+}
 
 // Function to roll the dice
-function rollDice() {
+function takeTurn() {
   // generate a random dice roll
-  const roll = Math.trunc(Math.random() * 6) + 1;
+  const roll = rollDice();
   
   // display the dice corresponding to the roll
   diceEl.classList.remove("hidden");
   diceEl.src = `dice-${roll}.png`;
   
   // check if the number rolled === 1
-  if (roll !== 1) { // refactor to function updateCurrentScore()
-    // update and display current score
-    // currentScore += roll;
-    // document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
-    // currentScoreDisplay.textContent = currentScore;
+  if (roll !== 1) {
     updateCurrentScore(roll);
-  } else { // refactor to function switchPlayer()
-    // if number rolled === 1: set current player score to zero; switch to next player; update visual cue of current player
-    // console.log("🧟‍♀️...player rolled a 1!");
-
-    // // set current player score to zero and display;
-    // currentScore = 0;
-    // currentScoreDisplay.textContent = currentScore;
-
-    // // reset current player to the next player
-    // currentPlayer = (currentPlayer === 0) ? 1 : 0;
-
-    // // reset currentScoreDisplay
-    // currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
-
-    // // set active player status on game board
-    // player0ActiveEl.classList.toggle("player--active");
-    // player1ActiveEl.classList.toggle("player--active");
-
+  } else { 
     switchPlayer();
   };
 };
@@ -71,13 +55,11 @@ function rollDice() {
 function updateCurrentScore(roll) {
     // update and display current score
     currentScore += roll;
-    // document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
     currentScoreDisplay.textContent = currentScore;
 };
 
 function switchPlayer() {
-   // if number rolled === 1: set current player score to zero; switch to next player; update visual cue of current player
-   console.log("🧟‍♀️...player rolled a 1!");
+   console.log(`🧟‍♀️...player ${currentPlayer} rolled a 1!`);
 
    // set current player score to zero and display;
    currentScore = 0;
