@@ -58,21 +58,23 @@ function rollDice() {
     // currentPlayer = (currentPlayer === "name--0") ? "name--1" : "name--0";
     currentPlayer = (currentPlayer === 0) ? 1 : 0;
 
-    console.log("reset current player >", currentPlayer);
+    // console.log("reset current player >", currentPlayer);
 
     // reset currentScoreDisplay
     currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
 
     // set active player status on game board
-    if (currentActive === player0ActiveEl) {
-      player1ActiveEl.classList.add("player--active");
-      player0ActiveEl.classList.remove("player--active");
-      currentActive = player1ActiveEl;
-    } else {
-      player1ActiveEl.classList.remove("player--active");
-      player0ActiveEl.classList.add("player--active");
-      currentActive = player0ActiveEl;
-    };
+    // if (currentActive === player0ActiveEl) {
+    //   player1ActiveEl.classList.add("player--active");
+    //   player0ActiveEl.classList.remove("player--active");
+    //   currentActive = player1ActiveEl;
+    // } else {
+    //   player1ActiveEl.classList.remove("player--active");
+    //   player0ActiveEl.classList.add("player--active");
+    //   currentActive = player0ActiveEl;
+    // };
+    player0ActiveEl.classList.toggle("player--active");
+    player1ActiveEl.classList.toggle("player--active");
 
   }
   
