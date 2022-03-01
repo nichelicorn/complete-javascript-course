@@ -29,6 +29,7 @@ currentScoreDisplay = current0El;
 
 // 🎧 Event listeners
 btnHold.addEventListener("click", holdScore);
+btnNew.addEventListener("click", newGame);
 btnRoll.addEventListener("click", takeTurn);
 
 // ⚙️ Functions
@@ -88,4 +89,14 @@ function holdScore() {
     score1El.textContent = scores[1];
   }
   switchPlayer();
+};
+
+function newGame() {
+  score0El.textContent = 0;
+  score1El.textContent = 0;
+  diceEl.classList.add("hidden");
+  currentActive = player0ActiveEl;
+  // currentPlayer = "name--0"; // original solution
+  currentPlayer = 0; // jonas' solution
+  currentScoreDisplay = current0El;  
 };
