@@ -28,12 +28,13 @@ currentPlayer = 0; // jonas' solution
 currentScoreDisplay = current0El;
 
 // 🎧 Event listeners
+btnHold.addEventListener("click", holdScore);
 btnRoll.addEventListener("click", takeTurn);
 
 // ⚙️ Functions
 function rollDice() {
   return Math.trunc(Math.random() * 6) + 1;
-}
+};
 
 // Function to roll the dice
 function takeTurn() {
@@ -74,4 +75,17 @@ function switchPlayer() {
    // set active player status on game board
    player0ActiveEl.classList.toggle("player--active");
    player1ActiveEl.classList.toggle("player--active");
+};
+
+function holdScore() {
+  console.log("currentPlayer >", currentPlayer);
+  console.log("currentScore >", currentScore);
+  if (currentPlayer === 0) {
+    scores[0] += currentScore;
+    score0El.textContent = scores[0];
+  } else {
+    scores[1] += currentScore;
+    score1El.textContent = scores[1];
+  }
+  switchPlayer();
 };
