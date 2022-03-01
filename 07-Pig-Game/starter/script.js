@@ -48,21 +48,23 @@ function rollDice() {
     updateCurrentScore(roll);
   } else { // refactor to function switchPlayer()
     // if number rolled === 1: set current player score to zero; switch to next player; update visual cue of current player
-    console.log("🧟‍♀️...player rolled a 1!");
+    // console.log("🧟‍♀️...player rolled a 1!");
 
-    // set current player score to zero and display;
-    currentScore = 0;
-    currentScoreDisplay.textContent = currentScore;
+    // // set current player score to zero and display;
+    // currentScore = 0;
+    // currentScoreDisplay.textContent = currentScore;
 
-    // reset current player to the next player
-    currentPlayer = (currentPlayer === 0) ? 1 : 0;
+    // // reset current player to the next player
+    // currentPlayer = (currentPlayer === 0) ? 1 : 0;
 
-    // reset currentScoreDisplay
-    currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
+    // // reset currentScoreDisplay
+    // currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
 
-    // set active player status on game board
-    player0ActiveEl.classList.toggle("player--active");
-    player1ActiveEl.classList.toggle("player--active");
+    // // set active player status on game board
+    // player0ActiveEl.classList.toggle("player--active");
+    // player1ActiveEl.classList.toggle("player--active");
+
+    switchPlayer();
   };
 };
 
@@ -71,4 +73,23 @@ function updateCurrentScore(roll) {
     currentScore += roll;
     // document.getElementById(`current--${currentPlayer}`).textContent = currentScore;
     currentScoreDisplay.textContent = currentScore;
-}
+};
+
+function switchPlayer() {
+   // if number rolled === 1: set current player score to zero; switch to next player; update visual cue of current player
+   console.log("🧟‍♀️...player rolled a 1!");
+
+   // set current player score to zero and display;
+   currentScore = 0;
+   currentScoreDisplay.textContent = currentScore;
+
+   // reset current player to the next player
+   currentPlayer = (currentPlayer === 0) ? 1 : 0;
+
+   // reset currentScoreDisplay
+   currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
+
+   // set active player status on game board
+   player0ActiveEl.classList.toggle("player--active");
+   player1ActiveEl.classList.toggle("player--active");
+};
