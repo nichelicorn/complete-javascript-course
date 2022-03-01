@@ -50,8 +50,11 @@ function takeTurn() {
   if (roll !== 1) {
     updateCurrentScore(roll);
   } else { 
+      //  console.log(`🧟‍♀️...player ${currentPlayer} rolled a 1!`);
     switchPlayer();
   };
+
+  // checkScore();
 };
 
 function updateCurrentScore(roll) {
@@ -61,8 +64,6 @@ function updateCurrentScore(roll) {
 };
 
 function switchPlayer() {
-   console.log(`🧟‍♀️...player ${currentPlayer} rolled a 1!`);
-
    // set current player score to zero and display;
    currentScore = 0;
    currentScoreDisplay.textContent = currentScore;
@@ -79,8 +80,8 @@ function switchPlayer() {
 };
 
 function holdScore() {
-  console.log("currentPlayer >", currentPlayer);
-  console.log("currentScore >", currentScore);
+  // console.log("currentPlayer >", currentPlayer);
+  // console.log("currentScore >", currentScore);
   if (currentPlayer === 0) {
     scores[0] += currentScore;
     score0El.textContent = scores[0];
@@ -88,6 +89,8 @@ function holdScore() {
     scores[1] += currentScore;
     score1El.textContent = scores[1];
   }
+
+  checkScore();
   switchPlayer();
 };
 
@@ -99,4 +102,13 @@ function newGame() {
   // currentPlayer = "name--0"; // original solution
   currentPlayer = 0; // jonas' solution
   currentScoreDisplay = current0El;  
+};
+
+function checkScore() {
+  console.log("current score >", currentScore, typeof currentScore);
+  console.log(typeof 100);
+  console.log("currentScore > 100", currentScore > 100);
+  // if (currentScore > 100) {
+  //   console.log("current score is > 100!! Player", currentPlayer);
+  // }
 };
