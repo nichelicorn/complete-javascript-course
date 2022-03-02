@@ -12,9 +12,7 @@
 ## 84. Switching the active player
 
 ## 85. Holding current score
-* 
 
 ## 86. Resetting the game
-
 
 ### Resources

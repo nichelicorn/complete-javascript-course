@@ -38,6 +38,8 @@ function takeTurn() {
   } else { 
     switchPlayer();
   };
+
+  // checkScore();
 };
 
 function displayDice(roll) {
@@ -76,7 +78,7 @@ function holdScore() {
   };
 
   checkScore();
-  switchPlayer();
+  // switchPlayer();
 };
 
 function newGame() {
@@ -92,13 +94,17 @@ function newGame() {
   currentScoreDisplay = current0El;
   current0El.textContent = 0;
   current1El.textContent = 0;
+  // currentActive.classList.remove("player--winner");
 };
 
 function checkScore() {
   const scoreToCheck = scores[currentPlayer];
   
   if (scoreToCheck >= 100) {
-    alert(`Player ${currentPlayer} has won the game! Play again?`);
+    // currentActive.classList.add("player--winner");
+    alert(`Player ${currentPlayer + 1} has won the game! Play again?`);
     newGame();
+  } else {
+    switchPlayer();
   };
 };
