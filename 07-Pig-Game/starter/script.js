@@ -28,14 +28,13 @@ function rollDice() {
   return Math.trunc(Math.random() * 6) + 1;
 };
 
-// Function to roll the dice
 function takeTurn() {
-  // generate a random dice roll
   const roll = rollDice();
   
   // display the dice corresponding to the roll
-  diceEl.classList.remove("hidden");
-  diceEl.src = `dice-${roll}.png`;
+  // diceEl.classList.remove("hidden");
+  // diceEl.src = `dice-${roll}.png`;
+  displayDice(roll);
   
   // check if the number rolled === 1
   if (roll !== 1) {
@@ -46,6 +45,11 @@ function takeTurn() {
   };
 
   // checkScore();
+};
+
+function displayDice(roll) {
+  diceEl.classList.remove("hidden");
+  diceEl.src = `dice-${roll}.png`;
 };
 
 function updateCurrentScore(roll) {
