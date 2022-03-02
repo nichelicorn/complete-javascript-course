@@ -17,16 +17,6 @@ const player1ActiveEl = document.querySelector(".player--1");
 const score0El = document.getElementById("score--0");
 const score1El = document.getElementById("score--1");
 
-// 🎬 Starting conditions
-// set scores to zero and hide dice on page load; set current player
-// score0El.textContent = 0;
-// score1El.textContent = 0;
-// diceEl.classList.add("hidden");
-// currentActive = player0ActiveEl;
-// currentPlayer = "name--0"; // original solution
-// currentPlayer = 0; // jonas' solution
-// currentScoreDisplay = current0El;
-
 // 🎧 Event listeners
 window.addEventListener("load", newGame);
 btnHold.addEventListener("click", holdScore);
