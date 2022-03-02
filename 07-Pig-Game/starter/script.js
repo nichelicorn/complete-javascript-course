@@ -31,20 +31,13 @@ function rollDice() {
 function takeTurn() {
   const roll = rollDice();
   
-  // display the dice corresponding to the roll
-  // diceEl.classList.remove("hidden");
-  // diceEl.src = `dice-${roll}.png`;
   displayDice(roll);
   
-  // check if the number rolled === 1
   if (roll !== 1) {
     updateCurrentScore(roll);
   } else { 
-      //  console.log(`🧟‍♀️...player ${currentPlayer} rolled a 1!`);
     switchPlayer();
   };
-
-  // checkScore();
 };
 
 function displayDice(roll) {
@@ -53,7 +46,6 @@ function displayDice(roll) {
 };
 
 function updateCurrentScore(roll) {
-    // update and display current score
     currentScore += roll;
     currentScoreDisplay.textContent = currentScore;
 };
@@ -75,15 +67,13 @@ function switchPlayer() {
 };
 
 function holdScore() {
-  // console.log("currentPlayer >", currentPlayer);
-  // console.log("currentScore >", currentScore);
   if (currentPlayer === 0) {
     scores[0] += currentScore;
     score0El.textContent = scores[0];
   } else {
     scores[1] += currentScore;
     score1El.textContent = scores[1];
-  }
+  };
 
   checkScore();
   switchPlayer();
@@ -91,7 +81,7 @@ function holdScore() {
 
 function newGame() {
   // 🎬 Starting conditions
-  currentPlayer = 0; // jonas' solution
+  currentPlayer = 0;
   currentScore = 0;
   scores[0] = 0;
   scores[1] = 0;
@@ -102,30 +92,12 @@ function newGame() {
   currentScoreDisplay = current0El;
   current0El.textContent = 0;
   current1El.textContent = 0;
-  
-  console.log("scores at game start >", scores);
-
-// diceEl.classList.add("hidden");
-// currentActive = player0ActiveEl;
-// currentPlayer = "name--0"; // original solution
-// currentPlayer = 0; // jonas' solution
-// currentScoreDisplay = current0El;
-
 };
 
 function checkScore() {
-  // not checking the currentScore/ need to check score of current player
-  // console.log("current score >", currentScore, typeof currentScore);
-  // console.log(typeof 100);
-  // console.log("currentScore > 100", currentScore > 100);
-  // if (currentScore > 100) {
-  //   console.log("current score is > 100!! Player", currentPlayer);
-  // }
-  // console.log("currentPlayer >", currentPlayer);
   const scoreToCheck = scores[currentPlayer];
   
   if (scoreToCheck >= 100) {
-    console.log(`Player ${currentPlayer} has rolled 100! 🎲`);
     alert(`Player ${currentPlayer} has won the game! Play again?`);
     newGame();
   };
