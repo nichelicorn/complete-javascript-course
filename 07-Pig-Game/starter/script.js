@@ -105,10 +105,19 @@ function newGame() {
 };
 
 function checkScore() {
-  console.log("current score >", currentScore, typeof currentScore);
-  console.log(typeof 100);
-  console.log("currentScore > 100", currentScore > 100);
+  // not checking the currentScore/ need to check score of current player
+  // console.log("current score >", currentScore, typeof currentScore);
+  // console.log(typeof 100);
+  // console.log("currentScore > 100", currentScore > 100);
   // if (currentScore > 100) {
   //   console.log("current score is > 100!! Player", currentPlayer);
   // }
+  // console.log("currentPlayer >", currentPlayer);
+  const scoreToCheck = scores[currentPlayer];
+  
+  if (scoreToCheck >= 100) {
+    console.log(`Player ${currentPlayer} has rolled 100! 🎲`);
+    alert(`Player ${currentPlayer} has won the game! Play again?`);
+    newGame();
+  };
 };
