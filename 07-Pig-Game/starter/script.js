@@ -3,7 +3,7 @@
 // 💾 Application state
 let currentScore = 0;
 let currentPlayer, currentScoreDisplay, currentActive;
-const scores = [0, 0]; // jonas' solution; the cumulative score for each player 
+const scores = [0, 0];
 
 // 🔎 Selected elements
 const btnHold = document.querySelector(".btn--hold");
@@ -19,15 +19,16 @@ const score1El = document.getElementById("score--1");
 
 // 🎬 Starting conditions
 // set scores to zero and hide dice on page load; set current player
-score0El.textContent = 0;
-score1El.textContent = 0;
-diceEl.classList.add("hidden");
-currentActive = player0ActiveEl;
+// score0El.textContent = 0;
+// score1El.textContent = 0;
+// diceEl.classList.add("hidden");
+// currentActive = player0ActiveEl;
 // currentPlayer = "name--0"; // original solution
-currentPlayer = 0; // jonas' solution
-currentScoreDisplay = current0El;
+// currentPlayer = 0; // jonas' solution
+// currentScoreDisplay = current0El;
 
 // 🎧 Event listeners
+window.addEventListener("load", newGame);
 btnHold.addEventListener("click", holdScore);
 btnNew.addEventListener("click", newGame);
 btnRoll.addEventListener("click", takeTurn);
@@ -95,13 +96,27 @@ function holdScore() {
 };
 
 function newGame() {
+  // 🎬 Starting conditions
+  currentPlayer = 0; // jonas' solution
+  currentScore = 0;
+  scores[0] = 0;
+  scores[1] = 0;
   score0El.textContent = 0;
   score1El.textContent = 0;
   diceEl.classList.add("hidden");
   currentActive = player0ActiveEl;
-  // currentPlayer = "name--0"; // original solution
-  currentPlayer = 0; // jonas' solution
-  currentScoreDisplay = current0El;  
+  currentScoreDisplay = current0El;
+  current0El.textContent = 0;
+  current1El.textContent = 0;
+  
+  console.log("scores at game start >", scores);
+
+// diceEl.classList.add("hidden");
+// currentActive = player0ActiveEl;
+// currentPlayer = "name--0"; // original solution
+// currentPlayer = 0; // jonas' solution
+// currentScoreDisplay = current0El;
+
 };
 
 function checkScore() {
