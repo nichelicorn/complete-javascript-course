@@ -2,7 +2,7 @@
 
 // 💾 Application state
 let currentScore = 0;
-let currentPlayer, currentScoreDisplay, currentActive, gameplayActive;
+let currentPlayer, currentScoreDisplay, currentActive, isActiveGame;
 const scores = [0, 0];
 
 // 🔎 Selected elements
@@ -26,9 +26,9 @@ btnRoll.addEventListener("click", takeTurn);
 // ⚙️ Functions
 
 // 🐛 need to work out functionality on game end conditions
-// wasn't updating state correctly -- need to set a variable for gameplay status √
-// when a new game starts, gamplayActive = true; 
-// when a game is won, gameplayACtive = false;
+// √ wasn't updating state correctly -- need to set a variable for gameplay status
+// √ when a new game starts, gamplayActive = true; 
+// when a game is won, isActiveGame = false;
 
 
 function rollDice() {
@@ -82,7 +82,7 @@ function holdScore() {
     score1El.textContent = scores[1];
   };
 
-  // checkScore();
+  checkScore();
   switchPlayer();
 };
 
@@ -90,7 +90,7 @@ function newGame() {
   // 🎬 Starting conditions
   currentPlayer = 0;
   currentScore = 0;
-  gameplayActive = true; 
+  isActiveGame = true; 
   scores[0] = 0;
   scores[1] = 0;
   score0El.textContent = 0;
@@ -106,7 +106,10 @@ function checkScore() {
   const scoreToCheck = scores[currentPlayer];
   
   if (scoreToCheck >= 100) {
-    alert(`Player ${currentPlayer} has won the game! Play again?`);
-    newGame();
+    // alert(`Player ${currentPlayer} has won the game! Play again?`);
+    // newGame();
+    console.log(`Player ${currentPlayer} has won the game! Play again?`);
+    isActiveGame = false;
   };
+  console.log("isActiveGame >", isActiveGame);
 };
