@@ -30,7 +30,10 @@ btnRoll.addEventListener("click", takeTurn);
 // √ when a new game starts, gamplayActive = true; 
 // √ when a game is won, isActiveGame = false;
 // when a game is won, change current player class to .player--winner
-
+// need to review how the light color background is switching — which element is being updated on that change? That’s what should be updating the player—winner class
+// add function to endGame that contains conditions if there is a winner
+// refactor to ternaries
+// add helper functions if avail
 
 function rollDice() {
   return Math.trunc(Math.random() * 6) + 1;
@@ -97,7 +100,7 @@ function startGame() {
   score0El.textContent = 0;
   score1El.textContent = 0;
   diceEl.classList.add("hidden");
-  currentActive = player0ActiveEl;
+  // currentActive = player0ActiveEl;
   currentScoreDisplay = current0El;
   current0El.textContent = 0;
   current1El.textContent = 0;
@@ -105,14 +108,22 @@ function startGame() {
 
 function checkScore() {
   const scoreToCheck = scores[currentPlayer];
-  
+  console.log("checking player >", currentPlayer + 1);
+
+  console.log("checking currentActive >", currentActive);
+
   if (scoreToCheck >= 10) {
     // alert(`Player ${currentPlayer} has won the game! Play again?`);
     // startGame();
     console.log(`Player ${currentPlayer + 1} has won the game! Play again?`);
     isActiveGame = false;
     // when a game is won, change current player class to .player--winner
-    currentActive.classList.add("player--winner"); // this is where the bug is -- in test, player2 won the game, but the console log says that player1 has won the game
+    // console.log("winning currentActive ?? >", currentActive); // this isn't updating at all
+    // currentActive.classList.add("player--winner"); // this is where the bug is -- in test, player2 won the game, but the console log says that player1 has won the game
+
+    // review how the light color background is switching — which element is being updated on that change? That’s what should be updating the player—winner class
+
+
   } else {
     switchPlayer();
   };
