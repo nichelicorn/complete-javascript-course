@@ -1,5 +1,7 @@
 # Section 7: JavaScript in the Browser: DOM and Events Fundamentals
 
+[Play a game of Pig](https://codepen.io/nichelicorn/pen/ExbrMBJ)
+
 ## 82. Project #3 - Pig Game
 * Created a flow chart to describe all available user actions
 * Flow chart available in project folder for this game
