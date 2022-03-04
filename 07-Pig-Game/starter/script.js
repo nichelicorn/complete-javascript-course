@@ -2,7 +2,7 @@
 
 // 💾 Application state
 let currentScore = 0;
-let currentPlayer, currentScoreDisplay, currentActive;
+let currentPlayer, currentScoreDisplay, currentActive, gameplayActive;
 const scores = [0, 0];
 
 // 🔎 Selected elements
@@ -24,6 +24,11 @@ btnNew.addEventListener("click", newGame);
 btnRoll.addEventListener("click", takeTurn);
 
 // ⚙️ Functions
+
+// 🐛 need to work out functionality on game end conditions
+// wasn't updating state correctly -- need to set a variable for gameplay status √
+
+
 function rollDice() {
   return Math.trunc(Math.random() * 6) + 1;
 };
@@ -38,8 +43,6 @@ function takeTurn() {
   } else { 
     switchPlayer();
   };
-
-  // checkScore();
 };
 
 function displayDice(roll) {
@@ -77,8 +80,8 @@ function holdScore() {
     score1El.textContent = scores[1];
   };
 
-  checkScore();
-  // switchPlayer();
+  // checkScore();
+  switchPlayer();
 };
 
 function newGame() {
@@ -94,17 +97,13 @@ function newGame() {
   currentScoreDisplay = current0El;
   current0El.textContent = 0;
   current1El.textContent = 0;
-  // currentActive.classList.remove("player--winner");
 };
 
 function checkScore() {
   const scoreToCheck = scores[currentPlayer];
   
   if (scoreToCheck >= 100) {
-    // currentActive.classList.add("player--winner");
-    alert(`Player ${currentPlayer + 1} has won the game! Play again?`);
+    alert(`Player ${currentPlayer} has won the game! Play again?`);
     newGame();
-  } else {
-    switchPlayer();
   };
 };
