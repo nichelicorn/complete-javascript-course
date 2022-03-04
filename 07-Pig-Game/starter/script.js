@@ -18,9 +18,9 @@ const score0El = document.getElementById("score--0");
 const score1El = document.getElementById("score--1");
 
 // 🎧 Event listeners
-window.addEventListener("load", newGame);
+window.addEventListener("load", startGame);
 btnHold.addEventListener("click", holdScore);
-btnNew.addEventListener("click", newGame);
+btnNew.addEventListener("click", startGame);
 btnRoll.addEventListener("click", takeTurn);
 
 // ⚙️ Functions
@@ -87,7 +87,7 @@ function holdScore() {
   switchPlayer();
 };
 
-function newGame() {
+function startGame() {
   // 🎬 Starting conditions
   currentPlayer = 0;
   currentScore = 0;
@@ -108,8 +108,8 @@ function checkScore() {
   
   if (scoreToCheck >= 10) {
     // alert(`Player ${currentPlayer} has won the game! Play again?`);
-    // newGame();
-    console.log(`Player ${currentPlayer} has won the game! Play again?`);
+    // startGame();
+    console.log(`Player ${currentPlayer + 1} has won the game! Play again?`);
     isActiveGame = false;
     // when a game is won, change current player class to .player--winner
     currentActive.classList.add("player--winner"); // this is where the bug is -- in test, player2 won the game, but the console log says that player1 has won the game
