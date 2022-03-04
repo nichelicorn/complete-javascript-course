@@ -30,6 +30,7 @@ btnRoll.addEventListener("click", takeTurn);
 // Add how to play section to pig game
 // Update the look of the pig game
 // Add pigs to the pig game
+// refactor startGame ... damn, it's huge and ugly
 
 // ⚙️ Functions
 function rollDice() {
@@ -76,11 +77,13 @@ function switchPlayer() {
 };
 
 function holdScore() {
+  scores[currentPlayer] += currentScore;
+
   if (currentPlayer === 0) {
-    scores[0] += currentScore;
+    // scores[0] += currentScore;
     score0El.textContent = scores[0];
   } else {
-    scores[1] += currentScore;
+    // scores[1] += currentScore;
     score1El.textContent = scores[1];
   };
 
