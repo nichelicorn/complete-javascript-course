@@ -102,18 +102,20 @@ function startGame(event) {
   score0El.textContent = 0;
   score1El.textContent = 0;
   diceEl.classList.add("hidden");
-  // currentActive = player0ActiveEl;
+  currentActive = player0ActiveEl;
   currentScoreDisplay = current0El;
   current0El.textContent = 0;
   current1El.textContent = 0;
-  player0ActiveEl.classList.remove("player--winner");    player1ActiveEl.classList.remove("player--winner");
+  player0ActiveEl.classList.remove("player--winner");    player1ActiveEl.classList.remove("player--winner")
+  btnRoll.disabled = false;
+  btnHold.disabled = false;;
 };
 
 function checkScore() {
   const scoreToCheck = scores[currentPlayer];
   console.log("checking player >", currentPlayer + 1);
 
-  console.log("checking currentActive >", currentActive);
+  // console.log("checking currentActive >", currentActive);
 
   if (scoreToCheck >= 10) {
     // alert(`Player ${currentPlayer} has won the game! Play again?`);
