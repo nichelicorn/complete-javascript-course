@@ -2,7 +2,7 @@
 
 // 💾 Application state
 let currentScore = 0;
-let currentPlayer, currentScoreDisplay, currentActive, isActiveGame;
+let currentPlayer, currentScoreDisplay, currentActiveEl, isActiveGame;
 const scores = [0, 0];
 
 // 🔎 Selected elements
@@ -31,6 +31,7 @@ btnRoll.addEventListener("click", takeTurn);
 // Update the look of the pig game
 // Add pigs to the pig game
 // refactor startGame ... damn, it's huge and ugly
+// use player id number as an argument and make these statements dynamic
 
 // ⚙️ Functions
 function rollDice() {
@@ -41,12 +42,8 @@ function takeTurn() {
   const roll = rollDice();
   
   displayDice(roll);
-  
-  if (roll !== 1) {
-    updateCurrentScore(roll);
-  } else { 
-    switchPlayer();
-  };
+
+  roll !== 1 ? updateCurrentScore(roll) : switchPlayer();
 };
 
 function displayDice(roll) {
@@ -97,7 +94,7 @@ function startGame(event) {
   score0El.textContent = 0;
   score1El.textContent = 0;
   diceEl.classList.add("hidden");
-  currentActive = player0ActiveEl;
+  currentActiveEl = player0ActiveEl;
   currentScoreDisplay = current0El;
   current0El.textContent = 0;
   current1El.textContent = 0;
