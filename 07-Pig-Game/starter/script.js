@@ -64,16 +64,7 @@ function switchPlayer() {
 
   currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
 
-  // if (currentPlayer === 0) {
-  //   player0ActiveEl.classList.add("player--active");
-  //   player1ActiveEl.classList.remove("player--active");
-  // } else {
-  //   player0ActiveEl.classList.remove("player--active");
-  //   player1ActiveEl.classList.add("player--active");
-  // };
-
   toggleActive();
-
 };
 
 function toggleActive() {
@@ -84,14 +75,6 @@ function toggleActive() {
     player0ActiveEl.classList.remove("player--active");
     player1ActiveEl.classList.add("player--active");
   };
-
-  // this just made it a string 🙄
-  // console.log("player >", player + 1);
-  // currentActiveEl = `player${player}ActiveEl`;
-  // const inactiveEl = player === 0 ? player0ActiveEl : player1ActiveEl;
-  // console.log("currentActiveEl >", currentActiveEl);
-  // currentActiveEl.classList.toggle("player--active");
-  // inactiveEl.classList.remove("player--active");
 };
 
 function holdScore() {
