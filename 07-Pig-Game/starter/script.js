@@ -26,7 +26,6 @@ btnRoll.addEventListener("click", takeTurn);
 // ⚙️ Functions
 
 // Refactoring to-do list
-// fix active player display error -- if player 2 wins the game, the white overlay doesn't apply to the correct player; scores / state still updating correctly
 // add function to endGame that contains conditions if there is a winner
 // refactor to ternaries
 // add helper functions if avail
@@ -128,7 +127,7 @@ function startGame(event) {
   current0El.textContent = 0;
   current1El.textContent = 0;
   player0ActiveEl.classList.add("player--active");
-    player1ActiveEl.classList.remove("player--active");
+  player1ActiveEl.classList.remove("player--active");
   player0ActiveEl.classList.remove("player--winner");    player1ActiveEl.classList.remove("player--winner")
   btnRoll.disabled = false;
   btnHold.disabled = false;;
@@ -141,6 +140,28 @@ function checkScore() {
   // console.log("checking currentActive >", currentActive);
 
   if (scoreToCheck >= 10) {
+  //   // alert(`Player ${currentPlayer} has won the game! Play again?`);
+  //   console.log(`Player ${currentPlayer + 1} has won the game!`);
+  //   isActiveGame = false;
+
+  //   if (currentPlayer === 0) {
+  //    player0ActiveEl.classList.add("player--winner");
+  //  } else {
+  //    player1ActiveEl.classList.add("player--winner");
+  //  };
+
+  //  btnRoll.disabled = true;
+  //  btnHold.disabled = true;
+    endGame();
+  } else {
+    switchPlayer();
+  };
+  // console.log("isActiveGame >", isActiveGame);
+  
+  
+};
+
+function endGame() {
     // alert(`Player ${currentPlayer} has won the game! Play again?`);
     console.log(`Player ${currentPlayer + 1} has won the game!`);
     isActiveGame = false;
@@ -154,10 +175,4 @@ function checkScore() {
    btnRoll.disabled = true;
    btnHold.disabled = true;
 
-  } else {
-    switchPlayer();
-  };
-  // console.log("isActiveGame >", isActiveGame);
-  
-  
 };
