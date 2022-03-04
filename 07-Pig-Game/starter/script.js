@@ -29,8 +29,9 @@ btnRoll.addEventListener("click", takeTurn);
 // √ wasn't updating state correctly -- need to set a variable for gameplay status
 // √ when a new game starts, gamplayActive = true; 
 // √ when a game is won, isActiveGame = false;
-// when a game is won, change current player class to .player--winner
-// need to review how the light color background is switching — which element is being updated on that change? That’s what should be updating the player—winner class
+// √ when a game is won, change current player class to .player--winner
+// √ need to review how the light color background is switching — which element is being updated on that change? That’s what should be updating the player—winner class
+// disable hold and roll buttons
 // add function to endGame that contains conditions if there is a winner
 // refactor to ternaries
 // add helper functions if avail
@@ -127,7 +128,10 @@ function checkScore() {
      player0ActiveEl.classList.add("player--winner");
    } else {
      player1ActiveEl.classList.add("player--winner");
-   }
+   };
+
+   btnRoll.disabled = true;
+   btnHold.disabled = true;
 
   } else {
     switchPlayer();
