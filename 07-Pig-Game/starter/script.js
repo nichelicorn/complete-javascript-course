@@ -135,35 +135,15 @@ function startGame(event) {
 
 function checkScore() {
   const scoreToCheck = scores[currentPlayer];
-  console.log("checking player >", currentPlayer + 1);
-
-  // console.log("checking currentActive >", currentActive);
 
   if (scoreToCheck >= 10) {
-  //   // alert(`Player ${currentPlayer} has won the game! Play again?`);
-  //   console.log(`Player ${currentPlayer + 1} has won the game!`);
-  //   isActiveGame = false;
-
-  //   if (currentPlayer === 0) {
-  //    player0ActiveEl.classList.add("player--winner");
-  //  } else {
-  //    player1ActiveEl.classList.add("player--winner");
-  //  };
-
-  //  btnRoll.disabled = true;
-  //  btnHold.disabled = true;
     endGame();
   } else {
     switchPlayer();
-  };
-  // console.log("isActiveGame >", isActiveGame);
-  
-  
+  };  
 };
 
 function endGame() {
-    // alert(`Player ${currentPlayer} has won the game! Play again?`);
-    console.log(`Player ${currentPlayer + 1} has won the game!`);
     isActiveGame = false;
 
     if (currentPlayer === 0) {
@@ -174,5 +154,4 @@ function endGame() {
 
    btnRoll.disabled = true;
    btnHold.disabled = true;
-
 };
