@@ -122,7 +122,12 @@ function checkScore() {
     // currentActive.classList.add("player--winner"); // this is where the bug is -- in test, player2 won the game, but the console log says that player1 has won the game
 
     // review how the light color background is switching — which element is being updated on that change? That’s what should be updating the player—winner class
-
+   // set active player status on game board
+   if (currentPlayer === 0) {
+     player0ActiveEl.classList.add("player--winner");
+   } else {
+     player1ActiveEl.classList.add("player--winner");
+   }
 
   } else {
     switchPlayer();
