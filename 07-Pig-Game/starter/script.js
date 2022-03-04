@@ -29,6 +29,10 @@ btnRoll.addEventListener("click", takeTurn);
 // add function to endGame that contains conditions if there is a winner
 // refactor to ternaries
 // add helper functions if avail
+// Find actual rules for this game and make sure it matches what is set up
+// Add how to play section to pig game
+// Update the look of the pig game
+// Add pigs to the pig game
 
 function rollDice() {
   return Math.trunc(Math.random() * 6) + 1;
