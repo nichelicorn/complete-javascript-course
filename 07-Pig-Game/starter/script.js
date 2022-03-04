@@ -112,7 +112,7 @@ function startGame(event) {
 function checkScore() {
   const scoreToCheck = scores[currentPlayer];
 
-  scoreToCheck >= 10 ? endGame() : switchPlayer();
+  scoreToCheck >= 100 ? endGame() : switchPlayer();
 };
 
 function endGame() {
