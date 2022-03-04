@@ -1,9 +1,9 @@
 'use strict';
 
 // 💾 Application state
+const scores = [0, 0];
 let currentScore = 0;
 let currentPlayer, currentScoreDisplay, currentActiveEl, isActiveGame;
-const scores = [0, 0];
 
 // 🔎 Selected elements
 const btnHold = document.querySelector(".btn--hold");
@@ -24,10 +24,9 @@ btnNew.addEventListener("click", startGame);
 btnRoll.addEventListener("click", takeTurn);
 
 // Refactoring to-do list
-// refactor to ternaries
-// add helper functions if avail
+// review code and add sensible helper functions
 // Find actual rules for this game and make sure it matches what is set up
-// Add how to play section to pig game
+// Add how to play section to pig game UI
 // Update the look of the pig game
 // Add pigs to the pig game
 // refactor startGame ... damn, it's huge and ugly
@@ -90,16 +89,16 @@ function holdScore() {
 function startGame(event) {
   // 🎬 Starting conditions
   event.preventDefault();
+  isActiveGame = true; 
   currentPlayer = 0;
   currentScore = 0;
-  isActiveGame = true; 
   scores[0] = 0;
   scores[1] = 0;
   score0El.textContent = 0;
   score1El.textContent = 0;
-  diceEl.classList.add("hidden");
-  currentActiveEl = player0ActiveEl;
+  // currentActiveEl = player0ActiveEl;
   currentScoreDisplay = current0El;
+  diceEl.classList.add("hidden");
   current0El.textContent = 0;
   current1El.textContent = 0;
   player0ActiveEl.classList.add("player--active");
