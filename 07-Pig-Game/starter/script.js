@@ -23,10 +23,7 @@ btnHold.addEventListener("click", holdScore);
 btnNew.addEventListener("click", startGame);
 btnRoll.addEventListener("click", takeTurn);
 
-// ⚙️ Functions
-
 // Refactoring to-do list
-// add function to endGame that contains conditions if there is a winner
 // refactor to ternaries
 // add helper functions if avail
 // Find actual rules for this game and make sure it matches what is set up
@@ -34,6 +31,7 @@ btnRoll.addEventListener("click", takeTurn);
 // Update the look of the pig game
 // Add pigs to the pig game
 
+// ⚙️ Functions
 function rollDice() {
   return Math.trunc(Math.random() * 6) + 1;
 };
@@ -123,14 +121,12 @@ function checkScore() {
 };
 
 function endGame() {
-    isActiveGame = false;
+  isActiveGame = false;
 
-    if (currentPlayer === 0) {
-     player0ActiveEl.classList.add("player--winner");
-   } else {
-     player1ActiveEl.classList.add("player--winner");
-   };
+  currentPlayer === 0 ? 
+    player0ActiveEl.classList.add("player--winner") : 
+    player1ActiveEl.classList.add("player--winner");
 
-   btnRoll.disabled = true;
-   btnHold.disabled = true;
+  btnRoll.disabled = true;
+  btnHold.disabled = true;
 };
