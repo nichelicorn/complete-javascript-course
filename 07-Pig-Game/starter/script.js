@@ -69,6 +69,9 @@ function switchPlayer() {
    currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
 
    // set active player status on game board
+  //  🐛 this is where the bug is -- it's just toggling these modes, not verifying the active player and displaying that
+  // go back to using the currentActive? seemed like it worked okay when that was being used
+  // hopefully this is in the git history
    player0ActiveEl.classList.toggle("player--active");
    player1ActiveEl.classList.toggle("player--active");
 };
@@ -114,16 +117,10 @@ function checkScore() {
 
   if (scoreToCheck >= 10) {
     // alert(`Player ${currentPlayer} has won the game! Play again?`);
-    // startGame();
-    console.log(`Player ${currentPlayer + 1} has won the game! Play again?`);
+    console.log(`Player ${currentPlayer + 1} has won the game!`);
     isActiveGame = false;
-    // when a game is won, change current player class to .player--winner
-    // console.log("winning currentActive ?? >", currentActive); // this isn't updating at all
-    // currentActive.classList.add("player--winner"); // this is where the bug is -- in test, player2 won the game, but the console log says that player1 has won the game
 
-    // review how the light color background is switching — which element is being updated on that change? That’s what should be updating the player—winner class
-   // set active player status on game board
-   if (currentPlayer === 0) {
+    if (currentPlayer === 0) {
      player0ActiveEl.classList.add("player--winner");
    } else {
      player1ActiveEl.classList.add("player--winner");
@@ -135,7 +132,7 @@ function checkScore() {
   } else {
     switchPlayer();
   };
-  console.log("isActiveGame >", isActiveGame);
+  // console.log("isActiveGame >", isActiveGame);
   
   
 };
