@@ -25,13 +25,8 @@ btnRoll.addEventListener("click", takeTurn);
 
 // ⚙️ Functions
 
-// 🐛 need to work out functionality on game end conditions
-// √ wasn't updating state correctly -- need to set a variable for gameplay status
-// √ when a new game starts, gamplayActive = true; 
-// √ when a game is won, isActiveGame = false;
-// √ when a game is won, change current player class to .player--winner
-// √ need to review how the light color background is switching — which element is being updated on that change? That’s what should be updating the player—winner class
-// disable hold and roll buttons
+// Refactoring to-do list
+// fix active player display error -- if player 2 wins the game, the white overlay doesn't apply to the correct player; scores / state still updating correctly
 // add function to endGame that contains conditions if there is a winner
 // refactor to ternaries
 // add helper functions if avail
