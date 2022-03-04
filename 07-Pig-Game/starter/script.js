@@ -91,8 +91,9 @@ function holdScore() {
   // switchPlayer();
 };
 
-function startGame() {
+function startGame(event) {
   // 🎬 Starting conditions
+  event.preventDefault();
   currentPlayer = 0;
   currentScore = 0;
   isActiveGame = true; 
@@ -105,6 +106,7 @@ function startGame() {
   currentScoreDisplay = current0El;
   current0El.textContent = 0;
   current1El.textContent = 0;
+  player0ActiveEl.classList.remove("player--winner");    player1ActiveEl.classList.remove("player--winner");
 };
 
 function checkScore() {
