@@ -28,7 +28,8 @@ btnRoll.addEventListener("click", takeTurn);
 // 🐛 need to work out functionality on game end conditions
 // √ wasn't updating state correctly -- need to set a variable for gameplay status
 // √ when a new game starts, gamplayActive = true; 
-// when a game is won, isActiveGame = false;
+// √ when a game is won, isActiveGame = false;
+// when a game is won, change current player class to .player--winner
 
 
 function rollDice() {
@@ -105,11 +106,13 @@ function newGame() {
 function checkScore() {
   const scoreToCheck = scores[currentPlayer];
   
-  if (scoreToCheck >= 100) {
+  if (scoreToCheck >= 10) {
     // alert(`Player ${currentPlayer} has won the game! Play again?`);
     // newGame();
     console.log(`Player ${currentPlayer} has won the game! Play again?`);
     isActiveGame = false;
+    // when a game is won, change current player class to .player--winner
+    currentActive.classList.add("player--winner"); // this is where the bug is -- in test, player2 won the game, but the console log says that player1 has won the game
   };
   console.log("isActiveGame >", isActiveGame);
 };
