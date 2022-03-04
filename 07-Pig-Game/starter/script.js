@@ -84,7 +84,7 @@ function holdScore() {
   };
 
   checkScore();
-  switchPlayer();
+  // switchPlayer();
 };
 
 function startGame() {
