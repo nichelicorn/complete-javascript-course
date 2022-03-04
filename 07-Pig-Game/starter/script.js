@@ -27,6 +27,8 @@ btnRoll.addEventListener("click", takeTurn);
 
 // 🐛 need to work out functionality on game end conditions
 // wasn't updating state correctly -- need to set a variable for gameplay status √
+// when a new game starts, gamplayActive = true; 
+// when a game is won, gameplayACtive = false;
 
 
 function rollDice() {
@@ -88,6 +90,7 @@ function newGame() {
   // 🎬 Starting conditions
   currentPlayer = 0;
   currentScore = 0;
+  gameplayActive = true; 
   scores[0] = 0;
   scores[1] = 0;
   score0El.textContent = 0;
