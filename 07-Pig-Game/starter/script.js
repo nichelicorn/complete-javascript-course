@@ -79,16 +79,11 @@ function switchPlayer() {
 function holdScore() {
   scores[currentPlayer] += currentScore;
 
-  if (currentPlayer === 0) {
-    // scores[0] += currentScore;
-    score0El.textContent = scores[0];
-  } else {
-    // scores[1] += currentScore;
-    score1El.textContent = scores[1];
-  };
+  currentPlayer === 0 ? 
+  score0El.textContent = scores[0] : 
+  score1El.textContent = scores[1];
 
   checkScore();
-  // switchPlayer();
 };
 
 function startGame(event) {
