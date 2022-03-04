@@ -61,45 +61,20 @@ function updateCurrentScore(roll) {
 };
 
 function switchPlayer() {
-   // set current player score to zero and display;
    currentScore = 0;
    currentScoreDisplay.textContent = currentScore;
 
-   // reset current player to the next player
    currentPlayer = (currentPlayer === 0) ? 1 : 0;
 
-   // reset currentScoreDisplay
    currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
-
-   // set active player status on game board
-// fix active player display error -- if player 2 wins the game, the white overlay doesn't apply to the correct player; scores / state still updating correctly
-   //  🐛 this is where the bug is -- it's just toggling these modes, not verifying the active player and displaying that
-  // go back to using the currentActive? seemed like it worked okay when that was being used
-  // hopefully this is in the git history
-
-  console.log("new current player >", currentPlayer + 1);
 
   if (currentPlayer === 0) {
     player0ActiveEl.classList.add("player--active");
     player1ActiveEl.classList.remove("player--active");
-
   } else {
     player0ActiveEl.classList.remove("player--active");
     player1ActiveEl.classList.add("player--active");
-
-  }
-
-   
-  //  console.log("checking currentActive >", currentActive);
-
-  // if (currentActive.classList.contains("player--0")) {
-  //   console.log("current player is now player 2");
-  //   currentActive = player0ActiveEl;
-  // } else {
-  //   currentActive = player1ActiveEl;
-  //   console.log("current player is now player 1");
-  // }
-
+  };
 };
 
 function holdScore() {
