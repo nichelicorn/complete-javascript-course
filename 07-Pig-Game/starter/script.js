@@ -57,13 +57,26 @@ function updateCurrentScore(roll) {
 };
 
 function switchPlayer() {
-   currentScore = 0;
-   currentScoreDisplay.textContent = currentScore;
+  currentScore = 0;
+  currentScoreDisplay.textContent = currentScore;
 
-   currentPlayer = (currentPlayer === 0) ? 1 : 0;
+  currentPlayer = (currentPlayer === 0) ? 1 : 0;
 
-   currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
+  currentScoreDisplay = (currentScoreDisplay === current0El) ? current1El : current0El;
 
+  // if (currentPlayer === 0) {
+  //   player0ActiveEl.classList.add("player--active");
+  //   player1ActiveEl.classList.remove("player--active");
+  // } else {
+  //   player0ActiveEl.classList.remove("player--active");
+  //   player1ActiveEl.classList.add("player--active");
+  // };
+
+  toggleActive();
+
+};
+
+function toggleActive() {
   if (currentPlayer === 0) {
     player0ActiveEl.classList.add("player--active");
     player1ActiveEl.classList.remove("player--active");
@@ -71,6 +84,14 @@ function switchPlayer() {
     player0ActiveEl.classList.remove("player--active");
     player1ActiveEl.classList.add("player--active");
   };
+
+  // this just made it a string 🙄
+  // console.log("player >", player + 1);
+  // currentActiveEl = `player${player}ActiveEl`;
+  // const inactiveEl = player === 0 ? player0ActiveEl : player1ActiveEl;
+  // console.log("currentActiveEl >", currentActiveEl);
+  // currentActiveEl.classList.toggle("player--active");
+  // inactiveEl.classList.remove("player--active");
 };
 
 function holdScore() {
